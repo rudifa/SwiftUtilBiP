@@ -1,5 +1,5 @@
 //
-//  BiPlatformExtensions.swift v.0.1.1
+//  BiPlatformExtensions.swift v.0.1.2
 //  SwiftUtil
 //
 //  Created by Rudolf Farkas on 27.07.19.
@@ -12,15 +12,12 @@
     typealias NSUIGestureRecognizer = UIGestureRecognizer
     typealias NSUIPanGestureRecognizer = UIPanGestureRecognizer
     typealias NSUITapClickGestureRecognizer = UITapGestureRecognizer
-
-    func positiveDeltaIsDownwards(delta: Float) -> Float { return delta }
 #elseif os(OSX)
     import Cocoa
     typealias NSUIViewController = NSViewController
     typealias NSUIGestureRecognizer = NSGestureRecognizer
     typealias NSUIPanGestureRecognizer = NSPanGestureRecognizer
     typealias NSUITapClickGestureRecognizer = NSClickGestureRecognizer
-    func positiveDeltaIsDownwards(delta: Float) -> Float { return -delta }
 #endif
 
 #if os(iOS)
@@ -29,6 +26,7 @@
             return location(in: view)
         }
     }
+
 #elseif os(OSX)
     extension NSGestureRecognizer {
         func locationFromTop(in view: NSView) -> CGPoint {
@@ -47,6 +45,7 @@
         convenience init(cgImage: CGImage) {
             self.init(cgImage: cgImage, size: CGSize(width: cgImage.width, height: cgImage.height))
         }
+
         var cgImage: CGImage? {
             return self.cgImage(forProposedRect: nil, context: nil, hints: nil)
         }
