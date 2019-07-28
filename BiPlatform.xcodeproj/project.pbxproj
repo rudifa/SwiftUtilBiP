@@ -12,20 +12,38 @@
 		9DF5F1A822ED8EDB00A02DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A622ED8EDB00A02DD4 /* Main.storyboard */; };
 		9DF5F1AA22ED8EDC00A02DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A922ED8EDC00A02DD4 /* Assets.xcassets */; };
 		9DF5F1AD22ED8EDC00A02DD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1AB22ED8EDC00A02DD4 /* LaunchScreen.storyboard */; };
+		9DF5F1BB22ED8F4100A02DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1BA22ED8F4100A02DD4 /* AppDelegate.swift */; };
+		9DF5F1BD22ED8F4100A02DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1BC22ED8F4100A02DD4 /* ViewController.swift */; };
+		9DF5F1BF22ED8F4200A02DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1BE22ED8F4200A02DD4 /* Assets.xcassets */; };
+		9DF5F1C222ED8F4200A02DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1C022ED8F4200A02DD4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9DF5F19F22ED8EDB00A02DD4 /* BiPlatform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiPlatform.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF5F19F22ED8EDB00A02DD4 /* BiPlatformIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiPlatformIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF5F1A422ED8EDB00A02DD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9DF5F1A722ED8EDB00A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DF5F1A922ED8EDC00A02DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DF5F1AC22ED8EDC00A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DF5F1AE22ED8EDC00A02DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF5F1B822ED8F4100A02DD4 /* BiPlatformMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiPlatformMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF5F1BA22ED8F4100A02DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9DF5F1BC22ED8F4100A02DD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DF5F1BE22ED8F4200A02DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9DF5F1C122ED8F4200A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9DF5F1C322ED8F4200A02DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF5F1C422ED8F4200A02DD4 /* BiPlatformMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BiPlatformMacOS.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9DF5F19C22ED8EDB00A02DD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF5F1B522ED8F4100A02DD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,7 +56,9 @@
 		9DF5F19622ED8EDB00A02DD4 = {
 			isa = PBXGroup;
 			children = (
-				9DF5F1A122ED8EDB00A02DD4 /* BiPlatform */,
+				9DF5F1C822ED8F9E00A02DD4 /* New Group */,
+				9DF5F1A122ED8EDB00A02DD4 /* BiPlatformIOS */,
+				9DF5F1B922ED8F4100A02DD4 /* BiPlatformMacOS */,
 				9DF5F1A022ED8EDB00A02DD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,12 +66,13 @@
 		9DF5F1A022ED8EDB00A02DD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9DF5F19F22ED8EDB00A02DD4 /* BiPlatform.app */,
+				9DF5F19F22ED8EDB00A02DD4 /* BiPlatformIOS.app */,
+				9DF5F1B822ED8F4100A02DD4 /* BiPlatformMacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9DF5F1A122ED8EDB00A02DD4 /* BiPlatform */ = {
+		9DF5F1A122ED8EDB00A02DD4 /* BiPlatformIOS */ = {
 			isa = PBXGroup;
 			children = (
 				9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */,
@@ -61,15 +82,35 @@
 				9DF5F1AB22ED8EDC00A02DD4 /* LaunchScreen.storyboard */,
 				9DF5F1AE22ED8EDC00A02DD4 /* Info.plist */,
 			);
-			path = BiPlatform;
+			path = BiPlatformIOS;
+			sourceTree = "<group>";
+		};
+		9DF5F1B922ED8F4100A02DD4 /* BiPlatformMacOS */ = {
+			isa = PBXGroup;
+			children = (
+				9DF5F1BA22ED8F4100A02DD4 /* AppDelegate.swift */,
+				9DF5F1BC22ED8F4100A02DD4 /* ViewController.swift */,
+				9DF5F1BE22ED8F4200A02DD4 /* Assets.xcassets */,
+				9DF5F1C022ED8F4200A02DD4 /* Main.storyboard */,
+				9DF5F1C322ED8F4200A02DD4 /* Info.plist */,
+				9DF5F1C422ED8F4200A02DD4 /* BiPlatformMacOS.entitlements */,
+			);
+			path = BiPlatformMacOS;
+			sourceTree = "<group>";
+		};
+		9DF5F1C822ED8F9E00A02DD4 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9DF5F19E22ED8EDB00A02DD4 /* BiPlatform */ = {
+		9DF5F19E22ED8EDB00A02DD4 /* BiPlatformIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatform" */;
+			buildConfigurationList = 9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatformIOS" */;
 			buildPhases = (
 				9DF5F19B22ED8EDB00A02DD4 /* Sources */,
 				9DF5F19C22ED8EDB00A02DD4 /* Frameworks */,
@@ -79,9 +120,26 @@
 			);
 			dependencies = (
 			);
-			name = BiPlatform;
+			name = BiPlatformIOS;
 			productName = BiPlatform;
-			productReference = 9DF5F19F22ED8EDB00A02DD4 /* BiPlatform.app */;
+			productReference = 9DF5F19F22ED8EDB00A02DD4 /* BiPlatformIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9DF5F1B722ED8F4100A02DD4 /* BiPlatformMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatformMacOS" */;
+			buildPhases = (
+				9DF5F1B422ED8F4100A02DD4 /* Sources */,
+				9DF5F1B522ED8F4100A02DD4 /* Frameworks */,
+				9DF5F1B622ED8F4100A02DD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BiPlatformMacOS;
+			productName = BiPlatformMacOS;
+			productReference = 9DF5F1B822ED8F4100A02DD4 /* BiPlatformMacOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,6 +153,9 @@
 				ORGANIZATIONNAME = "Rudolf Farkas";
 				TargetAttributes = {
 					9DF5F19E22ED8EDB00A02DD4 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					9DF5F1B722ED8F4100A02DD4 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
@@ -112,7 +173,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9DF5F19E22ED8EDB00A02DD4 /* BiPlatform */,
+				9DF5F19E22ED8EDB00A02DD4 /* BiPlatformIOS */,
+				9DF5F1B722ED8F4100A02DD4 /* BiPlatformMacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +190,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9DF5F1B622ED8F4100A02DD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF5F1BF22ED8F4200A02DD4 /* Assets.xcassets in Resources */,
+				9DF5F1C222ED8F4200A02DD4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,6 +208,15 @@
 			files = (
 				9DF5F1A522ED8EDB00A02DD4 /* ViewController.swift in Sources */,
 				9DF5F1A322ED8EDB00A02DD4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DF5F1B422ED8F4100A02DD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DF5F1BD22ED8F4100A02DD4 /* ViewController.swift in Sources */,
+				9DF5F1BB22ED8F4100A02DD4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +237,14 @@
 				9DF5F1AC22ED8EDC00A02DD4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9DF5F1C022ED8F4200A02DD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9DF5F1C122ED8F4200A02DD4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -314,6 +402,50 @@
 			};
 			name = Release;
 		};
+		9DF5F1C622ED8F4200A02DD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BiPlatformMacOS/BiPlatformMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LHA84NAPNA;
+				INFOPLIST_FILE = BiPlatformMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = rudifa.BiPlatformMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9DF5F1C722ED8F4200A02DD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BiPlatformMacOS/BiPlatformMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LHA84NAPNA;
+				INFOPLIST_FILE = BiPlatformMacOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = rudifa.BiPlatformMacOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -326,11 +458,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatform" */ = {
+		9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatformIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DF5F1B222ED8EDC00A02DD4 /* Debug */,
 				9DF5F1B322ED8EDC00A02DD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatformMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DF5F1C622ED8F4200A02DD4 /* Debug */,
+				9DF5F1C722ED8F4200A02DD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
