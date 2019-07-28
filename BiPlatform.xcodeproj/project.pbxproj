@@ -37,6 +37,7 @@
 		9DF5F1CB22ED927F00A02DD4 /* BiPlatformExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiPlatformExtensions.swift; sourceTree = "<group>"; };
 		9DF5F1CD22ED92A900A02DD4 /* DebugUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugUtil.swift; sourceTree = "<group>"; };
 		9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BiPlatformIOS/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		9DF5F1D422EDAF3300A02DD4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		9DF5F19622ED8EDB00A02DD4 = {
 			isa = PBXGroup;
 			children = (
+				9DF5F1D422EDAF3300A02DD4 /* README.md */,
 				9DF5F1C822ED8F9E00A02DD4 /* Shared */,
 				9DF5F1A122ED8EDB00A02DD4 /* BiPlatformIOS */,
 				9DF5F1B922ED8F4100A02DD4 /* BiPlatformMacOS */,

@@ -20,12 +20,20 @@ class ViewController: NSUIViewController {
         super.viewDidLoad()
         printClassAndFunc()
 
-        let recognizer = NSUITapClickGestureRecognizer(target: self,
-                                                       action: #selector(handleTapClick(recognizer:)))
-        view.addGestureRecognizer(recognizer)
+        let tapClickRecognizer = NSUITapClickGestureRecognizer(target: self,
+                                                               action: #selector(handleTapClick(recognizer:)))
+        view.addGestureRecognizer(tapClickRecognizer)
+
+        let panRecognizer = NSUIPanGestureRecognizer(target: self, action: #selector(handlePan(recognizer:)))
+        view.addGestureRecognizer(panRecognizer)
     }
 
     @objc func handleTapClick(recognizer: NSUITapClickGestureRecognizer) {
+        let location = recognizer.locationFromTop(in: view)
+        printClassAndFunc(info: "\(location)")
+    }
+
+    @objc func handlePan(recognizer: NSUIPanGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
         printClassAndFunc(info: "\(location)")
     }

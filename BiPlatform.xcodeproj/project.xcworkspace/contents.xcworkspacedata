@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:DebugUtil.swift">
-   </FileRef>
-   <FileRef
       location = "self:BiPlatform.xcodeproj">
    </FileRef>
 </Workspace>
