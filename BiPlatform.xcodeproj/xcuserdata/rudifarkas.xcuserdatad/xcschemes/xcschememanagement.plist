@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BiPlatform.xcscheme_^#shared#^_</key>
+		<key>BiPlatformIOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -13,6 +13,19 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9DF5F19E22ED8EDB00A02DD4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DF5F1B722ED8F4100A02DD4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -1,0 +1,8 @@
+.DS_Store
+*.xcuserstate
+*.xcbkptlist
+*xcuserdata
+*xcbaselines
+build/
+DerivedData/
+.xcodesamplecode.plist
