@@ -1,5 +1,5 @@
 //
-//  BiPlatformExtensions.swift v.0.1.0
+//  BiPlatformExtensions.swift v.0.1.1
 //  SwiftUtil
 //
 //  Created by Rudolf Farkas on 27.07.19.

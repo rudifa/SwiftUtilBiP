@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D8113A822EE304000E29C0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */; };
 		9DF5F1A322ED8EDB00A02DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */; };
 		9DF5F1A822ED8EDB00A02DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A622ED8EDB00A02DD4 /* Main.storyboard */; };
 		9DF5F1AA22ED8EDC00A02DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A922ED8EDC00A02DD4 /* Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		9DF5F1CF22ED962700A02DD4 /* DebugUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1CD22ED92A900A02DD4 /* DebugUtil.swift */; };
 		9DF5F1D022ED962A00A02DD4 /* BiPlatformExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1CB22ED927F00A02DD4 /* BiPlatformExtensions.swift */; };
 		9DF5F1D222EDA03D00A02DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */; };
-		9DF5F1D322EDA8EA00A02DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +36,7 @@
 		9DF5F1C422ED8F4200A02DD4 /* BiPlatformMacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BiPlatformMacOS.entitlements; sourceTree = "<group>"; };
 		9DF5F1CB22ED927F00A02DD4 /* BiPlatformExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiPlatformExtensions.swift; sourceTree = "<group>"; };
 		9DF5F1CD22ED92A900A02DD4 /* DebugUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugUtil.swift; sourceTree = "<group>"; };
-		9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = BiPlatformIOS/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Shared/ViewController.swift; sourceTree = SOURCE_ROOT; };
 		9DF5F1D422EDAF3300A02DD4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,7 +233,7 @@
 			files = (
 				9DF5F1C922ED904000A02DD4 /* AppDelegate.swift in Sources */,
 				9DF5F1D022ED962A00A02DD4 /* BiPlatformExtensions.swift in Sources */,
-				9DF5F1D322EDA8EA00A02DD4 /* ViewController.swift in Sources */,
+				9D8113A822EE304000E29C0A /* ViewController.swift in Sources */,
 				9DF5F1CF22ED962700A02DD4 /* DebugUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
