@@ -16,6 +16,8 @@
 #endif
 
 class ViewController: NSUIViewController {
+    var lastPanLocation = CGPoint()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         printClassAndFunc()
@@ -24,7 +26,7 @@ class ViewController: NSUIViewController {
     }
 }
 
-// MARK: gesture recognizers
+// MARK: - gesture recognizers
 
 extension ViewController {
     private func addGestureRecognizers() {
@@ -37,11 +39,25 @@ extension ViewController {
 
     @objc func handleTapClick(recognizer: NSUITapClickGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
-        printClassAndFunc(info: "\(location)")
+        printClassAndFunc(info: "\(location.fmt)")
     }
 
     @objc func handlePan(recognizer: NSUIPanGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
-        printClassAndFunc(info: "\(location)")
+        printClassAndFunc(info: "\(location.fmt)  \(recognizer.state.rawValue)")
+        let panSensitivity: Float = 5.0
+        switch recognizer.state {
+        case .began:
+            lastPanLocation = location
+        case .changed:
+            _ = Float((lastPanLocation.x - location.x) / view.bounds.width) * panSensitivity
+            _ = Float((lastPanLocation.y - location.y) / view.bounds.height) * panSensitivity
+            // printClassAndFunc(info: "\(xDelta) \(yDelta) ")
+            lastPanLocation = location
+        case .ended:
+            break
+        default:
+            break
+        }
     }
 }
