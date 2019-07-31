@@ -40,11 +40,13 @@ extension ViewController {
     @objc func handleTapClick(recognizer: NSUITapClickGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
         printClassAndFunc(info: "\(location.fmt)")
+        // works on macOS and on iOS device, not on iOS simulator
     }
 
     @objc func handlePan(recognizer: NSUIPanGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
         printClassAndFunc(info: "\(location.fmt)  \(recognizer.state.rawValue)")
+        // works on macOS, on iOS device, and on iOS simulator
         let panSensitivity: Float = 5.0
         switch recognizer.state {
         case .began:
