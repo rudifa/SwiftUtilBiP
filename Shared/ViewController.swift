@@ -20,12 +20,19 @@ class ViewController: NSUIViewController {
         super.viewDidLoad()
         printClassAndFunc()
 
-        let tapClickRecognizer = NSUITapClickGestureRecognizer(target: self,
-                                                               action: #selector(handleTapClick(recognizer:)))
-        view.addGestureRecognizer(tapClickRecognizer)
+        addGestureRecognizers()
+    }
+}
 
-        let panRecognizer = NSUIPanGestureRecognizer(target: self, action: #selector(handlePan(recognizer:)))
-        view.addGestureRecognizer(panRecognizer)
+// MARK: gesture recognizers
+
+extension ViewController {
+    private func addGestureRecognizers() {
+        view.addGestureRecognizer(NSUITapClickGestureRecognizer(target: self,
+                                                                action: #selector(handleTapClick(recognizer:))))
+
+        view.addGestureRecognizer(NSUIPanGestureRecognizer(target: self,
+                                                           action: #selector(handlePan(recognizer:))))
     }
 
     @objc func handleTapClick(recognizer: NSUITapClickGestureRecognizer) {
