@@ -21,7 +21,6 @@ class ViewController: NSUIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         printClassAndFunc()
-
         addGestureRecognizers()
     }
 }
@@ -32,7 +31,6 @@ extension ViewController {
     private func addGestureRecognizers() {
         view.addGestureRecognizer(NSUITapClickGestureRecognizer(target: self,
                                                                 action: #selector(handleTapClick(recognizer:))))
-
         view.addGestureRecognizer(NSUIPanGestureRecognizer(target: self,
                                                            action: #selector(handlePan(recognizer:))))
     }
