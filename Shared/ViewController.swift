@@ -27,12 +27,26 @@ class ViewController: NSUIViewController {
 
 // MARK: - gesture recognizers
 
-extension ViewController {
+extension ViewController: NSUIGestureRecognizerDelegate {
     private func addGestureRecognizers() {
-        view.addGestureRecognizer(NSUITapClickGestureRecognizer(target: self,
-                                                                action: #selector(handleTapClick(recognizer:))))
-        view.addGestureRecognizer(NSUIPanGestureRecognizer(target: self,
-                                                           action: #selector(handlePan(recognizer:))))
+        let tapClickGestureRecognizer = NSUITapClickGestureRecognizer(target: self,
+                                                                      action: #selector(handleTapClick(recognizer:)))
+        let panGestureRecognizer = NSUIPanGestureRecognizer(target: self,
+                                                            action: #selector(handlePan(recognizer:)))
+        tapClickGestureRecognizer.delegate = self
+        panGestureRecognizer.delegate = self
+
+        view.addGestureRecognizer(tapClickGestureRecognizer)
+        view.addGestureRecognizer(panGestureRecognizer)
+    }
+
+    //    Controlling Simultaneous Gesture Recognition
+    //    func gestureRecognizer(UIGestureRecognizer, shouldRecognizeSimultaneouslyWith: UIGestureRecognizer) -> Bool
+    //    Asks the delegate if two gesture recognizers should be allowed to recognize gestures simultaneously.
+
+    func gestureRecognizer(_: NSUIGestureRecognizer, shouldRecognizeSimultaneouslyWith _: NSUIGestureRecognizer) -> Bool {
+        printClassAndFunc()
+        return true
     }
 
     @objc func handleTapClick(recognizer: NSUITapClickGestureRecognizer) {

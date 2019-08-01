@@ -1,5 +1,5 @@
 //
-//  BiPlatformExtensions.swift v.0.1.2
+//  BiPlatformExtensions.swift v.0.1.3
 //  SwiftUtil
 //
 //  Created by Rudolf Farkas on 27.07.19.
@@ -12,12 +12,14 @@
     typealias NSUIGestureRecognizer = UIGestureRecognizer
     typealias NSUIPanGestureRecognizer = UIPanGestureRecognizer
     typealias NSUITapClickGestureRecognizer = UITapGestureRecognizer
+    typealias NSUIGestureRecognizerDelegate = UIGestureRecognizerDelegate
 #elseif os(OSX)
     import Cocoa
     typealias NSUIViewController = NSViewController
     typealias NSUIGestureRecognizer = NSGestureRecognizer
     typealias NSUIPanGestureRecognizer = NSPanGestureRecognizer
     typealias NSUITapClickGestureRecognizer = NSClickGestureRecognizer
+    typealias NSUIGestureRecognizerDelegate = NSGestureRecognizerDelegate
 #endif
 
 #if os(iOS)
