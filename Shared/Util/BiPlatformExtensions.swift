@@ -1,5 +1,5 @@
 //
-//  BiPlatformExtensions.swift v.0.1.3
+//  BiPlatformExtensions.swift v.0.1.4
 //  SwiftUtil
 //
 //  Created by Rudolf Farkas on 27.07.19.
@@ -13,6 +13,8 @@
     typealias NSUIPanGestureRecognizer = UIPanGestureRecognizer
     typealias NSUITapClickGestureRecognizer = UITapGestureRecognizer
     typealias NSUIGestureRecognizerDelegate = UIGestureRecognizerDelegate
+    typealias NSUILabel = UILabel
+    typealias NSUIColor = UIColor
 #elseif os(OSX)
     import Cocoa
     typealias NSUIViewController = NSViewController
@@ -20,6 +22,8 @@
     typealias NSUIPanGestureRecognizer = NSPanGestureRecognizer
     typealias NSUITapClickGestureRecognizer = NSClickGestureRecognizer
     typealias NSUIGestureRecognizerDelegate = NSGestureRecognizerDelegate
+    typealias NSUILabel = NSTextField
+    typealias NSUIColor = NSColor
 #endif
 
 #if os(iOS)
@@ -35,6 +39,19 @@
             var location = self.location(in: view)
             location.y = view.bounds.height - location.y
             return location
+        }
+    }
+
+    extension NSTextField {
+        var text: String {
+            set {
+                isEditable = false
+                isBezeled = false
+                stringValue = newValue
+            }
+            get {
+                return stringValue
+            }
         }
     }
 #endif
