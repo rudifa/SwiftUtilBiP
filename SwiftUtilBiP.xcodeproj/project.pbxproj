@@ -26,13 +26,13 @@
 
 /* Begin PBXFileReference section */
 		9D3477AA22F20DCD0029BE85 /* CGUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGUtil.swift; sourceTree = "<group>"; };
-		9DF5F19F22ED8EDB00A02DD4 /* SwiftUtil2PIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtil2PIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF5F19F22ED8EDB00A02DD4 /* SwiftUtilBiPIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtilBiPIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF5F1A722ED8EDB00A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DF5F1A922ED8EDC00A02DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DF5F1AC22ED8EDC00A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DF5F1AE22ED8EDC00A02DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DF5F1B822ED8F4100A02DD4 /* SwiftUtil2PMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtil2PMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF5F1B822ED8F4100A02DD4 /* SwiftUtilBiPMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtilBiPMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5F1BE22ED8F4200A02DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DF5F1C122ED8F4200A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DF5F1C322ED8F4200A02DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,8 +66,8 @@
 			children = (
 				9DF5F1D422EDAF3300A02DD4 /* README.md */,
 				9DF5F1C822ED8F9E00A02DD4 /* Shared */,
-				9DF5F1A122ED8EDB00A02DD4 /* BiPlatformIOS */,
-				9DF5F1B922ED8F4100A02DD4 /* BiPlatformMacOS */,
+				9DF5F1A122ED8EDB00A02DD4 /* BiPiOS */,
+				9DF5F1B922ED8F4100A02DD4 /* BiPmacOS */,
 				9DF5F1A022ED8EDB00A02DD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,13 +75,13 @@
 		9DF5F1A022ED8EDB00A02DD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9DF5F19F22ED8EDB00A02DD4 /* SwiftUtil2PIOS.app */,
-				9DF5F1B822ED8F4100A02DD4 /* SwiftUtil2PMacOS.app */,
+				9DF5F19F22ED8EDB00A02DD4 /* SwiftUtilBiPIOS.app */,
+				9DF5F1B822ED8F4100A02DD4 /* SwiftUtilBiPMacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9DF5F1A122ED8EDB00A02DD4 /* BiPlatformIOS */ = {
+		9DF5F1A122ED8EDB00A02DD4 /* BiPiOS */ = {
 			isa = PBXGroup;
 			children = (
 				9DF5F1A622ED8EDB00A02DD4 /* Main.storyboard */,
@@ -89,10 +89,10 @@
 				9DF5F1A922ED8EDC00A02DD4 /* Assets.xcassets */,
 				9DF5F1AE22ED8EDC00A02DD4 /* Info.plist */,
 			);
-			path = BiPlatformIOS;
+			path = BiPiOS;
 			sourceTree = "<group>";
 		};
-		9DF5F1B922ED8F4100A02DD4 /* BiPlatformMacOS */ = {
+		9DF5F1B922ED8F4100A02DD4 /* BiPmacOS */ = {
 			isa = PBXGroup;
 			children = (
 				9DF5F1C022ED8F4200A02DD4 /* Main.storyboard */,
@@ -100,7 +100,7 @@
 				9DF5F1C322ED8F4200A02DD4 /* Info.plist */,
 				9DF5F1C422ED8F4200A02DD4 /* BiPlatformMacOS.entitlements */,
 			);
-			path = BiPlatformMacOS;
+			path = BiPmacOS;
 			sourceTree = "<group>";
 		};
 		9DF5F1C822ED8F9E00A02DD4 /* Shared */ = {
@@ -126,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9DF5F19E22ED8EDB00A02DD4 /* SwiftUtil2PIOS */ = {
+		9DF5F19E22ED8EDB00A02DD4 /* SwiftUtilBiPIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtil2PIOS" */;
+			buildConfigurationList = 9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPIOS" */;
 			buildPhases = (
 				9DF5F19B22ED8EDB00A02DD4 /* Sources */,
 				9DF5F19C22ED8EDB00A02DD4 /* Frameworks */,
@@ -138,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftUtil2PIOS;
+			name = SwiftUtilBiPIOS;
 			productName = BiPlatform;
-			productReference = 9DF5F19F22ED8EDB00A02DD4 /* SwiftUtil2PIOS.app */;
+			productReference = 9DF5F19F22ED8EDB00A02DD4 /* SwiftUtilBiPIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9DF5F1B722ED8F4100A02DD4 /* SwiftUtil2PMacOS */ = {
+		9DF5F1B722ED8F4100A02DD4 /* SwiftUtilBiPMacOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtil2PMacOS" */;
+			buildConfigurationList = 9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPMacOS" */;
 			buildPhases = (
 				9DF5F1B422ED8F4100A02DD4 /* Sources */,
 				9DF5F1B522ED8F4100A02DD4 /* Frameworks */,
@@ -155,9 +155,9 @@
 			);
 			dependencies = (
 			);
-			name = SwiftUtil2PMacOS;
+			name = SwiftUtilBiPMacOS;
 			productName = BiPlatformMacOS;
-			productReference = 9DF5F1B822ED8F4100A02DD4 /* SwiftUtil2PMacOS.app */;
+			productReference = 9DF5F1B822ED8F4100A02DD4 /* SwiftUtilBiPMacOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -178,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "SwiftUtil2P" */;
+			buildConfigurationList = 9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "SwiftUtilBiP" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -191,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9DF5F19E22ED8EDB00A02DD4 /* SwiftUtil2PIOS */,
-				9DF5F1B722ED8F4100A02DD4 /* SwiftUtil2PMacOS */,
+				9DF5F19E22ED8EDB00A02DD4 /* SwiftUtilBiPIOS */,
+				9DF5F1B722ED8F4100A02DD4 /* SwiftUtilBiPMacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -396,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LHA84NAPNA;
-				INFOPLIST_FILE = "$(SRCROOT)/BiPlatformIOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BiPiOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -414,7 +414,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LHA84NAPNA;
-				INFOPLIST_FILE = "$(SRCROOT)/BiPlatformIOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BiPiOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -430,12 +430,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BiPlatformMacOS/BiPlatformMacOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BiPmacOS/BiPlatformMacOS.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = LHA84NAPNA;
-				INFOPLIST_FILE = BiPlatformMacOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BiPmacOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -452,12 +452,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = BiPlatformMacOS/BiPlatformMacOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = BiPmacOS/BiPlatformMacOS.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = LHA84NAPNA;
-				INFOPLIST_FILE = BiPlatformMacOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BiPmacOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -473,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "SwiftUtil2P" */ = {
+		9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "SwiftUtilBiP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DF5F1AF22ED8EDC00A02DD4 /* Debug */,
@@ -482,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtil2PIOS" */ = {
+		9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DF5F1B222ED8EDC00A02DD4 /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtil2PMacOS" */ = {
+		9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPMacOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DF5F1C622ED8F4200A02DD4 /* Debug */,
