@@ -15,6 +15,8 @@
     import Cocoa
 #endif
 
+//https://www.hackingwithswift.com/example-code/uikit/how-to-create-auto-layout-constraints-in-code-constraintswithvisualformat
+
 class ViewController: NSUIViewController {
     var lastPanLocation = CGPoint()
 
@@ -22,7 +24,57 @@ class ViewController: NSUIViewController {
         super.viewDidLoad()
         printClassAndFunc()
         addGestureRecognizers()
+
+
+
+
+        let label1 = NSUILabel()
+        label1.translatesAutoresizingMaskIntoConstraints = false
+        label1.backgroundColor = NSUIColor.red
+        label1.text = "THESE"
+        label1.sizeToFit()
+
+        let label2 = NSUILabel()
+        label2.translatesAutoresizingMaskIntoConstraints = false
+        label2.backgroundColor = NSUIColor.cyan
+        label2.text = "ARE"
+        label2.sizeToFit()
+
+        let label3 = NSUILabel()
+        label3.translatesAutoresizingMaskIntoConstraints = false
+        label3.backgroundColor = NSUIColor.yellow
+        label3.text = "SOME"
+        label3.sizeToFit()
+
+        let label4 = NSUILabel()
+        label4.translatesAutoresizingMaskIntoConstraints = false
+        label4.backgroundColor = NSUIColor.green
+        label4.text = "AWESOME"
+        label4.sizeToFit()
+
+        let label5 = NSUILabel()
+        label5.translatesAutoresizingMaskIntoConstraints = false
+        label5.backgroundColor = NSUIColor.orange
+        label5.text = "LABELS"
+        label5.sizeToFit()
+        printClassAndFunc(info: "l5 \(label5.text)")
+
+        view.addSubview(label1)
+        view.addSubview(label2)
+        view.addSubview(label3)
+        view.addSubview(label4)
+        view.addSubview(label5)
+
+        let viewsDictionary = ["label1": label1, "label2": label2, "label3": label3, "label4": label4, "label5": label5]
+
+        for label in viewsDictionary.keys {
+            view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
+        }
+
+        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-50-[label1]-[label2]-[label3]-[label4]-[label5]", options: [], metrics: nil, views: viewsDictionary))
+
     }
+
 }
 
 // MARK: - gesture recognizers
