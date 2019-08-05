@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:BiPlatform.xcodeproj">
+      location = "self:/Users/rudifarkas/tmp/trymerge copy 3/BiPlatform/SwiftUtil2P.xcodeproj">
    </FileRef>
 </Workspace>

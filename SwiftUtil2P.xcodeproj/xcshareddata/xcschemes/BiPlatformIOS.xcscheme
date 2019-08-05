@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9DF5F1B722ED8F4100A02DD4"
-               BuildableName = "BiPlatformMacOS.app"
-               BlueprintName = "BiPlatformMacOS"
-               ReferencedContainer = "container:BiPlatform.xcodeproj">
+               BlueprintIdentifier = "9DF5F19E22ED8EDB00A02DD4"
+               BuildableName = "SwiftUtil2PIOS.app"
+               BlueprintName = "SwiftUtil2PIOS"
+               ReferencedContainer = "container:SwiftUtil2P.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9DF5F1B722ED8F4100A02DD4"
-            BuildableName = "BiPlatformMacOS.app"
-            BlueprintName = "BiPlatformMacOS"
-            ReferencedContainer = "container:BiPlatform.xcodeproj">
+            BlueprintIdentifier = "9DF5F19E22ED8EDB00A02DD4"
+            BuildableName = "SwiftUtil2PIOS.app"
+            BlueprintName = "SwiftUtil2PIOS"
+            ReferencedContainer = "container:SwiftUtil2P.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9DF5F1B722ED8F4100A02DD4"
-            BuildableName = "BiPlatformMacOS.app"
-            BlueprintName = "BiPlatformMacOS"
-            ReferencedContainer = "container:BiPlatform.xcodeproj">
+            BlueprintIdentifier = "9DF5F19E22ED8EDB00A02DD4"
+            BuildableName = "SwiftUtil2PIOS.app"
+            BlueprintName = "SwiftUtil2PIOS"
+            ReferencedContainer = "container:SwiftUtil2P.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9DF5F1B722ED8F4100A02DD4"
-            BuildableName = "BiPlatformMacOS.app"
-            BlueprintName = "BiPlatformMacOS"
-            ReferencedContainer = "container:BiPlatform.xcodeproj">
+            BlueprintIdentifier = "9DF5F19E22ED8EDB00A02DD4"
+            BuildableName = "SwiftUtil2PIOS.app"
+            BlueprintName = "SwiftUtil2PIOS"
+            ReferencedContainer = "container:SwiftUtil2P.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

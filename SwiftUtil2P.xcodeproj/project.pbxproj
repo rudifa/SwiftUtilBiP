@@ -26,13 +26,13 @@
 
 /* Begin PBXFileReference section */
 		9D3477AA22F20DCD0029BE85 /* CGUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGUtil.swift; sourceTree = "<group>"; };
-		9DF5F19F22ED8EDB00A02DD4 /* BiPlatformIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiPlatformIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF5F19F22ED8EDB00A02DD4 /* SwiftUtil2PIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtil2PIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF5F1A722ED8EDB00A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DF5F1A922ED8EDC00A02DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DF5F1AC22ED8EDC00A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DF5F1AE22ED8EDC00A02DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DF5F1B822ED8F4100A02DD4 /* BiPlatformMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BiPlatformMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DF5F1B822ED8F4100A02DD4 /* SwiftUtil2PMacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtil2PMacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5F1BE22ED8F4200A02DD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DF5F1C122ED8F4200A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DF5F1C322ED8F4200A02DD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,8 +75,8 @@
 		9DF5F1A022ED8EDB00A02DD4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9DF5F19F22ED8EDB00A02DD4 /* BiPlatformIOS.app */,
-				9DF5F1B822ED8F4100A02DD4 /* BiPlatformMacOS.app */,
+				9DF5F19F22ED8EDB00A02DD4 /* SwiftUtil2PIOS.app */,
+				9DF5F1B822ED8F4100A02DD4 /* SwiftUtil2PMacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9DF5F19E22ED8EDB00A02DD4 /* BiPlatformIOS */ = {
+		9DF5F19E22ED8EDB00A02DD4 /* SwiftUtil2PIOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatformIOS" */;
+			buildConfigurationList = 9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtil2PIOS" */;
 			buildPhases = (
 				9DF5F19B22ED8EDB00A02DD4 /* Sources */,
 				9DF5F19C22ED8EDB00A02DD4 /* Frameworks */,
@@ -138,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = BiPlatformIOS;
+			name = SwiftUtil2PIOS;
 			productName = BiPlatform;
-			productReference = 9DF5F19F22ED8EDB00A02DD4 /* BiPlatformIOS.app */;
+			productReference = 9DF5F19F22ED8EDB00A02DD4 /* SwiftUtil2PIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9DF5F1B722ED8F4100A02DD4 /* BiPlatformMacOS */ = {
+		9DF5F1B722ED8F4100A02DD4 /* SwiftUtil2PMacOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatformMacOS" */;
+			buildConfigurationList = 9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtil2PMacOS" */;
 			buildPhases = (
 				9DF5F1B422ED8F4100A02DD4 /* Sources */,
 				9DF5F1B522ED8F4100A02DD4 /* Frameworks */,
@@ -155,9 +155,9 @@
 			);
 			dependencies = (
 			);
-			name = BiPlatformMacOS;
+			name = SwiftUtil2PMacOS;
 			productName = BiPlatformMacOS;
-			productReference = 9DF5F1B822ED8F4100A02DD4 /* BiPlatformMacOS.app */;
+			productReference = 9DF5F1B822ED8F4100A02DD4 /* SwiftUtil2PMacOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -178,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "BiPlatform" */;
+			buildConfigurationList = 9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "SwiftUtil2P" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -191,8 +191,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9DF5F19E22ED8EDB00A02DD4 /* BiPlatformIOS */,
-				9DF5F1B722ED8F4100A02DD4 /* BiPlatformMacOS */,
+				9DF5F19E22ED8EDB00A02DD4 /* SwiftUtil2PIOS */,
+				9DF5F1B722ED8F4100A02DD4 /* SwiftUtil2PMacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -473,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "BiPlatform" */ = {
+		9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "SwiftUtil2P" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DF5F1AF22ED8EDC00A02DD4 /* Debug */,
@@ -482,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatformIOS" */ = {
+		9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtil2PIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DF5F1B222ED8EDC00A02DD4 /* Debug */,
@@ -491,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "BiPlatformMacOS" */ = {
+		9DF5F1C522ED8F4200A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtil2PMacOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9DF5F1C622ED8F4200A02DD4 /* Debug */,
