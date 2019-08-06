@@ -1,5 +1,5 @@
 //
-//  BiPlatformExtensions.swift v.0.1.4
+//  BiPlatformExtensions.swift v.0.2.0
 //  SwiftUtil
 //
 //  Created by Rudolf Farkas on 27.07.19.
@@ -8,27 +8,29 @@
 
 #if os(iOS)
     import UIKit
-    typealias NSUIViewController = UIViewController
-    typealias NSUIGestureRecognizer = UIGestureRecognizer
-    typealias NSUIPanGestureRecognizer = UIPanGestureRecognizer
-    typealias NSUITapClickGestureRecognizer = UITapGestureRecognizer
-    typealias NSUIGestureRecognizerDelegate = UIGestureRecognizerDelegate
-    typealias NSUILabel = UILabel
-    typealias NSUIColor = UIColor
-    typealias NSUIStackView = UIStackView
+
+    typealias NUColor = UIColor
+    typealias NUGestureRecognizer = UIGestureRecognizer
+    typealias NUGestureRecognizerDelegate = UIGestureRecognizerDelegate
+    typealias NUPanGestureRecognizer = UIPanGestureRecognizer
+    typealias NUTapClickGestureRecognizer = UITapGestureRecognizer
+    typealias NULabel = UILabel
+    typealias NUStackView = UIStackView
     typealias NUView = UIView
+    typealias NUViewController = UIViewController
 
 #elseif os(OSX)
     import Cocoa
-    typealias NSUIViewController = NSViewController
-    typealias NSUIGestureRecognizer = NSGestureRecognizer
-    typealias NSUIPanGestureRecognizer = NSPanGestureRecognizer
-    typealias NSUITapClickGestureRecognizer = NSClickGestureRecognizer
-    typealias NSUIGestureRecognizerDelegate = NSGestureRecognizerDelegate
-    typealias NSUILabel = NSTextField
-    typealias NSUIColor = NSColor
-    typealias NSUIStackView = NSStackView
+
+    typealias NUColor = NSColor
+    typealias NUGestureRecognizer = NSGestureRecognizer
+    typealias NUGestureRecognizerDelegate = NSGestureRecognizerDelegate
+    typealias NUPanGestureRecognizer = NSPanGestureRecognizer
+    typealias NUTapClickGestureRecognizer = NSClickGestureRecognizer
+    typealias NULabel = NSTextField
+    typealias NUStackView = NSStackView
     typealias NUView = NSView
+    typealias NUViewController = NSViewController
 
 #endif
 
@@ -63,9 +65,9 @@
 #endif
 
 #if os(iOS)
-    typealias NSUIImage = UIImage
+    typealias NUImage = UIImage
 #elseif os(OSX)
-    typealias NSUIImage = NSImage
+    typealias NUImage = NSImage
     extension NSImage {
         convenience init(cgImage: CGImage) {
             self.init(cgImage: cgImage, size: CGSize(width: cgImage.width, height: cgImage.height))

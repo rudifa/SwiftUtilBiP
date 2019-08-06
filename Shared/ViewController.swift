@@ -18,58 +18,58 @@
 // https://www.hackingwithswift.com/example-code/uikit/how-to-create-auto-layout-constraints-in-code-constraintswithvisualformat
 // https://stackoverflow.com/questions/26180822/how-to-add-constraints-programmatically-using-swift
 
-class ViewController: NSUIViewController {
+class ViewController: NUViewController {
     var lastPanLocation = CGPoint()
 
-    lazy var label1: NSUILabel = {
-        let label = NSUILabel()
+    lazy var label1: NULabel = {
+        let label = NULabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = NSUIColor.yellow
+        label.backgroundColor = NUColor.yellow
         label.text = "Pan from"
         label.sizeToFit()
         return label
     }()
 
-    lazy var label2: NSUILabel = {
-        let label = NSUILabel()
+    lazy var label2: NULabel = {
+        let label = NULabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = NSUIColor.yellow
+        label.backgroundColor = NUColor.yellow
         label.text = ""
         label.sizeToFit()
         return label
     }()
 
-    lazy var label3: NSUILabel = {
-        let label = NSUILabel()
+    lazy var label3: NULabel = {
+        let label = NULabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = NSUIColor.yellow
+        label.backgroundColor = NUColor.yellow
         label.text = "to"
         label.sizeToFit()
         return label
     }()
 
-    lazy var label4: NSUILabel = {
-        let label = NSUILabel()
+    lazy var label4: NULabel = {
+        let label = NULabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = NSUIColor.yellow
+        label.backgroundColor = NUColor.yellow
         label.text = ""
         label.sizeToFit()
         return label
     }()
 
-    lazy var label5: NSUILabel = {
-        let label = NSUILabel()
+    lazy var label5: NULabel = {
+        let label = NULabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = NSUIColor.orange
+        label.backgroundColor = NUColor.orange
         label.text = "TapClick at"
         label.sizeToFit()
         return label
     }()
 
-    lazy var label6: NSUILabel = {
-        let label = NSUILabel()
+    lazy var label6: NULabel = {
+        let label = NULabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = NSUIColor.orange
+        label.backgroundColor = NUColor.orange
         label.text = ""
         label.sizeToFit()
         return label
@@ -109,11 +109,11 @@ class ViewController: NSUIViewController {
 
 // MARK: - gesture recognizers
 
-extension ViewController: NSUIGestureRecognizerDelegate {
+extension ViewController: NUGestureRecognizerDelegate {
     private func addGestureRecognizers() {
-        let tapClickGestureRecognizer = NSUITapClickGestureRecognizer(target: self,
+        let tapClickGestureRecognizer = NUTapClickGestureRecognizer(target: self,
                                                                       action: #selector(handleTapClick(recognizer:)))
-        let panGestureRecognizer = NSUIPanGestureRecognizer(target: self,
+        let panGestureRecognizer = NUPanGestureRecognizer(target: self,
                                                             action: #selector(handlePan(recognizer:)))
         tapClickGestureRecognizer.delegate = self
         panGestureRecognizer.delegate = self
@@ -126,18 +126,18 @@ extension ViewController: NSUIGestureRecognizerDelegate {
     //    func gestureRecognizer(UIGestureRecognizer, shouldRecognizeSimultaneouslyWith: UIGestureRecognizer) -> Bool
     //    Asks the delegate if two gesture recognizers should be allowed to recognize gestures simultaneously.
 
-    func gestureRecognizer(_: NSUIGestureRecognizer, shouldRecognizeSimultaneouslyWith _: NSUIGestureRecognizer) -> Bool {
+    func gestureRecognizer(_: NUGestureRecognizer, shouldRecognizeSimultaneouslyWith _: NUGestureRecognizer) -> Bool {
         printClassAndFunc()
         return true
     }
 
-    @objc func handleTapClick(recognizer: NSUITapClickGestureRecognizer) {
+    @objc func handleTapClick(recognizer: NUTapClickGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
         printClassAndFunc(info: "\(location.fmt)")
         label6.text = "\(location.fmt)"
     }
 
-    @objc func handlePan(recognizer: NSUIPanGestureRecognizer) {
+    @objc func handlePan(recognizer: NUPanGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
         printClassAndFunc(info: "\(location.fmt)  \(recognizer.state.rawValue)")
         // works on macOS, on iOS device, and on iOS simulator
