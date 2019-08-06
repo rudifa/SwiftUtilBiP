@@ -15,7 +15,9 @@
     import Cocoa
 #endif
 
-//https://www.hackingwithswift.com/example-code/uikit/how-to-create-auto-layout-constraints-in-code-constraintswithvisualformat
+// https://www.hackingwithswift.com/example-code/uikit/how-to-create-auto-layout-constraints-in-code-constraintswithvisualformat
+// https://stackoverflow.com/questions/26180822/how-to-add-constraints-programmatically-using-swift
+
 
 class ViewController: NSUIViewController {
     var lastPanLocation = CGPoint()
@@ -25,9 +27,10 @@ class ViewController: NSUIViewController {
         printClassAndFunc()
         addGestureRecognizers()
 
+        addLabels()
+    }
 
-
-
+    fileprivate func addLabels() {
         let label1 = NSUILabel()
         label1.translatesAutoresizingMaskIntoConstraints = false
         label1.backgroundColor = NSUIColor.red
@@ -57,24 +60,49 @@ class ViewController: NSUIViewController {
         label5.backgroundColor = NSUIColor.orange
         label5.text = "LABELS"
         label5.sizeToFit()
-        printClassAndFunc(info: "l5 \(label5.text)")
+
+        let label6 = NSUILabel()
+        label6.translatesAutoresizingMaskIntoConstraints = false
+//        label6.backgroundColor = NSUIColor.orange
+        label6.text = "LABELS"
+        label6.sizeToFit()
 
         view.addSubview(label1)
         view.addSubview(label2)
         view.addSubview(label3)
         view.addSubview(label4)
         view.addSubview(label5)
+        view.addSubview(label6)
 
-        let viewsDictionary = ["label1": label1, "label2": label2, "label3": label3, "label4": label4, "label5": label5]
+        /* Example
+         view.addConstraintsWithFormat(format: "H:|-8-[v0(100)]-8-[v1(>=20)]-8-[v2(100)]-8-|", views: previousButton, pageControl, nextButton)
+         */
+        //    let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:[view]-(<=0)-[newView(100)]", options: NSLayoutConstraint.FormatOptions.alignAllCenterY, metrics: nil, views: views)
+        //    let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:[view]-(<=0)-[newView(100)]", options: NSLayoutConstraint.FormatOptions.alignAllCenterX, metrics: nil, views: views)
 
-        for label in viewsDictionary.keys {
-            view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
-        }
 
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-50-[label1]-[label2]-[label3]-[label4]-[label5]", options: [], metrics: nil, views: viewsDictionary))
+        view.addConstraintsWithFormat(format: "H:|-50-[v0(100)]-8-[v1(100)]", views: label1, label2)
+        view.addConstraintsWithFormat(format: "V:|-100-[v0]", views: label1)
+        view.addConstraintsWithFormat(format: "V:|-100-[v0]", views: label2)
 
+        view.addConstraintsWithFormat(format: "H:|-50-[v0(100)]-8-[v1(100)]", views: label3, label4)
+        view.addConstraintsWithFormat(format: "V:|-150-[v0]", views: label3)
+        view.addConstraintsWithFormat(format: "V:|-150-[v0]", views: label4)
+
+        view.addConstraintsWithFormat(format: "H:|-50-[v0(100)]-8-[v1(100)]", views: label5, label6)
+        view.addConstraintsWithFormat(format: "V:|-200-[v0]", views: label5)
+        view.addConstraintsWithFormat(format: "V:|-200-[v0]", views: label6)
+
+
+
+//        let viewsDictionary = ["label1": label1, "label2": label2, "label3": label3, "label4": label4, "label5": label5]
+//
+//        for label in viewsDictionary.keys {
+//            view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[\(label)]|", options: [], metrics: nil, views: viewsDictionary))
+//        }
+
+//        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-50-[label1]-[label2]-[label3]-[label4]-[label5]", options: [], metrics: nil, views: viewsDictionary))
     }
-
 }
 
 // MARK: - gesture recognizers
