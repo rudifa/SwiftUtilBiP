@@ -22,6 +22,13 @@
 
 
 extension NUView {
+    /// Add constraints on views using the Auto Layout Visual Format Language
+    ///
+    /// - Parameters:
+    ///   - format: string describing constraints in VFL
+    ///   - options: alignement, direction, spacing
+    ///   - metrics: a dict of constants for use in format
+    ///   - views: views to constrain
     func addConstraintsWithFormat(format: String, options: NSLayoutConstraint.FormatOptions = [], metrics: [String : NSNumber]? = nil, views: NUView...) {
         var viewDictionary = [String: NUView]()
 
