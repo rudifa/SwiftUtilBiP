@@ -26,6 +26,7 @@ class ViewController: NUViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = NUColor.yellow
         label.text = "Pan from"
+        label.textAlignment = .right
         label.sizeToFit()
         return label
     }()
@@ -44,6 +45,7 @@ class ViewController: NUViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = NUColor.yellow
         label.text = "to"
+        label.textAlignment = .right
         label.sizeToFit()
         return label
     }()
@@ -62,6 +64,7 @@ class ViewController: NUViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = NUColor.orange
         label.text = "TapClick at"
+        label.textAlignment = .right
         label.sizeToFit()
         return label
     }()
@@ -81,6 +84,10 @@ class ViewController: NUViewController {
         addGestureRecognizers()
 
         addLabels()
+        let location = CGPoint(x: 987, y: 654)
+        printClassAndFunc(info: "loc= \(location)")
+        printClassAndFunc()
+        printClassAndFunc(info: "blah")
     }
 
     fileprivate func addLabels() {
