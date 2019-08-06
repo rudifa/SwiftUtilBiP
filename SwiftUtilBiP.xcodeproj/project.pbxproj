@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		9D3477AB22F20DCD0029BE85 /* _CGUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3477AA22F20DCD0029BE85 /* _CGUtil.swift */; };
 		9D3477AC22F20DF20029BE85 /* _CGUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3477AA22F20DCD0029BE85 /* _CGUtil.swift */; };
+		9D37783922F9639C00D040FC /* NUConstraintsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */; };
 		9D8113A822EE304000E29C0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */; };
+		9DB8C21E22F975810077D0AB /* NUConstraintsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */; };
 		9DF5F1A322ED8EDB00A02DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */; };
 		9DF5F1A822ED8EDB00A02DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A622ED8EDB00A02DD4 /* Main.storyboard */; };
 		9DF5F1AA22ED8EDC00A02DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A922ED8EDC00A02DD4 /* Assets.xcassets */; };
@@ -26,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		9D3477AA22F20DCD0029BE85 /* _CGUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _CGUtil.swift; sourceTree = "<group>"; };
+		9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NUConstraintsUtil.swift; sourceTree = "<group>"; };
 		9DF5F19F22ED8EDB00A02DD4 /* SwiftUtilBiPIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtilBiPIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF5F1A722ED8EDB00A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 				9D3477AA22F20DCD0029BE85 /* _CGUtil.swift */,
 				9DF5F1CD22ED92A900A02DD4 /* _DebugUtil.swift */,
 				9DF5F1CB22ED927F00A02DD4 /* BiPlatformExtensions.swift */,
+				9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -224,6 +228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D37783922F9639C00D040FC /* NUConstraintsUtil.swift in Sources */,
 				9D3477AB22F20DCD0029BE85 /* _CGUtil.swift in Sources */,
 				9DF5F1A322ED8EDB00A02DD4 /* AppDelegate.swift in Sources */,
 				9DF5F1D222EDA03D00A02DD4 /* ViewController.swift in Sources */,
@@ -236,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB8C21E22F975810077D0AB /* NUConstraintsUtil.swift in Sources */,
 				9D3477AC22F20DF20029BE85 /* _CGUtil.swift in Sources */,
 				9DF5F1C922ED904000A02DD4 /* AppDelegate.swift in Sources */,
 				9DF5F1D022ED962A00A02DD4 /* BiPlatformExtensions.swift in Sources */,

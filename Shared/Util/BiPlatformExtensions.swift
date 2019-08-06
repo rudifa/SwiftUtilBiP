@@ -15,6 +15,9 @@
     typealias NSUIGestureRecognizerDelegate = UIGestureRecognizerDelegate
     typealias NSUILabel = UILabel
     typealias NSUIColor = UIColor
+    typealias NSUIStackView = UIStackView
+    typealias NUView = UIView
+
 #elseif os(OSX)
     import Cocoa
     typealias NSUIViewController = NSViewController
@@ -24,6 +27,9 @@
     typealias NSUIGestureRecognizerDelegate = NSGestureRecognizerDelegate
     typealias NSUILabel = NSTextField
     typealias NSUIColor = NSColor
+    typealias NSUIStackView = NSStackView
+    typealias NUView = NSView
+
 #endif
 
 #if os(iOS)
