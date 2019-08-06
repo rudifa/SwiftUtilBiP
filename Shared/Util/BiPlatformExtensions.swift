@@ -1,6 +1,6 @@
 //
 //  BiPlatformExtensions.swift v.0.2.0
-//  SwiftUtil
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 27.07.19.
 //  Copyright © 2019 Rudolf Farkas. All rights reserved.
@@ -52,14 +52,15 @@
 
     extension NSTextField {
         var text: String {
-            set {
-                isEditable = false
+            get { return stringValue }
+            set { isEditable = false
                 isBezeled = false
-                stringValue = newValue
-            }
-            get {
-                return stringValue
-            }
+                stringValue = newValue }
+        }
+
+        var textAlignment: NSTextAlignment {
+            get { return alignment }
+            set { alignment = newValue }
         }
     }
 #endif
