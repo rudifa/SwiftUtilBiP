@@ -12,6 +12,8 @@
 		9D37783922F9639C00D040FC /* NUConstraintsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */; };
 		9D8113A822EE304000E29C0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */; };
 		9DB8C21E22F975810077D0AB /* NUConstraintsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */; };
+		9DE027B122FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE027B022FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift */; };
+		9DE027BF22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE027BE22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift */; };
 		9DF5F1A322ED8EDB00A02DD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */; };
 		9DF5F1A822ED8EDB00A02DD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A622ED8EDB00A02DD4 /* Main.storyboard */; };
 		9DF5F1AA22ED8EDC00A02DD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF5F1A922ED8EDC00A02DD4 /* Assets.xcassets */; };
@@ -26,9 +28,32 @@
 		9DF5F1D222EDA03D00A02DD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9DE027B322FB1C4300D8A524 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DF5F19722ED8EDB00A02DD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DF5F19E22ED8EDB00A02DD4;
+			remoteInfo = SwiftUtilBiPIOS;
+		};
+		9DE027C122FB1C5C00D8A524 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DF5F19722ED8EDB00A02DD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DF5F1B722ED8F4100A02DD4;
+			remoteInfo = SwiftUtilBiPMacOS;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		9D3477AA22F20DCD0029BE85 /* CGUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGUtil.swift; sourceTree = "<group>"; };
 		9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NUConstraintsUtil.swift; sourceTree = "<group>"; };
+		9DE027AE22FB1C4300D8A524 /* SwiftUtilBiPIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUtilBiPIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE027B022FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtilBiPIOSTests.swift; sourceTree = "<group>"; };
+		9DE027B222FB1C4300D8A524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE027BC22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUtilBiPMacOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DE027BE22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtilBiPMacOSTests.swift; sourceTree = "<group>"; };
+		9DE027C022FB1C5C00D8A524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DF5F19F22ED8EDB00A02DD4 /* SwiftUtilBiPIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUtilBiPIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF5F1A222ED8EDB00A02DD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DF5F1A722ED8EDB00A02DD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,6 +72,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9DE027AB22FB1C4300D8A524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE027B922FB1C5C00D8A524 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DF5F19C22ED8EDB00A02DD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +103,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DE027AF22FB1C4300D8A524 /* SwiftUtilBiPIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DE027B022FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift */,
+				9DE027B222FB1C4300D8A524 /* Info.plist */,
+			);
+			path = SwiftUtilBiPIOSTests;
+			sourceTree = "<group>";
+		};
+		9DE027BD22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DE027BE22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift */,
+				9DE027C022FB1C5C00D8A524 /* Info.plist */,
+			);
+			path = SwiftUtilBiPMacOSTests;
+			sourceTree = "<group>";
+		};
 		9DF5F19622ED8EDB00A02DD4 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +128,8 @@
 				9DF5F1C822ED8F9E00A02DD4 /* Shared */,
 				9DF5F1A122ED8EDB00A02DD4 /* BiPiOS */,
 				9DF5F1B922ED8F4100A02DD4 /* BiPmacOS */,
+				9DE027AF22FB1C4300D8A524 /* SwiftUtilBiPIOSTests */,
+				9DE027BD22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests */,
 				9DF5F1A022ED8EDB00A02DD4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,6 +139,8 @@
 			children = (
 				9DF5F19F22ED8EDB00A02DD4 /* SwiftUtilBiPIOS.app */,
 				9DF5F1B822ED8F4100A02DD4 /* SwiftUtilBiPMacOS.app */,
+				9DE027AE22FB1C4300D8A524 /* SwiftUtilBiPIOSTests.xctest */,
+				9DE027BC22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +191,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9DE027AD22FB1C4300D8A524 /* SwiftUtilBiPIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DE027B722FB1C4300D8A524 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPIOSTests" */;
+			buildPhases = (
+				9DE027AA22FB1C4300D8A524 /* Sources */,
+				9DE027AB22FB1C4300D8A524 /* Frameworks */,
+				9DE027AC22FB1C4300D8A524 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DE027B422FB1C4300D8A524 /* PBXTargetDependency */,
+			);
+			name = SwiftUtilBiPIOSTests;
+			productName = SwiftUtilBiPIOSTests;
+			productReference = 9DE027AE22FB1C4300D8A524 /* SwiftUtilBiPIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9DE027BB22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DE027C322FB1C5C00D8A524 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPMacOSTests" */;
+			buildPhases = (
+				9DE027B822FB1C5C00D8A524 /* Sources */,
+				9DE027B922FB1C5C00D8A524 /* Frameworks */,
+				9DE027BA22FB1C5C00D8A524 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9DE027C222FB1C5C00D8A524 /* PBXTargetDependency */,
+			);
+			name = SwiftUtilBiPMacOSTests;
+			productName = SwiftUtilBiPMacOSTests;
+			productReference = 9DE027BC22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9DF5F19E22ED8EDB00A02DD4 /* SwiftUtilBiPIOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DF5F1B122ED8EDC00A02DD4 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPIOS" */;
@@ -174,6 +271,14 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Rudolf Farkas";
 				TargetAttributes = {
+					9DE027AD22FB1C4300D8A524 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 9DF5F19E22ED8EDB00A02DD4;
+					};
+					9DE027BB22FB1C5C00D8A524 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 9DF5F1B722ED8F4100A02DD4;
+					};
 					9DF5F19E22ED8EDB00A02DD4 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -197,11 +302,27 @@
 			targets = (
 				9DF5F19E22ED8EDB00A02DD4 /* SwiftUtilBiPIOS */,
 				9DF5F1B722ED8F4100A02DD4 /* SwiftUtilBiPMacOS */,
+				9DE027AD22FB1C4300D8A524 /* SwiftUtilBiPIOSTests */,
+				9DE027BB22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9DE027AC22FB1C4300D8A524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE027BA22FB1C5C00D8A524 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DF5F19D22ED8EDB00A02DD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,6 +345,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9DE027AA22FB1C4300D8A524 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DE027B122FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DE027B822FB1C5C00D8A524 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DE027BF22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DF5F19B22ED8EDB00A02DD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +388,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9DE027B422FB1C4300D8A524 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DF5F19E22ED8EDB00A02DD4 /* SwiftUtilBiPIOS */;
+			targetProxy = 9DE027B322FB1C4300D8A524 /* PBXContainerItemProxy */;
+		};
+		9DE027C222FB1C5C00D8A524 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9DF5F1B722ED8F4100A02DD4 /* SwiftUtilBiPMacOS */;
+			targetProxy = 9DE027C122FB1C5C00D8A524 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9DF5F1A622ED8EDB00A02DD4 /* Main.storyboard */ = {
@@ -280,6 +430,94 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9DE027B522FB1C4300D8A524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHA84NAPNA;
+				INFOPLIST_FILE = SwiftUtilBiPIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rudifa.SwiftUtilBiPIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUtilBiPIOS.app/SwiftUtilBiPIOS";
+			};
+			name = Debug;
+		};
+		9DE027B622FB1C4300D8A524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LHA84NAPNA;
+				INFOPLIST_FILE = SwiftUtilBiPIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = rudifa.SwiftUtilBiPIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUtilBiPIOS.app/SwiftUtilBiPIOS";
+			};
+			name = Release;
+		};
+		9DE027C422FB1C5C00D8A524 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LHA84NAPNA;
+				INFOPLIST_FILE = SwiftUtilBiPMacOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = rudifa.SwiftUtilBiPMacOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUtilBiPMacOS.app/Contents/MacOS/SwiftUtilBiPMacOS";
+			};
+			name = Debug;
+		};
+		9DE027C522FB1C5C00D8A524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LHA84NAPNA;
+				INFOPLIST_FILE = SwiftUtilBiPMacOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = rudifa.SwiftUtilBiPMacOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUtilBiPMacOS.app/Contents/MacOS/SwiftUtilBiPMacOS";
+			};
+			name = Release;
+		};
 		9DF5F1AF22ED8EDC00A02DD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -479,6 +717,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9DE027B722FB1C4300D8A524 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE027B522FB1C4300D8A524 /* Debug */,
+				9DE027B622FB1C4300D8A524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DE027C322FB1C5C00D8A524 /* Build configuration list for PBXNativeTarget "SwiftUtilBiPMacOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DE027C422FB1C5C00D8A524 /* Debug */,
+				9DE027C522FB1C5C00D8A524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9DF5F19A22ED8EDB00A02DD4 /* Build configuration list for PBXProject "SwiftUtilBiP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
