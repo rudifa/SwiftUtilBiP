@@ -21,6 +21,17 @@
 class ViewController: NUViewController {
     var lastPanLocation = CGPoint()
 
+    lazy var label0: NULabel = {
+        let label = NULabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        label.backgroundColor = NUColor.gray
+        label.text = "Demo Pan and ClickTouch gesture recognizers"
+        label.textAlignment = .center
+        label.sizeToFit()
+        return label
+    }()
+
     lazy var label1: NULabel = {
         let label = NULabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -82,21 +93,20 @@ class ViewController: NUViewController {
         super.viewDidLoad()
         printClassAndFunc()
         addGestureRecognizers()
-
         addLabels()
-        let location = CGPoint(x: 987, y: 654)
-        printClassAndFunc(info: "loc= \(location)")
-        printClassAndFunc()
-        printClassAndFunc(info: "blah")
     }
 
     fileprivate func addLabels() {
+        view.addSubview(label0)
         view.addSubview(label1)
         view.addSubview(label2)
         view.addSubview(label3)
         view.addSubview(label4)
         view.addSubview(label5)
         view.addSubview(label6)
+
+        view.addConstraintsWithFormat(format: "H:|-50-[v0(308)]", views: label0)
+        view.addConstraintsWithFormat(format: "V:|-50-[v0]", views: label0)
 
         view.addConstraintsWithFormat(format: "H:|-50-[v0(150)]-8-[v1(150)]", views: label1, label2)
         view.addConstraintsWithFormat(format: "V:|-100-[v0]", views: label1)
