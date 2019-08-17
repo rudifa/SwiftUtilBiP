@@ -1,10 +1,14 @@
 #  Swift BiPlatform utilities
 
+by [rudifa](https://github.com/rudifa)
+
 This project contains a set of utilities for use in Xcode projects that target one of or both **iOS** and **macOS** platforms.
 
 ## BiPlatformExtensions
 
 `BiPlatformExtensions.swift` defines typealiases and extensions for a subset of `UIkit` | `Cocoa` classes and methods, to provide equivalent behaviors on both platforms. Typealiases use the prefix `NU` that aliases to `UI` on iOS and to `NS` on macOS.
+
+Definition example
 
 ```
 #if os(iOS)
@@ -13,10 +17,11 @@ This project contains a set of utilities for use in Xcode projects that target o
     ...
 #elseif os(OSX)
     import Cocoa
-    typealias NUPanGestureRecognizer = UIPanGestureRecognizer
+    typealias NUPanGestureRecognizer = NSPanGestureRecognizer
     ...
 #endif
 ```
+Usage example
 ```
 @objc func handlePan(recognizer: NUPanGestureRecognizer) {...}
 ```
@@ -27,7 +32,7 @@ This project contains a set of utilities for use in Xcode projects that target o
 
 ```
 let location = CGPoint(x: 123, y: 456)
-print("loc= \(location)")
+print("loc= \(location.fmt)")
 ```
 ```
 loc= (123.0, 456.0)
