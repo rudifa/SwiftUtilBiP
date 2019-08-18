@@ -15,18 +15,22 @@
 // MARK: - Formatting of CG structures and scalars
 
 extension CGFloat {
+    /// Returns a "%.3g" formatted string
     var fmt: String { return String(format: "%.3g", self) }
 }
 
 extension CGPoint {
+    /// Returns a pair of "%.2f" formatted strings
     var fmt: String { return String(format: "(%.2f, %.2f)", x, y) }
 }
 
 extension CGSize {
+    /// Returns a pair of "%.2f" formatted strings
     var fmt: String { return String(format: "(%.2f, %.2f)", width, height) }
 }
 
 extension CGRect {
+    /// Returns a quad of "%.2f" formatted strings
     var fmt: String { return "\(origin.fmt),\(size.fmt)" }
 }
 
