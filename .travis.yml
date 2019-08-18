@@ -1,8 +1,14 @@
 language: objective-c
 osx_image: xcode10.3
 xcode_workspace: SwiftUtilBiP.xcworkspace # path to your xcodeproj folder
-xcode_scheme: BiPiOS
-xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone X
+matrix:
+  include:
+  - name: "BiPiOS Tests"
+    xcode_scheme: BiPiOS
+    xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone X
+  - name: "BiPmacOS Tests"
+    xcode_scheme: BiPmacOS
+    xcode_destination: platform=macOS
 before_install:
     - pod install
 after_success:
