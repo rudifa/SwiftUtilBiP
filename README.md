@@ -46,14 +46,20 @@ loc= (123.0, 456.0)
 
 ## DateUtil
 
-`DateUtil.swift` extends class `Date` with formatting and time tag properties:
+`DateUtil.swift` extends `struct Date` with formatting and time tag properties:
 ```
+.MMMM_yyyy
 .ddMMyyyy
+.EEEEddMMyyyy
 .HHmmss
 .EEEEddMMyyyy
-...
+.HHmmss
+.HHmmssSSS
+.init(secondsInto21stCentury:)
+.timeStamp
 .timeTag
 ```
+Examples
 
 ```
 print("--- Today \(date.EEEEddMMyyyy) at \(date.HHmmss) tag= \(date.timeTag)")
@@ -61,13 +67,34 @@ print("--- Today \(date.EEEEddMMyyyy) at \(date.HHmmss) tag= \(date.timeTag)")
 --- Today Wednesday 07.08.2019 at 20:13:29 tag= 1565201609_57600
 ```
 
-It also extends class `Date` with calendar-related methods and properties
+It also extends `struct Date` with calendar-related methods and properties
 ```
+.incrementBy(component:value:)
 .month
 .nextMonth()
-...
+.prevMonth()
+.month
+.month_0
+.month1st
+.daysInMonth
+.year
+.day
+.day_0
+.weekdayOrdinal
+.weekday
+.weekday_0M
+month1stWeekday
+month1stWeekday_0M
 .isToday
 ```
+
+It also extends `struct Calendar` with property
+
+```
+.weekdaySymbols_M0
+```
+
+Examples
 
 ```
 var dd = Date()
@@ -82,7 +109,7 @@ print("--- \(dd.ddMMyyyy) is " + (dd.isToday ? "" : "not ") + "today")
 
 ## DebugUtil
 
-`DebugUtil.swift` offers the method `printClassAndFunc(fnc:info)` for debugging purposes.
+`DebugUtil.swift` extends `class NSObject` with method `printClassAndFunc(fnc:info)`, useful in debugging.
 ```
 let location = CGPoint(x: 987, y: 654)
 printClassAndFunc(info: "loc= \(location)")
@@ -94,7 +121,7 @@ printClassAndFunc(info: "loc= \(location)")
 
 ## DictUtil
 
-`DictUtil.swift` declares a 2-tuple-like ```struct HashablePair<P1, P2>```
+`DictUtil.swift` declares a 2-tuple-like `struct HashablePair<P1, P2>`
 ```
 struct HashablePair<P1, P2>: Hashable where P1: Hashable, P2: Hashable {
     var p1: P1
@@ -118,10 +145,11 @@ let dictionary: Dictionary<State_Event, State> = [
 }
 ```
 
-## HexDump
+## HexUtil
 
-`HexDump.swift` extends `String` with a simple property `.hexDump`
+`HexUtil.swift` extends `struct String` with property `.hexDump`
 
+Examples
 
 ```
 let string = "Hello Swift\t"
@@ -131,7 +159,7 @@ print("---- \(string) \(hexdump)")
 ---- |Hello Swift	| |48 65 6c 6c 6f 20 53 77 69 66 74 09|
 ```
 ```
-let string = "🇧🇷🇳🇿"
+let string = "flags 🇧🇷🇳🇿"
 let hexdump = string.hexDump
 print("---- \(string) \(hexdump)")
 
@@ -142,14 +170,15 @@ print("---- \(string) \(hexdump)")
 
 ## NUConstraintsUtil
 
-**`NUConstraintsUtil.swift`**  extends NUView (typealias for `UIView | NSView`) with method `addConstraintsWithFormat(format:options:metrics:views:)` that facilitates the use of Apple `Auto Layout Visual Format Language` in swift code.
+**`NUConstraintsUtil.swift`**  extends `class NUView` (typealias for `UIView | NSView`) with method `addConstraintsWithFormat(format:options:metrics:views:)` that facilitates the use of Apple `Auto Layout Visual Format Language` in swift code.
 ```
 view.addConstraintsWithFormat(format: "H:|-50-[v0(150)]-8-[v1(150)]", views: label1, label2)
 ```
 
 ## OptionalUtil
 
-`OptionalUtil.swift` extends Optional so that an `Int?` can be freely incremented (defaults to 0 if nil)
+`OptionalUtil.swift` extends `enum Optional` with func `increment(val:)`
+so that an `Int?` can be freely incremented (defaults to 0 if nil)
 ```
 var ival: Int?
 ival.increment()
@@ -159,7 +188,7 @@ assert(ival == 1)
 
 ## RegexUtil
 
-`RegexUtil.swift` extends class  String` with methods:
+`RegexUtil.swift` extends `struct String` with methods:
 ```
 .matches(for regex: String) -> [String]
 .isBlank() -> Bool
@@ -178,7 +207,7 @@ print("----", string, matched, "blank= \(string.isBlank())")
 
 ## StringUtil
 
-`StringUtil.swift` extends `String` with property `.camelCaseSplit`
+`StringUtil.swift` extends `struct String` with property `.camelCaseSplit`
 
 ```
 let string = "camelCaseSplit"
@@ -191,4 +220,4 @@ print("---- |\(string)| |\(string.camelCaseSplit)|")
 
 ## UIUtil.swift
 
-`UIUtil.swift` (iOS only) extends UIAlertController with method `show() which presents the alert from a (possibly) non-UIViewController object.
+`UIUtil.swift` (iOS only) extends `class UIAlertController` with method `show()` which presents the alert from a (possibly) non-UIViewController object.

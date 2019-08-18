@@ -21,7 +21,6 @@ class HexUtilTests: XCTestCase {
             let sub = string.dropFirst(i).prefix(s) as Substring
             print(sub)
         }
-        string.hexdump(step: 5)
     }
 
     func testHexDump2() {
