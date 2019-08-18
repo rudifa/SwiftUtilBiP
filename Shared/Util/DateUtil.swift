@@ -49,9 +49,6 @@ extension Date {
         return formatted(fmt: "HH:mm:ss.SSS")
     }
 
-    /// Requires seconds into 21st century
-
-
     /// Initializes self to the date at the specified secondsInto21stCentury
     ///
     /// - Parameter secondsInto21stCentury: seconds since 00:00:00 UTC on 1 January 2001
