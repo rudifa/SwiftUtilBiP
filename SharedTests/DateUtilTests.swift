@@ -9,18 +9,38 @@
 import XCTest
 
 class DateUtilTests: XCTestCase {
+    func test_TimeZone() {
+        let tzCurrent = TimeZone.current
+        print("--- tzCurrent=\(tzCurrent)") // --- tzCurrent=Europe/Zurich (current)
+        print("--- timeZoneDataVersion=\(TimeZone.timeZoneDataVersion)") // 2019b
+        let tzUTC = TimeZone(identifier: "UTC")
+        print("--- tzUTC=\(String(describing: tzUTC))") // --- tzUTC=Optional(GMT (fixed))
+
+        let date = Date()
+        let tzCurrentDiffSeconds = tzCurrent.secondsFromGMT(for: date)
+        print("--- tzCurrentDiffSeconds=\(tzCurrentDiffSeconds)") // --- tzCurrentDiffSeconds=7200 as of 18 Aug 2019
+        let tzUTCDiffSeconds = tzUTC!.secondsFromGMT(for: date)
+        print("--- tzUTCDiffSeconds=\(tzUTCDiffSeconds)") // --- tzUTCDiffSeconds=0 // always
+        XCTAssertEqual(tzUTCDiffSeconds, 0)
+    }
+
     func test_DateExtFormats() {
         let date = Date()
         print("--- date=", date, "ddMMyyy=", date.ddMMyyyy)
         print("--- time=", date, "HHmmss=", date.HHmmss)
         print("--- Today \(date.EEEEddMMyyyy) at \(date.HHmmss) tag= \(date.timeTag)")
 
-        let date0 = Date(timeIntervalSince1970: -1_006_347_601)
-        XCTAssertEqual("10.02.1938", date0.ddMMyyyy)
-        XCTAssertEqual("11:59:59", date0.HHmmss)
-        XCTAssertEqual("11:59:59.000", date0.HHmmssSSS)
-        XCTAssertEqual("February 1938", date0.MMMM_yyyy)
-        print("--- Once upon a time", date0.ddMMyyyy, "at", date0.HHmmss, "...")
+        // set an arbitrary date
+        let date0 = Date(timeIntervalSince1970: -1_006_344_000)
+        let secondsFromUTC = TimeZone.current.secondsFromGMT(for: date0)
+        // get the corresponding date-time in UTC
+        // so that the following tests become independent of the current time zone where tests are executed
+        let date0UTC = date0.addingTimeInterval(-TimeInterval(secondsFromUTC))
+        XCTAssertEqual("10.02.1938", date0UTC.ddMMyyyy)
+        XCTAssertEqual("12:00:00", date0UTC.HHmmss)
+        XCTAssertEqual("12:00:00.000", date0UTC.HHmmssSSS)
+        XCTAssertEqual("February 1938", date0UTC.MMMM_yyyy)
+        print("--- Once upon a time", date0UTC.ddMMyyyy, "at", date0.HHmmss, "...")
     }
 
     func testInit() {
