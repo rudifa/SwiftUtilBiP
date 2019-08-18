@@ -3,11 +3,13 @@ osx_image: xcode10.3
 xcode_workspace: SwiftUtilBiP.xcworkspace # path to your xcodeproj folder
 xcode_scheme: BiPiOS
 xcode_destination: platform=iOS Simulator,OS=12.4,name=iPhone X
-#before_install:
-#    - pod install
+before_install:
+    - pod install
 after_success:
     - gem install jazzy
     - make docs
+after_failure:
+  - cat *SwiftUtilBiP*.failure.txt
 deploy:
   provider: pages
   skip-cleanup: true
