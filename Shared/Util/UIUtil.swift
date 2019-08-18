@@ -9,9 +9,10 @@
 #if os(iOS)
     import UIKit
 
-// Create a UIWindow with a UIViewController to present UIAlertController on it.
-// http://lazyself.io/ios/2017/05/18/present-uialertcontroller-when-not-in-a-uiviewcontroller.html
-
+/**
+ Create a UIWindow with a UIViewController to present UIAlertController on it.
+ from http://lazyself.io/ios/2017/05/18/present-uialertcontroller-when-not-in-a-uiviewcontroller.html
+*/
 extension UIAlertController {
     /// present alert from a (possibly) non-UIViewController object
     func show() {

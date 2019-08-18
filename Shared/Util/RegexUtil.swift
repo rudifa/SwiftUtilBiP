@@ -8,12 +8,14 @@
 
 import Foundation
 
+/**
+Originally from
+    https://learnappmaking.com/regular-expressions-swift-string/
+    https://stackoverflow.com/questions/27880650/swift-extract-regex-matches
+ */
 extension String
 {
-    // see
-    //https://learnappmaking.com/regular-expressions-swift-string/
-    //https://stackoverflow.com/questions/27880650/swift-extract-regex-matches
-    
+
     /// Returns an array of substrings in self that matched the regex pattern
     ///
     /// - Parameter regex: pattern
@@ -31,9 +33,9 @@ extension String
         }
     }
     
-    /// Returns true if self is blank (empty or consists of whitespace characters only)
+    /// Check if self is blank (is empty or consists of whitespace characters only)
     ///
-    /// - Returns: <#return value description#>
+    /// - Returns: true if self is blank
     func isBlank() -> Bool {
         return self.matches(for: "^\\s*$") != []
     }
@@ -53,7 +55,7 @@ extension String
     /// Returns UUID (if any) found in self
     ///
     /// - Returns: String that matched the UUID pattern or empty string
-    /// - Example: "https://my-app/product_images%2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775.png" -> "2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775"
+    /// - Example: "https://my-app/product_images%2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775.png" -> "08D41FB1-8B2E-4F6F-977A-BFA876AEF775"
     func extractUUID() -> String {
         let matches = self.matches(for: "[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}")
         if matches.count > 0 {

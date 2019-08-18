@@ -2,7 +2,13 @@
 
 by [rudifa](https://github.com/rudifa)
 
-This project contains a set of utilities for use in Xcode projects that target one of or both **iOS** and **macOS** platforms.
+This project contains a set of Swift utilities for use in Xcode projects that target one of or both **iOS** and **macOS** platforms.
+
+### How to use
+
+Source files are found [here](https://github.com/rudifa/SwiftUtilBiP/tree/master/Shared/Util) while the detailed documentation is [here](https://rudifa.github.io/SwiftUtilBiP/).
+
+Copy individual files into your project, or clone the [repository](https://github.com/rudifa/SwiftUtilBiP) and take files of interest from there.
 
 ## BiPlatformExtensions
 

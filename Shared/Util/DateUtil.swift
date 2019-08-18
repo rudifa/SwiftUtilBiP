@@ -11,9 +11,13 @@ import Foundation
 // MARK: - Extended Date formatting
 
 extension Date {
+    /// Formats the self per format string, using TimeZone.current
+    ///
+    /// - Parameter fmt: a valid DateFormatter format string
+    /// - Returns: date+time string
     private func formatted(fmt: String) -> String {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone.current // the default is UTC
+        formatter.timeZone = TimeZone.current
         formatter.dateFormat = fmt
         return formatter.string(from: self)
     }
@@ -25,27 +29,32 @@ extension Date {
         return formatted(fmt: "MMMM yyyy")
     }
 
-    /// Returns the local date string
+    /// Returns the local date string like "18.08.2019"
     var ddMMyyyy: String {
         return formatted(fmt: "dd.MM.yyyy")
     }
 
-    /// Returns the local date string including day
+    /// Returns the local date string including day, like "Sunday 18.08.2019"
     var EEEEddMMyyyy: String {
         return formatted(fmt: "EEEE dd.MM.yyyy")
     }
 
-    /// Returns the local time string
+    /// Returns the local time string like "20:44:23"
     var HHmmss: String {
         return formatted(fmt: "HH:mm:ss")
     }
 
-    /// Returns the local time string with milliseconds
+    /// Returns the local time string with milliseconds, like "12:00:00.000"
     var HHmmssSSS: String {
         return formatted(fmt: "HH:mm:ss.SSS")
     }
 
     /// Requires seconds into 21st century
+
+
+    /// Initializes self to the date at the specified secondsInto21stCentury
+    ///
+    /// - Parameter secondsInto21stCentury: seconds since 00:00:00 UTC on 1 January 2001
     init(seconds secondsInto21stCentury: TimeInterval) {
         self.init(timeIntervalSinceReferenceDate: secondsInto21stCentury)
     }
@@ -53,7 +62,7 @@ extension Date {
     /// Returns a timestamp (timeIntervalSince1970)
     var timeStamp: TimeInterval { return timeIntervalSince1970 }
 
-    /// Returns a timestamp string (timeIntervalSince1970)
+    /// Returns a timestamp string (timeIntervalSince1970), like "1566153863_69661"
     var timeTag: String {
         return String(format: "%10.5f", timeStamp).replacingOccurrences(of: ".", with: "_")
     }
@@ -65,6 +74,10 @@ extension Date {
     // MARK: - modifiers
 
     /// Increments self by component and value
+    ///
+    /// - Parameters:
+    ///   - component: a Calendar.Component like .hour, .day, .month, ...
+    ///   - value: number of compoents (hous, days, months, ...)
     mutating func incrementBy(component: Calendar.Component, value: Int) {
         self = Calendar.current.date(byAdding: component, value: value, to: self)!
     }
@@ -91,7 +104,7 @@ extension Date {
         return month - 1
     }
 
-    /// Returns the start datee of the month
+    /// Returns the start date of the month
     var month1st: Date {
         return Calendar.current.dateInterval(of: .month, for: self)!.start
     }
@@ -106,37 +119,37 @@ extension Date {
         return Calendar.current.component(.year, from: self)
     }
 
-    /// Returns day in month (1..)
+    /// Returns day in month (1...)
     var day: Int {
         return Calendar.current.component(.day, from: self)
     }
 
-    /// Returns day in month (0..)
+    /// Returns day in month (0...)
     var day_0: Int {
         return day - 1
     }
 
-    /// Returns weekdayOrdinal (1..5, 1 for 1st 7 days of the month, 2 for next 7 days, etc)
+    /// Returns weekdayOrdinal (range 1...5, 1 for 1st 7 days of the month, 2 for next 7 days, etc)
     var weekdayOrdinal: Int {
         return Calendar.current.component(.weekdayOrdinal, from: self)
     }
 
-    /// Returns weekday (1..7, 1 is Sunday)
+    /// Returns weekday (1...7, 1 is Sunday)
     var weekday: Int {
         return Calendar.current.component(.weekday, from: self)
     }
 
-    /// Returns weekday (0..6, 0 is Monday)
+    /// Returns weekday (0...6, 0 is Monday)
     var weekday_0M: Int {
         return (weekday - 2 + 7) % 7
     }
 
-    /// Returns weekday (1..7, 1 is Sunday) of the first day of the month
+    /// Returns weekday (1...7, 1 is Sunday) of the first day of the month
     var month1stWeekday: Int {
         return month1st.weekday
     }
 
-    /// Returns weekday (0..6, 0 is Monday) of the first day of the month
+    /// Returns weekday (0...6, 0 is Monday) of the first day of the month
     var month1stWeekday_0M: Int {
         return month1st.weekday_0M
     }
@@ -151,7 +164,7 @@ extension Date {
 // MARK: - Extended Calendar properties
 
 extension Calendar {
-    /// Returns list of weekday names, starting with Monday
+    /// Returns array of weekday names, starting with Monday
     var weekdaySymbols_M0: [String] {
         var wkds = weekdaySymbols
         wkds.append(wkds.first!)

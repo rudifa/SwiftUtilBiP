@@ -9,7 +9,7 @@
 import Foundation
 
 extension Optional where Wrapped == Int {
-    /// Increment an optional Int
+    /// Increment an optional Int (also from nil to val)
     ///
     /// - Parameter val: to increment by
     public mutating func increment(by val: Int = 1) {

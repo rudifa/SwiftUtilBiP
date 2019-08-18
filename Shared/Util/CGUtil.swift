@@ -6,11 +6,7 @@
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.
 //
 
-#if os(iOS)
-    import UIKit
-#elseif os(OSX)
-    import Cocoa
-#endif
+import CoreGraphics
 
 // MARK: - Formatting of CG structures and scalars
 
@@ -37,36 +33,44 @@ extension CGRect {
 // MARK: - Arithmetic operations between CG structures and scalars
 
 extension CGSize {
+    /// Multiplies a CGSize by a CGFloat
     static func * (size: CGSize, scalar: CGFloat) -> CGSize {
         return CGSize(width: size.width * scalar, height: size.height * scalar)
     }
 
+    /// Multiplies a CGSize by a Double
     static func * (size: CGSize, scalar: Double) -> CGSize {
         return size * CGFloat(scalar)
     }
 
+    /// Divides a CGSize by a CGFloat
     static func / (size: CGSize, scalar: CGFloat) -> CGSize {
         return CGSize(width: size.width / scalar, height: size.height / scalar)
     }
 
+    /// Divides a CGSize by a Double
     static func / (size: CGSize, scalar: Double) -> CGSize {
         return size / CGFloat(scalar)
     }
 }
 
 extension CGPoint {
+    /// Multiplies a CGPoint by a CGFloat
     static func * (size: CGPoint, scalar: CGFloat) -> CGPoint {
         return CGPoint(x: size.x * scalar, y: size.y * scalar)
     }
 
+    /// Multiplies a CGPoint by a Double
     static func * (size: CGPoint, scalar: Double) -> CGPoint {
         return size * CGFloat(scalar)
     }
 
+    /// Divides a CGPoint by a CGFloat
     static func / (size: CGPoint, scalar: CGFloat) -> CGPoint {
         return CGPoint(x: size.x / scalar, y: size.y / scalar)
     }
 
+    /// Divides a CGPoint by a Double
     static func / (size: CGPoint, scalar: Double) -> CGPoint {
         return size / CGFloat(scalar)
     }

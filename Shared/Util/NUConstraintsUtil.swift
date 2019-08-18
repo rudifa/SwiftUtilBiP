@@ -14,13 +14,11 @@
     import Cocoa
 #endif
 
-/* Example
- self.addConstraintsWithFormat(format: "H:|-8-[v0(100)]-8-[v1(>=20)]-8-[v2(100)]-8-|", views: previousButton, pageControl, nextButton)
+/** Originally from https://blog.flashgen.com/2016/10/auto-layout-visual-format-language-helpers/
+
+Usage example
+    self.addConstraintsWithFormat(format: "H:|-8-[v0(100)]-8-[v1(>=20)]-8-[v2(100)]-8-|", views: previousButton, pageControl, nextButton)
  */
-
-//open class func constraints(withVisualFormat format: String, options opts: NSLayoutConstraint.FormatOptions = [], metrics: [String : NSNumber]?, views: [String : Any]) -> [NSLayoutConstraint]
-
-
 extension NUView {
     /// Add constraints on views using the Auto Layout Visual Format Language
     ///

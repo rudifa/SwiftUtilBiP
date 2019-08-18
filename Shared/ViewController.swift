@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  BiPlatform
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 28.07.19.
 //  Copyright © 2019 Rudolf Farkas. All rights reserved.
@@ -19,6 +19,7 @@
 
 /// This ViewController demonstrates the use of BiPlatform constrainers and gesture recognizers
 class ViewController: NUViewController {
+    /// Used by func handlePan(recognizer:)
     var lastPanLocation = CGPoint()
 
     lazy var label0: NULabel = {
@@ -125,6 +126,7 @@ class ViewController: NUViewController {
 // MARK: - gesture recognizers
 
 extension ViewController: NUGestureRecognizerDelegate {
+    /// Adds gesture recognizers
     private func addGestureRecognizers() {
         let tapClickGestureRecognizer = NUTapClickGestureRecognizer(target: self,
                                                                     action: #selector(handleTapClick(recognizer:)))
@@ -141,17 +143,29 @@ extension ViewController: NUGestureRecognizerDelegate {
     //    func gestureRecognizer(UIGestureRecognizer, shouldRecognizeSimultaneouslyWith: UIGestureRecognizer) -> Bool
     //    Asks the delegate if two gesture recognizers should be allowed to recognize gestures simultaneously.
 
+    /// Both gesture recognizers shall recognize the event
+    ///
+    /// - Parameters:
+    ///   - _: NUGestureRecognizer
+    ///   - _: other NUGestureRecognizer
+    /// - Returns: true
     func gestureRecognizer(_: NUGestureRecognizer, shouldRecognizeSimultaneouslyWith _: NUGestureRecognizer) -> Bool {
         printClassAndFunc()
         return true
     }
 
+    /// Handles tap or click gesture
+    ///
+    /// - Parameter recognizer: NUTapClickGestureRecognizer
     @objc func handleTapClick(recognizer: NUTapClickGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
         printClassAndFunc(info: "\(location.fmt)")
         label6.text = "\(location.fmt)"
     }
 
+    /// Handles pan gesture
+    ///
+    /// - Parameter recognizer: NUPanGestureRecognizer
     @objc func handlePan(recognizer: NUPanGestureRecognizer) {
         let location = recognizer.locationFromTop(in: view)
         printClassAndFunc(info: "\(location.fmt)  \(recognizer.state.rawValue)")

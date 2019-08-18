@@ -9,6 +9,7 @@
 import Foundation
 
 extension String {
+    /// Returns space-separated hex codes of unicode characters in self, like "66 6c 61 67 73 20 1f1e7 1f1f7 1f1f3 1f1ff"
     var hexDump: String {
         let arr = unicodeScalars.map {
             String(format: "%02x", $0.value)
@@ -34,9 +35,9 @@ extension String {
     // make a hexdumper that returns an array of dump lines, with 8 chars per line, hex and unicode
     // probably should break up into characters, stride & make a dump line for each n characters
 
-//    let aStr = String(format: "%@%x", "timeNow in hex: ", timeNow)
+    //    let aStr = String(format: "%@%x", "timeNow in hex: ", timeNow)
 
-//    for myInt in 1...3 {
-//    print(String(format: "%02d", myInt))
-//    }
+    //    for myInt in 1...3 {
+    //        print(String(format: "%02d", myInt))
+    //    }
 }

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  BiPlatform
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 28.07.19.
 //  Copyright © 2019 Rudolf Farkas. All rights reserved.
