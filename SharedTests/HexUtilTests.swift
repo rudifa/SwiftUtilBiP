@@ -1,6 +1,6 @@
 //
 //  HexUtilTests.swift v.0.1.0
-//  Swift4UtilTests
+//  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 15.08.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.

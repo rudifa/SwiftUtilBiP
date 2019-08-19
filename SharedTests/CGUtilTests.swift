@@ -1,6 +1,6 @@
 //
 //  CGUtilTests.swift v.0.1.2
-//  SwiftUtilBip SharedTests
+//  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 31.07.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.

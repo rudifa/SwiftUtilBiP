@@ -1,6 +1,6 @@
 //
 //  DebugUtilTests.swift  v.0.2.0
-//  SwiftUtilBip SharedTests
+//  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 23.07.19.
 //  Copyright © 2019 Rudolf Farkas. All rights reserved.

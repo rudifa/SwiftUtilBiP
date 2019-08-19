@@ -24,6 +24,12 @@
 		9D69021A22FB677F00BE0FDF /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69020C22FB62F200BE0FDF /* StringUtil.swift */; };
 		9D69021B22FB677F00BE0FDF /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69020C22FB62F200BE0FDF /* StringUtil.swift */; };
 		9D8113A822EE304000E29C0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF5F1D122EDA03D00A02DD4 /* ViewController.swift */; };
+		9D8FA3FD230A890C000CD695 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */; };
+		9D8FA400230A8935000CD695 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */; };
+		9D8FA401230A8937000CD695 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */; };
+		9D8FA402230A8937000CD695 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */; };
+		9D8FA403230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */; };
+		9D8FA404230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */; };
 		9D98D1E522FB386100A4A834 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98D1E422FB386100A4A834 /* CodableUtil.swift */; };
 		9D98D1E622FB386100A4A834 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98D1E422FB386100A4A834 /* CodableUtil.swift */; };
 		9D98D1E722FB386100A4A834 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98D1E422FB386100A4A834 /* CodableUtil.swift */; };
@@ -118,6 +124,8 @@
 		9D4EFD5A22FB336600631399 /* AppDefaultsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefaultsTests.swift; sourceTree = "<group>"; };
 		9D69020C22FB62F200BE0FDF /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 		9D69020E22FB630C00BE0FDF /* StringUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtilTests.swift; sourceTree = "<group>"; };
+		9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtilTests.swift; sourceTree = "<group>"; };
 		9D98D1E422FB386100A4A834 /* CodableUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableUtil.swift; sourceTree = "<group>"; };
 		9D98D1E922FB387800A4A834 /* CodableUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableUtilTests.swift; sourceTree = "<group>"; };
 		9DE027AE22FB1C4300D8A524 /* SwiftUtilBiPIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUtilBiPIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -236,6 +244,7 @@
 				9DEDA83122FB3B4600DB079E /* RegexUtilTests.swift */,
 				9D69020E22FB630C00BE0FDF /* StringUtilTests.swift */,
 				9DEDA84422FB3DD900DB079E /* UIUtilTest.swift */,
+				9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */,
 			);
 			path = SharedTests;
 			sourceTree = "<group>";
@@ -315,6 +324,7 @@
 				9DEDA82A22FB3B2A00DB079E /* RegexUtil.swift */,
 				9D69020C22FB62F200BE0FDF /* StringUtil.swift */,
 				9DEDA84022FB3DAC00DB079E /* UIUtil.swift */,
+				9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -540,6 +550,7 @@
 			files = (
 				9D4EFD5D22FB338D00631399 /* AppDefaults.swift in Sources */,
 				9DEDA84922FB3DED00DB079E /* UIUtilTest.swift in Sources */,
+				9D8FA403230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */,
 				9DE027B122FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift in Sources */,
 				9DEDA84C22FB3DF400DB079E /* UIUtil.swift in Sources */,
 				9DE027C722FB1E0900D8A524 /* CGUtilTests.swift in Sources */,
@@ -560,6 +571,7 @@
 				9DEDA82322FB3A4700DB079E /* HexUtil.swift in Sources */,
 				9DE027CD22FB232C00D8A524 /* DebugUtilTests.swift in Sources */,
 				9DE027CF22FB238700D8A524 /* DebugUtil.swift in Sources */,
+				9D8FA401230A8937000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9DEDA85C22FB45B000DB079E /* DateUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,6 +582,7 @@
 			files = (
 				9DE027BF22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift in Sources */,
 				9DEDA84A22FB3DEE00DB079E /* UIUtilTest.swift in Sources */,
+				9D8FA404230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */,
 				9DE027D022FB239700D8A524 /* DebugUtilTests.swift in Sources */,
 				9DEDA84E22FB3DF500DB079E /* UIUtil.swift in Sources */,
 				9DE027CA22FB1E7300D8A524 /* CGUtilTests.swift in Sources */,
@@ -590,6 +603,7 @@
 				9DEDA82522FB3A4700DB079E /* HexUtil.swift in Sources */,
 				9DE027CE22FB236800D8A524 /* DebugUtil.swift in Sources */,
 				9D4EFD5F22FB341A00631399 /* AppDefaults.swift in Sources */,
+				9D8FA402230A8937000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9DEDA85F22FB474F00DB079E /* DateUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -605,6 +619,7 @@
 				9DF5F1A322ED8EDB00A02DD4 /* AppDelegate.swift in Sources */,
 				9DEDA81A22FB3A2200DB079E /* HexUtil.swift in Sources */,
 				9DEDA81B22FB3A2200DB079E /* DictUtil.swift in Sources */,
+				9D8FA3FD230A890C000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9D98D1E522FB386100A4A834 /* CodableUtil.swift in Sources */,
 				9DF5F1D222EDA03D00A02DD4 /* ViewController.swift in Sources */,
 				9DF5F1CC22ED927F00A02DD4 /* BiPlatformExtensions.swift in Sources */,
@@ -626,6 +641,7 @@
 				9DEDA83922FB3CCE00DB079E /* RegexUtil.swift in Sources */,
 				9DEDA82122FB3A4600DB079E /* HexUtil.swift in Sources */,
 				9D3477AC22F20DF20029BE85 /* CGUtil.swift in Sources */,
+				9D8FA400230A8935000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9DF5F1C922ED904000A02DD4 /* AppDelegate.swift in Sources */,
 				9DEDA83622FB3CC900DB079E /* OptionalUtil.swift in Sources */,
 				9D98D1E622FB386100A4A834 /* CodableUtil.swift in Sources */,

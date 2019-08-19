@@ -1,6 +1,6 @@
 //
 //  CodableUtil.swift v.0.1.2
-//  Swift4Util
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 23.06.19.
 //  Copyright © 2019 Rudolf Farkas. All rights reserved.

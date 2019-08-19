@@ -1,6 +1,6 @@
 //
 //  UIUtil.swift v.0.1.3
-//  Swift4Util
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 04.09.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.

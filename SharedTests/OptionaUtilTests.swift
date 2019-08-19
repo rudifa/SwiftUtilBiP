@@ -1,6 +1,6 @@
 //
 //  OptionaUtilTests.swift
-//  Swift4UtilTests
+//  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 15.10.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.

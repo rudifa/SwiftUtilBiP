@@ -1,6 +1,6 @@
 //
 //  RegexUtil.swift  v.0.4.0
-//  Swift4Util
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 28.04.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.

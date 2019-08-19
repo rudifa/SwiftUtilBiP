@@ -1,6 +1,6 @@
 //
 //  StringUtil.swift v.0.2.0
-//  Swift4Util
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 22.07.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.

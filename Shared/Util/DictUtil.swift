@@ -1,6 +1,6 @@
 //
 //  DictUtil.swift v.0.1.0
-//  Swift4Util
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 30.06.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.

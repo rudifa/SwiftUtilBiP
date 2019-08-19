@@ -1,6 +1,6 @@
 //
-//  DateUtilTests.swift
-//  Swift4UtilTests v.0.1.6
+//  DateUtilTests.swift v.0.1.6
+//  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 18.06.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.
