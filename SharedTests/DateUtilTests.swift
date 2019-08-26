@@ -1,5 +1,5 @@
 //
-//  DateUtilTests.swift v.0.1.6
+//  DateUtilTests.swift v.0.1.8
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -7,7 +7,6 @@
 //
 
 import XCTest
-
 class DateUtilTests: XCTestCase {
     func test_TimeZone() {
         let tzCurrent = TimeZone.current
@@ -100,6 +99,15 @@ class DateUtilTests: XCTestCase {
         // test first of the month for date d1
         XCTAssertEqual([d1.month1st.EEEEddMMyyyy, String(d1.month1stWeekday), String(d1.month1stWeekday_0M)], ["Monday 01.07.2019", "2", "0"])
         XCTAssertEqual([d1.month1st.EEEEddMMyyyy, String(d1.month1st.weekday), String(d1.month1st.weekday_0M)], ["Monday 01.07.2019", "2", "0"])
+
+        // test last of the month for date d1
+        XCTAssertEqual([d1.monthLast.EEEEddMMyyyy, d1.monthLast.HHmmssSSS, String(d1.month1stWeekday), String(d1.month1stWeekday_0M)], ["Wednesday 31.07.2019", "00:00:00.000", "2", "0"])
+        XCTAssertEqual([d1.monthLast.EEEEddMMyyyy, d1.monthLast.HHmmssSSS, String(d1.month1st.weekday), String(d1.month1st.weekday_0M)], ["Wednesday 31.07.2019", "00:00:00.000", "2", "0"])
+
+        // test first of the next month for date d1
+        var d1_month1st = d1.month1st
+        d1_month1st.nextMonth()
+        XCTAssertEqual([d1_month1st.month1st.EEEEddMMyyyy, d1.monthLast.HHmmssSSS, String(d1_month1st.month1stWeekday), String(d1_month1st.month1stWeekday_0M)], ["Thursday 01.08.2019", "00:00:00.000", "5", "3"])
 
         // decrement d1 by 1 day and test properties
         d1.incrementBy(component: .day, value: -1)

@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift v.0.1.6
+//  DateUtil.swift v.0.1.8
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -17,7 +17,7 @@ extension Date {
     /// - Returns: date+time string
     private func formatted(fmt: String) -> String {
         let formatter = DateFormatter()
-        formatter.timeZone = TimeZone.current
+        formatter.timeZone = TimeZone.current // the default is UTC
         formatter.dateFormat = fmt
         return formatter.string(from: self)
     }
@@ -79,6 +79,11 @@ extension Date {
         self = Calendar.current.date(byAdding: component, value: value, to: self)!
     }
 
+    /// Date incremented by component and value
+    func incrementedBy(component: Calendar.Component, value: Int) -> Date {
+        return Calendar.current.date(byAdding: component, value: value, to: self)!
+    }
+
     /// Increments self by 1 month
     mutating func nextMonth() {
         incrementBy(component: .month, value: 1)
@@ -104,6 +109,12 @@ extension Date {
     /// Returns the start date of the month
     var month1st: Date {
         return Calendar.current.dateInterval(of: .month, for: self)!.start
+    }
+
+    /// Returns the last date of the month
+    var monthLast: Date {
+        let then = Calendar.current.dateInterval(of: .month, for: self)!.end // in fact, start of next month
+        return then.incrementedBy(component: .day, value: -1)
     }
 
     /// Returns an array of days. ex. [1, 2, ..., 31]
