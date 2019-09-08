@@ -27,7 +27,7 @@ class ViewController: NUViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .white
         label.backgroundColor = NUColor.gray
-        label.text = "Demo Pan and ClickTouch gesture recognizers"
+        label.text = "Pan and ClickTouch gesture recognizers"
         label.textAlignment = .center
         label.sizeToFit()
         return label
