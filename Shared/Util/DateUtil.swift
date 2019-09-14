@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift v.0.1.8
+//  DateUtil.swift v.0.2.0
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Extended Date formatting
+// MARK: - Extended Date Formats
 
 extension Date {
     /// Formats the self per format string, using TimeZone.current
@@ -56,6 +56,11 @@ extension Date {
         self.init(timeIntervalSinceReferenceDate: secondsInto21stCentury)
     }
 
+    /// Returns the detailed local date-time string, like "Wednesday 24.07.2019 10:00:00 +02:00"
+    var EEEE_ddMMyyyy_HHmmss_ZZZZZ: String {
+        return formatted(fmt: "EEEE dd.MM.yyyy HH:mm:ss ZZZZZ")
+    }
+
     /// Returns a timestamp (timeIntervalSince1970)
     var timeStamp: TimeInterval { return timeIntervalSince1970 }
 
@@ -65,7 +70,7 @@ extension Date {
     }
 }
 
-// MARK: - Extended Date modifiers and properties using Calendar and DateComponents
+// MARK: - Extended Date Modifiers and Properties using Calendar and DateComponents
 
 extension Date {
     // MARK: - modifiers
@@ -75,23 +80,72 @@ extension Date {
     /// - Parameters:
     ///   - component: a Calendar.Component like .hour, .day, .month, ...
     ///   - value: number of compoents (hous, days, months, ...)
-    mutating func incrementBy(component: Calendar.Component, value: Int) {
+    mutating func increment(by component: Calendar.Component, times value: Int) {
         self = Calendar.current.date(byAdding: component, value: value, to: self)!
     }
 
     /// Date incremented by component and value
-    func incrementedBy(component: Calendar.Component, value: Int) -> Date {
+    func incremented(by component: Calendar.Component, times value: Int) -> Date {
         return Calendar.current.date(byAdding: component, value: value, to: self)!
     }
 
     /// Increments self by 1 month
     mutating func nextMonth() {
-        incrementBy(component: .month, value: 1)
+        increment(by: .month, times: 1)
     }
 
     /// Decrements self by 1 month
     mutating func prevMonth() {
-        incrementBy(component: .month, value: -1)
+        increment(by: .month, times: -1)
+    }
+
+    /// Returns a date with the day of month modified
+    ///
+    /// Preserves the .hour, sets .minute and smaller components to 0
+    ///
+    /// - Parameter day: day of month (1...) to set to
+    /// - Returns: modified copy of self or nil if invalid date would be generated
+    func setting(day: Int) -> Date? {
+        var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour], from: self)
+        dateComponents.day = day
+        return Calendar.current.date(from: dateComponents)
+    }
+
+    /// Modifies self, setting the day of month
+    ///
+    /// Preserves the .hour, sets .minute and smaller components to 0
+    ///
+    /// - Parameter day: day of month (1...) to set to
+    mutating func set(day: Int) {
+        if let date = self.setting(day: day) { self = date }
+        else { print("*** set day failed") }
+    }
+
+    /// Returns a date with the hour modified
+    ///
+    /// Sets .minute and smaller components to 0
+    ///
+    /// - Parameter hour: hour to set to (0...23)
+    /// - Returns: modified copy of self or nil if invalid date would be generated
+    func setting(hour: Int) -> Date? {
+        var dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour], from: self)
+        dateComponents.hour = hour
+        return Calendar.current.date(from: dateComponents)
+    }
+
+    /// Modifies self, setting the hour
+    ///
+    /// Sets .minute and smaller components to 0
+    ///
+    /// - Parameter hour: hour to set to (0...23)
+    mutating func set(hour: Int) {
+        if let date = self.setting(hour: hour) { self = date }
+        else { print("*** set hour failed") }
+    }
+
+    var wholeHour: Date? {
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour], from: self)
+        return Calendar.current.date(from: dateComponents)
     }
 
     // MARK: - properties
@@ -114,7 +168,7 @@ extension Date {
     /// Returns the last date of the month
     var monthLast: Date {
         let then = Calendar.current.dateInterval(of: .month, for: self)!.end // in fact, start of next month
-        return then.incrementedBy(component: .day, value: -1)
+        return then.incremented(by: .day, times: -1)
     }
 
     /// Returns an array of days. ex. [1, 2, ..., 31]
@@ -179,3 +233,4 @@ extension Calendar {
         return Array(wkds.dropFirst())
     }
 }
+
