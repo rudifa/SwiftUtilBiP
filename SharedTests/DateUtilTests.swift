@@ -162,7 +162,20 @@ class DateUtilTests: XCTestCase {
     }
 
     func test_MoreExtendedDateModsAndProps() {
-        let timezone = TimeZone(identifier: "Europe/Zurich")
+        let timezone = TimeZone(identifier: "Europe/Zurich")!
+
+//        Getting Time Zone Information
+//        var identifier: String
+//        The geopolitical region identifier that identifies the time zone.
+//        func abbreviation(for: Date) -> String?
+//        Returns the abbreviation for the time zone at a given date.
+//        func secondsFromGMT(for: Date) -> Int
+//        The current difference in seconds between the time zone and Greenwich Mean Time.
+
+        XCTAssertEqual(timezone, TimeZone.current)
+        XCTAssertEqual(timezone.identifier, TimeZone.current.identifier)
+        XCTAssertEqual(timezone.abbreviation(), TimeZone.current.abbreviation())
+        XCTAssertEqual(timezone.secondsFromGMT(), TimeZone.current.secondsFromGMT())
 
        // create date1 from components, decompose and compare
         let d1Comp = DateComponents(timeZone: timezone, year: 2019, month: 7, day: 26, hour: 10)
