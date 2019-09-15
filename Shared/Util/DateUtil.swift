@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift v.0.2.0
+//  DateUtil.swift v.0.2.1
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -54,6 +54,11 @@ extension Date {
     /// - Parameter secondsInto21stCentury: seconds since 00:00:00 UTC on 1 January 2001
     init(seconds secondsInto21stCentury: TimeInterval) {
         self.init(timeIntervalSinceReferenceDate: secondsInto21stCentury)
+    }
+
+    /// Returns the detailed local date-time string, like "Wednesday 24.07.2019 10:00:00"
+    var EEEE_ddMMyyyy_HHmmss: String {
+        return formatted(fmt: "EEEE dd.MM.yyyy HH:mm:ss")
     }
 
     /// Returns the detailed local date-time string, like "Wednesday 24.07.2019 10:00:00 +02:00"

@@ -1,5 +1,5 @@
 //
-//  DateUtilTests.swift v.0.2.0
+//  DateUtilTests.swift v.0.2.1
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -120,11 +120,11 @@ class DateUtilTests: XCTestCase {
         do {
             // decrement d1 by 1 day and test properties
             let d2 = d1.incremented(by: .day, times: -1)
-            XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss_ZZZZZ, "Wednesday 24.07.2019 10:00:00 +02:00")
+            XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss, "Wednesday 24.07.2019 10:00:00")
             d1.increment(by: .day, times: -1)
-            XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss_ZZZZZ, "Wednesday 24.07.2019 10:00:00 +02:00")
+            XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss, "Wednesday 24.07.2019 10:00:00")
             d1.increment(by: .day, times: +1)
-            XCTAssertEqual(d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, "Thursday 25.07.2019 10:00:00 +02:00")
+            XCTAssertEqual(d1.EEEE_ddMMyyyy_HHmmss, "Thursday 25.07.2019 10:00:00")
         }
 
         // decrement d1 by 22 days and test properties
@@ -162,7 +162,7 @@ class DateUtilTests: XCTestCase {
     }
 
     func test_MoreExtendedDateModsAndProps() {
-        let timezone = TimeZone(identifier: "Europe/Zurich")!
+//        let timezone = TimeZone.current!
 
 //        Getting Time Zone Information
 //        var identifier: String
@@ -172,51 +172,51 @@ class DateUtilTests: XCTestCase {
 //        func secondsFromGMT(for: Date) -> Int
 //        The current difference in seconds between the time zone and Greenwich Mean Time.
 
-        XCTAssertEqual(timezone, TimeZone.current)
-        XCTAssertEqual(timezone.identifier, TimeZone.current.identifier)
-        XCTAssertEqual(timezone.abbreviation(), TimeZone.current.abbreviation())
-        XCTAssertEqual(timezone.secondsFromGMT(), TimeZone.current.secondsFromGMT())
+//        XCTAssertEqual(timezone, TimeZone.current)
+//        XCTAssertEqual(timezone.identifier, TimeZone.current.identifier)
+//        XCTAssertEqual(timezone.abbreviation(), TimeZone.current.abbreviation())
+//        XCTAssertEqual(timezone.secondsFromGMT(), TimeZone.current.secondsFromGMT())
 
        // create date1 from components, decompose and compare
-        let d1Comp = DateComponents(timeZone: timezone, year: 2019, month: 7, day: 26, hour: 10)
+        let d1Comp = DateComponents(timeZone: TimeZone.current, year: 2019, month: 7, day: 26, hour: 10)
         var d1 = Calendar.current.date(from: d1Comp)!
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019 10:00:00 +02:00", "26", "25"])
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019 10:00:00", "26", "25"])
 
         d1.set(day: 26)
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019 10:00:00 +02:00", "26", "25"])
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019 10:00:00", "26", "25"])
 
         d1.set(day: 25)
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, String(d1.day), String(d1.day_0)], ["Thursday 25.07.2019 10:00:00 +02:00", "25", "24"])
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Thursday 25.07.2019 10:00:00", "25", "24"])
 
         d1.set(day: 18)
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, String(d1.day), String(d1.day_0)], ["Thursday 18.07.2019 10:00:00 +02:00", "18", "17"])
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Thursday 18.07.2019 10:00:00", "18", "17"])
 
         d1.set(day: 1)
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, String(d1.day), String(d1.day_0)], ["Monday 01.07.2019 10:00:00 +02:00", "1", "0"])
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Monday 01.07.2019 10:00:00", "1", "0"])
 
         d1.set(hour: 2)
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, String(d1.day), String(d1.day_0)], ["Monday 01.07.2019 02:00:00 +02:00", "1", "0"])
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Monday 01.07.2019 02:00:00", "1", "0"])
 
         d1.set(hour: 8)
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, String(d1.day), String(d1.day_0)], ["Monday 01.07.2019 08:00:00 +02:00", "1", "0"])
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Monday 01.07.2019 08:00:00", "1", "0"])
 
         d1.set(hour: 16)
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss_ZZZZZ, String(d1.day), String(d1.day_0)], ["Monday 01.07.2019 16:00:00 +02:00", "1", "0"])
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Monday 01.07.2019 16:00:00", "1", "0"])
 
-        let d2Comp = DateComponents(timeZone: timezone, year: 2019, month: 9, day: 14, hour: 16, minute: 49, second: 31)
+        let d2Comp = DateComponents(timeZone: TimeZone.current, year: 2019, month: 9, day: 14, hour: 16, minute: 49, second: 31)
         var d2 = Calendar.current.date(from: d2Comp)!
-        XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss_ZZZZZ, "Saturday 14.09.2019 16:49:31 +02:00")
+        XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss, "Saturday 14.09.2019 16:49:31")
 
         let d3 = d2.setting(hour: 9)
-        XCTAssertEqual(d3!.EEEE_ddMMyyyy_HHmmss_ZZZZZ, "Saturday 14.09.2019 09:00:00 +02:00")
+        XCTAssertEqual(d3!.EEEE_ddMMyyyy_HHmmss, "Saturday 14.09.2019 09:00:00")
 
         var d4 = d2
         d4.set(hour: 13) // sets .minute and .second to 0
-        XCTAssertEqual(d4.EEEE_ddMMyyyy_HHmmss_ZZZZZ, "Saturday 14.09.2019 13:00:00 +02:00")
+        XCTAssertEqual(d4.EEEE_ddMMyyyy_HHmmss, "Saturday 14.09.2019 13:00:00")
 
         d4.set(day: 15) // preserves the hour
-        XCTAssertEqual(d4.EEEE_ddMMyyyy_HHmmss_ZZZZZ, "Sunday 15.09.2019 13:00:00 +02:00")
+        XCTAssertEqual(d4.EEEE_ddMMyyyy_HHmmss, "Sunday 15.09.2019 13:00:00")
 
         d2.set(day: 22) // preserves the hour, but sets .minute and .second to 0
-        XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss_ZZZZZ, "Sunday 22.09.2019 16:00:00 +02:00") }
+        XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss, "Sunday 22.09.2019 16:00:00") }
 }
