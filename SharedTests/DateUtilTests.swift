@@ -162,22 +162,42 @@ class DateUtilTests: XCTestCase {
     }
 
     func test_MoreExtendedDateModsAndProps() {
-//        let timezone = TimeZone.current!
 
-//        Getting Time Zone Information
-//        var identifier: String
-//        The geopolitical region identifier that identifies the time zone.
-//        func abbreviation(for: Date) -> String?
-//        Returns the abbreviation for the time zone at a given date.
-//        func secondsFromGMT(for: Date) -> Int
-//        The current difference in seconds between the time zone and Greenwich Mean Time.
+        /**
+         print("--- DateFormatter().timeZone: \(String(describing: DateFormatter().timeZone))")
+         // --- DateFormatter().timeZone: Optional(Europe/Zurich (current))
+         print("--- DateComponents().timeZone: \(String(describing: DateComponents().timeZone))")
+         // --- DateComponents().timeZone: nil
 
-//        XCTAssertEqual(timezone, TimeZone.current)
-//        XCTAssertEqual(timezone.identifier, TimeZone.current.identifier)
-//        XCTAssertEqual(timezone.abbreviation(), TimeZone.current.abbreviation())
-//        XCTAssertEqual(timezone.secondsFromGMT(), TimeZone.current.secondsFromGMT())
+         Getting Time Zone Information
+         var identifier: String - The geopolitical region identifier that identifies the time zone.
+         func abbreviation(for: Date) -> String? - Returns the abbreviation for the time zone at a given date.
+         func secondsFromGMT(for: Date) -> Int - The current difference in seconds between the time zone and Greenwich Mean Time.
 
-       // create date1 from components, decompose and compare
+         XCTAssertEqual(timezone, TimeZone.current) // ("Europe/Zurich (fixed)") is not equal to ("GMT (current)")
+         XCTAssertEqual(timezone.identifier, TimeZone.current.identifier) // ("Europe/Zurich") is not equal to ("GMT")
+         XCTAssertEqual(timezone.abbreviation(), TimeZone.current.abbreviation()) // ("Optional("GMT+2")") is not equal to ("Optional("GMT")")
+         XCTAssertEqual(timezone.secondsFromGMT(), TimeZone.current.secondsFromGMT()) // ("7200") is not equal to ("0")
+
+         Notes:
+         struct Date
+         A Date value encapsulate a single point in time, independent of any particular calendrical system or time zone. Date values represent a time interval relative to an absolute reference date.
+
+         class DateFormatter : Formatter
+         Instances of DateFormatter create string representations of NSDate objects, and convert textual representations of dates and times into NSDate objects.
+
+         struct DateComponents
+         DateComponents encapsulates the components of a date in an extendable, structured manner.
+
+         It is used to specify a date by providing the temporal components that make up a date and time in a particular calendar: hour, minutes, seconds, day, month, year, and so on. It can also be used to specify a duration of time, for example, 5 hours and 16 minutes. A DateComponents is not required to define all the component fields.
+
+         DateFormatter and DateComponents both have a .timeZone: TimeZone property.
+
+         As long as we use the same timezone for both DateFormatter and DateComponents, we get consistent results.
+         This holds also if we use the TimeZone.current.
+         */
+
+        // create date1 from components, decompose and compare
         let d1Comp = DateComponents(timeZone: TimeZone.current, year: 2019, month: 7, day: 26, hour: 10)
         var d1 = Calendar.current.date(from: d1Comp)!
         XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019 10:00:00", "26", "25"])
