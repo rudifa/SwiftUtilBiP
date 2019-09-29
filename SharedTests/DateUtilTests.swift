@@ -1,5 +1,5 @@
 //
-//  DateUtilTests.swift v.0.2.1
+//  DateUtilTests.swift v.0.2.3
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -162,7 +162,6 @@ class DateUtilTests: XCTestCase {
     }
 
     func test_MoreExtendedDateModsAndProps() {
-
         /**
          print("--- DateFormatter().timeZone: \(String(describing: DateFormatter().timeZone))")
          // --- DateFormatter().timeZone: Optional(Europe/Zurich (current))
@@ -198,9 +197,11 @@ class DateUtilTests: XCTestCase {
          */
 
         // create date1 from components, decompose and compare
-        let d1Comp = DateComponents(timeZone: TimeZone.current, year: 2019, month: 7, day: 26, hour: 10)
-        var d1 = Calendar.current.date(from: d1Comp)!
-        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019 10:00:00", "26", "25"])
+        let d0Comp = DateComponents(timeZone: TimeZone.current, year: 2019, month: 7, day: 26, hour: 10, minute: 20, second: 30)
+        let d0 = Calendar.current.date(from: d0Comp)!
+
+        var d1 = d0
+        XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019 10:20:30", "26", "25"])
 
         d1.set(day: 26)
         XCTAssertEqual([d1.EEEE_ddMMyyyy_HHmmss, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019 10:00:00", "26", "25"])
@@ -238,5 +239,26 @@ class DateUtilTests: XCTestCase {
         XCTAssertEqual(d4.EEEE_ddMMyyyy_HHmmss, "Sunday 15.09.2019 13:00:00")
 
         d2.set(day: 22) // preserves the hour, but sets .minute and .second to 0
-        XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss, "Sunday 22.09.2019 16:00:00") }
+        XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss, "Sunday 22.09.2019 16:00:00")
+
+        XCTAssertEqual(d0.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 10:20:30")
+
+        XCTAssertEqual(d0.year, 2019)
+        XCTAssertEqual(d0.month, 7)
+        XCTAssertEqual(d0.day, 26)
+        XCTAssertEqual(d0.hour, 10)
+        XCTAssertEqual(d0.zeroingHms()!.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 00:00:00")
+
+        XCTAssertEqual(d0.dateInterval(of: .year)!.start.ddMMyyyy_HHmmss, "01.01.2019 00:00:00")
+        XCTAssertEqual(d0.dateInterval(of: .year)!.end.ddMMyyyy_HHmmss, "01.01.2020 00:00:00")
+
+        XCTAssertEqual(d0.dateInterval(of: .month)!.start.ddMMyyyy_HHmmss, "01.07.2019 00:00:00")
+        XCTAssertEqual(d0.dateInterval(of: .month)!.end.ddMMyyyy_HHmmss, "01.08.2019 00:00:00")
+
+        XCTAssertEqual(d0.dateInterval(of: .day)!.start.ddMMyyyy_HHmmss, "26.07.2019 00:00:00")
+        XCTAssertEqual(d0.dateInterval(of: .day)!.end.ddMMyyyy_HHmmss, "27.07.2019 00:00:00")
+
+        XCTAssertEqual(d0.dateInterval(of: .hour)!.start.ddMMyyyy_HHmmss, "26.07.2019 10:00:00")
+        XCTAssertEqual(d0.dateInterval(of: .hour)!.end.ddMMyyyy_HHmmss, "26.07.2019 11:00:00")
+    }
 }

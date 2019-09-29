@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift v.0.2.2
+//  DateUtil.swift v.0.2.3
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -153,6 +153,26 @@ extension Date {
         else { print("*** set hour failed") }
     }
 
+    /// Returns a date setting the hour, minute, second all to 0
+    ///
+    /// - Returns: modified copy of self or nil if invalid date would be generated
+    func zeroingHms() -> Date? {
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: self)
+        return Calendar.current.date(from: dateComponents)
+    }
+
+    /// Modifies self, setting the hour, minute, second all to 0
+    ///
+    mutating func zeroHms() {
+        if let date = self.zeroingHms() { self = date }
+        else { print("*** zeroHms failed") }
+    }
+
+
+    /// Returns a date setting the minute, second all to 0
+    ///
+    /// - Returns: modified copy of self or nil if invalid date would be generated
+
     var wholeHour: Date? {
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour], from: self)
         return Calendar.current.date(from: dateComponents)
@@ -231,6 +251,17 @@ extension Date {
         let dateNow = Date()
         return day == dateNow.day && month == dateNow.month && year == dateNow.year
     }
+
+    /// Returns hour (0..23)
+    var hour: Int {
+        return Calendar.current.component(.hour, from: self)
+    }
+
+    /// Returns the date interval of `component` duration which contains self
+    /// - Parameter component: calendar component
+    func dateInterval(of component: Calendar.Component) -> DateInterval? {
+        return Calendar.current.dateInterval(of: component, for: self)
+    }
 }
 
 // MARK: - Extended Calendar properties
@@ -243,4 +274,3 @@ extension Calendar {
         return Array(wkds.dropFirst())
     }
 }
-
