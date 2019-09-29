@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4DF418236007299C9688AF4B /* Pods_SwiftUtilBiPIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5B56A337537FA3B68300BB0 /* Pods_SwiftUtilBiPIOSTests.framework */; };
+		9D12203A2340B40C00052F00 /* ClassUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1220392340B40C00052F00 /* ClassUtil.swift */; };
+		9D12203C2340B44200052F00 /* ClassUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12203B2340B44200052F00 /* ClassUtilTests.swift */; };
+		9D12203D2340B4EF00052F00 /* ClassUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1220392340B40C00052F00 /* ClassUtil.swift */; };
+		9D12203E2340B4EF00052F00 /* ClassUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1220392340B40C00052F00 /* ClassUtil.swift */; };
+		9D12203F2340B4F000052F00 /* ClassUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1220392340B40C00052F00 /* ClassUtil.swift */; };
+		9D1220422340B50B00052F00 /* ClassUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12203B2340B44200052F00 /* ClassUtilTests.swift */; };
 		9D3477AB22F20DCD0029BE85 /* CGUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3477AA22F20DCD0029BE85 /* CGUtil.swift */; };
 		9D3477AC22F20DF20029BE85 /* CGUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3477AA22F20DCD0029BE85 /* CGUtil.swift */; };
 		9D37783922F9639C00D040FC /* NUConstraintsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */; };
@@ -119,6 +125,8 @@
 		6DADFA4681199527AA3A9172 /* Pods-SwiftUtilBiPIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtilBiPIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtilBiPIOS/Pods-SwiftUtilBiPIOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8AEB8B4B6F67A947331AD969 /* Pods_SwiftUtilBiPIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUtilBiPIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9984A3A322F65235AC0930C1 /* Pods-SwiftUtilBiPIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtilBiPIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtilBiPIOSTests/Pods-SwiftUtilBiPIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D1220392340B40C00052F00 /* ClassUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassUtil.swift; sourceTree = "<group>"; };
+		9D12203B2340B44200052F00 /* ClassUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassUtilTests.swift; sourceTree = "<group>"; };
 		9D3477AA22F20DCD0029BE85 /* CGUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGUtil.swift; sourceTree = "<group>"; };
 		9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NUConstraintsUtil.swift; sourceTree = "<group>"; };
 		9D4EFD5822FB335500631399 /* AppDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
@@ -237,6 +245,7 @@
 			children = (
 				9D4EFD5A22FB336600631399 /* AppDefaultsTests.swift */,
 				9DE027C622FB1E0900D8A524 /* CGUtilTests.swift */,
+				9D12203B2340B44200052F00 /* ClassUtilTests.swift */,
 				9D98D1E922FB387800A4A834 /* CodableUtilTests.swift */,
 				9DEDA85322FB44E300DB079E /* DateUtilTests.swift */,
 				9DE027CC22FB232C00D8A524 /* DebugUtilTests.swift */,
@@ -316,6 +325,7 @@
 				9D4EFD5822FB335500631399 /* AppDefaults.swift */,
 				9DF5F1CB22ED927F00A02DD4 /* BiPlatformExtensions.swift */,
 				9D3477AA22F20DCD0029BE85 /* CGUtil.swift */,
+				9D1220392340B40C00052F00 /* ClassUtil.swift */,
 				9D98D1E422FB386100A4A834 /* CodableUtil.swift */,
 				9DEDA85122FB44D000DB079E /* DateUtil.swift */,
 				9DF5F1CD22ED92A900A02DD4 /* DebugUtil.swift */,
@@ -561,9 +571,11 @@
 				9D98D1EC22FB387800A4A834 /* CodableUtilTests.swift in Sources */,
 				9DEDA82222FB3A4700DB079E /* DictUtil.swift in Sources */,
 				9DEDA82722FB3A4D00DB079E /* HexUtilTests.swift in Sources */,
+				9D12203C2340B44200052F00 /* ClassUtilTests.swift in Sources */,
 				9D98D1E722FB386100A4A834 /* CodableUtil.swift in Sources */,
 				9DEDA85922FB453F00DB079E /* DateUtilTests.swift in Sources */,
 				9DEDA82622FB3A4D00DB079E /* DictUtilTests.swift in Sources */,
+				9D12203E2340B4EF00052F00 /* ClassUtil.swift in Sources */,
 				9DEDA83A22FB3CCF00DB079E /* RegexUtil.swift in Sources */,
 				9DEDA83722FB3CCA00DB079E /* OptionalUtil.swift in Sources */,
 				9D4EFD5C22FB337E00631399 /* AppDefaultsTests.swift in Sources */,
@@ -583,6 +595,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D1220422340B50B00052F00 /* ClassUtilTests.swift in Sources */,
 				9DE027BF22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift in Sources */,
 				9DEDA84A22FB3DEE00DB079E /* UIUtilTest.swift in Sources */,
 				9D8FA404230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */,
@@ -605,6 +618,7 @@
 				9DEDA83F22FB3CDA00DB079E /* RegexUtilTests.swift in Sources */,
 				9DEDA82522FB3A4700DB079E /* HexUtil.swift in Sources */,
 				9DE027CE22FB236800D8A524 /* DebugUtil.swift in Sources */,
+				9D12203F2340B4F000052F00 /* ClassUtil.swift in Sources */,
 				9D4EFD5F22FB341A00631399 /* AppDefaults.swift in Sources */,
 				9D8FA402230A8937000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9DEDA85F22FB474F00DB079E /* DateUtil.swift in Sources */,
@@ -631,6 +645,7 @@
 				9DEDA85A22FB454A00DB079E /* DateUtil.swift in Sources */,
 				9DEDA82D22FB3B2A00DB079E /* RegexUtil.swift in Sources */,
 				9DEDA82F22FB3B2A00DB079E /* OptionalUtil.swift in Sources */,
+				9D12203A2340B40C00052F00 /* ClassUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +667,7 @@
 				9DF5F1D022ED962A00A02DD4 /* BiPlatformExtensions.swift in Sources */,
 				9DEDA85E22FB474D00DB079E /* DateUtil.swift in Sources */,
 				9D8113A822EE304000E29C0A /* ViewController.swift in Sources */,
+				9D12203D2340B4EF00052F00 /* ClassUtil.swift in Sources */,
 				9DF5F1CF22ED962700A02DD4 /* DebugUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

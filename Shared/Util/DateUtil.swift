@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift v.0.2.3
+//  DateUtil.swift v.0.2.4
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 18.06.18.
