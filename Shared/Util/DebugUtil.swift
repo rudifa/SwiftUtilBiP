@@ -16,11 +16,13 @@ extension NSObject {
     /// - Requires: to be called from a subclass of NSObject
     ///
     /// - Parameters:
-    ///  - info: information string
-    ///   - fnc: current function (default value is the caller)
+    ///  - info: information string; a leading "@" will be replaced by the call time
+    ///  - fnc: current function (default value is the caller)
     func printClassAndFunc(info inf_: String = "", fnc fnc_: String = #function) {
         #if DEBUG
-        print("---- \(String(describing: type(of: self))).\(fnc_)", inf_)
+        var info = inf_
+        if inf_.first == "@" { info = "\(Date().HHmmssSSS) \(inf_.dropFirst())"}
+        print("---- \(String(describing: type(of: self))).\(fnc_)", info)
         #endif
     }
 }

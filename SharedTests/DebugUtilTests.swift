@@ -11,5 +11,9 @@ import XCTest
 class DebugUtilTests: XCTestCase {
     func test_printClassAndFunc() {
         printClassAndFunc(info: "more info")
+        printClassAndFunc(info: "@ even more info at this time")
+        printClassAndFunc(info: "@ even more info a tad later")
+
+        printClassAndFunc(info: "\(NSFullUserName())")
     }
 }

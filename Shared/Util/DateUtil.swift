@@ -168,7 +168,6 @@ extension Date {
         else { print("*** zeroHms failed") }
     }
 
-
     /// Returns a date setting the minute, second all to 0
     ///
     /// - Returns: modified copy of self or nil if invalid date would be generated
