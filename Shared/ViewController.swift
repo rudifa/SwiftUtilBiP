@@ -1,5 +1,5 @@
 //
-//  ViewController.swift  v.0.3.0
+//  ViewController.swift  v.0.3.1
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 28.07.19.

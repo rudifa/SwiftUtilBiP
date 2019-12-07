@@ -1,5 +1,5 @@
 //
-//  DebugUtil.swift  v.0.3.0
+//  DebugUtil.swift  v.0.3.1
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 23.07.19.
@@ -16,7 +16,7 @@ import Foundation
 ///
 /// `printClassAndFunc(info: "any info")  // ---- ViewController.viewDidLoad() any info`
 ///
-/// `printClassAndFunc(info: "@any info") // ---- ViewController.viewDidLoad() 2019-12-07 18:05:39.117525 any info`
+/// `printClassAndFunc(info: "@any info") // ---- 2019-12-07 18:05:39.117525 ViewController.viewDidLoad() any info`
 ///
 /// Log to the app's logfile "Log.txt"
 ///
@@ -24,7 +24,7 @@ import Foundation
 ///
 /// `logClassAndFunc(info: "any info")  // ---- ViewController.viewDidLoad() any info`
 ///
-/// `logClassAndFunc(info: "@any info") // ---- ViewController.viewDidLoad() 2019-12-07 18:05:39.117525 any info`
+/// `logClassAndFunc(info: "@any info") // ---- 2019-12-07 18:05:39.117525 ViewController.viewDidLoad() any info`
 ///
 /// View the log file captured on the iOS device:
 ///
@@ -82,9 +82,13 @@ extension NSObject {
     ///  - info: information string; a leading "@" will be replaced by the call date
     ///  - fnc: current function (default value is the caller)
     func formatClassAndFunc(info inf_: String = "", fnc fnc_: String = #function) -> String {
+        var dateTime = ""
         var info = inf_
-        if inf_.first == "@" { info = "\(dateTimeString()) \(inf_.dropFirst())" }
-        return "---- \(String(describing: type(of: self))).\(fnc_) \(info)"
+        if inf_.first == "@" {
+            info = "\(inf_.dropFirst())"
+            dateTime = "\(dateTimeString()) "
+        }
+        return "---- \(dateTime)\(String(describing: type(of: self))).\(fnc_) \(info)"
     }
 
     /// Return dateTimeString with microsecond resolution
