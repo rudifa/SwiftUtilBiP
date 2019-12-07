@@ -47,7 +47,6 @@ import Foundation
 /// Delete the log file captured on the iOS device:
 ///
 /// - Open the app's directory as above, right-click on the file and click `Delete`
-//class LoggingUtilities {}
 
 extension NSObject {
     /// Print to stdout current class and function names and optional info
