@@ -929,7 +929,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LHA84NAPNA;
+				DEVELOPMENT_TEAM = V7R356DGKL;
 				INFOPLIST_FILE = "$(SRCROOT)/BiPiOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -948,7 +948,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LHA84NAPNA;
+				DEVELOPMENT_TEAM = V7R356DGKL;
 				INFOPLIST_FILE = "$(SRCROOT)/BiPiOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

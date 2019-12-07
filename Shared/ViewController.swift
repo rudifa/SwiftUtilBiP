@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ViewController.swift  v.0.3.0
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 28.07.19.
@@ -95,6 +95,7 @@ class ViewController: NUViewController {
         printClassAndFunc()
         addGestureRecognizers()
         addLabels()
+        logClassAndFunc(info: "@ test logging to file")
     }
 
     fileprivate func addLabels() {
