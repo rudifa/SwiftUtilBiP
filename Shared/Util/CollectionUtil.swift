@@ -1,0 +1,19 @@
+//
+//  CollectionUtil.swift v.0.1.0
+//  SwiftUtilBiPIOS
+//
+//  Created by Rudolf Farkas on 24.12.19.
+//  Copyright © 2019 Rudolf Farkas. All rights reserved.
+//
+
+import Foundation
+
+extension Array where Element: Equatable {
+    /// Return array containing elements of self that are also in other, plue elements form other that are not in self
+    /// - Parameter other: the array to update from
+    func updatePreservingOrder(from other: Array) -> [Element] {
+        var updated: [Element] = filter { other.contains($0) }
+        updated += other.filter { !self.contains($0) }
+        return updated
+    }
+}
