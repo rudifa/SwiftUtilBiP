@@ -9,7 +9,7 @@
 import Foundation
 
 extension Array where Element: Equatable {
-    /// Return array containing elements of self that are also in other, plue elements form other that are not in self
+    /// Return array containing elements of self that are also in other, plus elements from other that are not in self
     /// - Parameter other: the array to update from
     func updatePreservingOrder(from other: Array) -> [Element] {
         var updated: [Element] = filter { other.contains($0) }
