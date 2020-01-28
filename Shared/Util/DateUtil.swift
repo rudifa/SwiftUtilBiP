@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift v.0.2.4
+//  DateUtil.swift v.0.3.0
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -271,5 +271,20 @@ extension Calendar {
         var wkds = weekdaySymbols
         wkds.append(wkds.first!)
         return Array(wkds.dropFirst())
+    }
+}
+
+// MARK: - Extended DateInterval properties
+
+extension DateInterval {
+    /// Returns true if self fully overlaps with interval
+    /// - Parameter interval: interval to compare with
+    func fullyOverlaps(with interval: DateInterval) -> Bool {
+        if let intersection = self.intersection(with: interval) {
+            if intersection.duration >= min(duration, interval.duration) {
+                return true
+            }
+        }
+        return false
     }
 }

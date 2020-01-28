@@ -1,5 +1,5 @@
 //
-//  DateUtilTests.swift v.0.2.4
+//  DateUtilTests.swift v.0.3.0
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -260,5 +260,29 @@ class DateUtilTests: XCTestCase {
 
         XCTAssertEqual(d0.dateInterval(of: .hour)!.start.ddMMyyyy_HHmmss, "26.07.2019 10:00:00")
         XCTAssertEqual(d0.dateInterval(of: .hour)!.end.ddMMyyyy_HHmmss, "26.07.2019 11:00:00")
+    }
+
+    func test_DateIntervalExtensions() {
+        let calendar = Calendar.current
+        let refDate = calendar.date(from: DateComponents(calendar: calendar, year: 2020, month: 1, day: 28, hour: 14))!
+
+        let firstHour = Calendar.current.dateInterval(of: .hour, for: refDate)!
+        let oneHour = firstHour.duration
+        let firstThreeHours = DateInterval(start: refDate, duration: 3.0 * oneHour)
+
+        let zeroHour = DateInterval(start: refDate - oneHour * 1.0, duration: oneHour)
+        let halfHour = DateInterval(start: refDate - oneHour * 0.5, duration: oneHour)
+        let secondHour = DateInterval(start: refDate + oneHour, duration: oneHour)
+        let fourthHour = DateInterval(start: refDate + oneHour * 4.0, duration: oneHour)
+
+        XCTAssertTrue(firstHour.fullyOverlaps(with: firstThreeHours))
+        XCTAssertFalse(firstHour.fullyOverlaps(with: halfHour))
+
+        XCTAssertTrue(firstThreeHours.fullyOverlaps(with: firstHour))
+        XCTAssertTrue(firstThreeHours.fullyOverlaps(with: secondHour))
+
+        XCTAssertFalse(firstThreeHours.fullyOverlaps(with: halfHour))
+        XCTAssertFalse(firstThreeHours.fullyOverlaps(with: fourthHour))
+        XCTAssertFalse(firstThreeHours.fullyOverlaps(with: zeroHour))
     }
 }
