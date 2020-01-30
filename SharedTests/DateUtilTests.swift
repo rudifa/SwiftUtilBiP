@@ -1,5 +1,5 @@
 //
-//  DateUtilTests.swift v.0.3.0
+//  DateUtilTests.swift v.0.3.1
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -95,6 +95,9 @@ class DateUtilTests: XCTestCase {
                        [2019, 7, 6, 26, 25, 6, 4, 31])
 
         XCTAssertEqual([d1.EEEEddMMyyyy, String(d1.day), String(d1.day_0)], ["Friday 26.07.2019", "26", "25"])
+
+        XCTAssertEqual("\(d1.wholeHour!.ddMMyyyy) \(d1.wholeHour!.HHmmss)", "26.07.2019 10:00:00")
+        XCTAssertEqual("\(d1.wholeDay!.ddMMyyyy) \(d1.wholeDay!.HHmmss)", "26.07.2019 00:00:00")
 
         // test first of the month for date d1
         XCTAssertEqual([d1.month1st.EEEEddMMyyyy, String(d1.month1stWeekday), String(d1.month1stWeekday_0M)], ["Monday 01.07.2019", "2", "0"])

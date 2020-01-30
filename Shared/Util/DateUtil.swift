@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift v.0.3.0
+//  DateUtil.swift v.0.3.1
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -171,9 +171,16 @@ extension Date {
     /// Returns a date setting the minute, second all to 0
     ///
     /// - Returns: modified copy of self or nil if invalid date would be generated
-
     var wholeHour: Date? {
         let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour], from: self)
+        return Calendar.current.date(from: dateComponents)
+    }
+
+    /// Returns a date setting the hour, minute, second all to 0
+    ///
+    /// - Returns: modified copy of self or nil if invalid date would be generated
+    var wholeDay: Date? {
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: self)
         return Calendar.current.date(from: dateComponents)
     }
 
