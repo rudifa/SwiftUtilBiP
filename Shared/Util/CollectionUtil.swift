@@ -1,5 +1,5 @@
 //
-//  CollectionUtil.swift v.0.1.1
+//  CollectionUtil.swift v.0.1.2
 //  SwiftUtilBiPIOS
 //
 //  Created by Rudolf Farkas on 24.12.19.
@@ -21,7 +21,7 @@ extension Array where Element: Equatable {
 extension Array where Element == IndexPath {
     /// Return element from self that is closest (in .row value) to the elt
     /// - Parameter elt: element to compare to self elements
-    func closest(_ elt: Element) -> Element? {
+    func closest(to elt: Element) -> Element? {
         guard let first = self.first else { return nil }
         return reduce(first) { abs(elt.row - $1.row) < abs(elt.row - $0.row) ? $1 : $0 }
     }
