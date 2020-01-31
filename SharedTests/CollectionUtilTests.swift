@@ -1,5 +1,5 @@
 //
-//  CollectionUtilTests.swift v.0.1.0
+//  CollectionUtilTests.swift v.0.1.1
 //  SwiftUtilBiPIOSTests
 //
 //  Created by Rudolf Farkas on 24.12.19.
@@ -21,5 +21,35 @@ class CollectionUtilTests: XCTestCase {
         XCTAssertEqual(aaa.updatePreservingOrder(from: [1, 2, 3, 4, 5, 6, 7]), [5, 4, 3, 2, 1, 6, 7])
         XCTAssertEqual(aaa.updatePreservingOrder(from: [3, 4, 5, 6, 7]), [5, 4, 3, 6, 7])
         XCTAssertEqual(aaa.updatePreservingOrder(from: [6, 7]), [6, 7])
+    }
+
+    func test_closest() {
+        func indexPath(row: Int, section: Int = 2) -> IndexPath {
+            return IndexPath(row: row, section: section)
+        }
+
+        let testPaths0 = [IndexPath]()
+        XCTAssertNil(testPaths0.closest(indexPath(row: 12)))
+
+        let testPaths1 = [indexPath(row: 5)]
+        XCTAssertEqual(testPaths1.closest(indexPath(row: 0)), indexPath(row: 5))
+        XCTAssertEqual(testPaths1.closest(indexPath(row: 4)), indexPath(row: 5))
+        XCTAssertEqual(testPaths1.closest(indexPath(row: 5)), indexPath(row: 5))
+        XCTAssertEqual(testPaths1.closest(indexPath(row: 6)), indexPath(row: 5))
+        XCTAssertEqual(testPaths1.closest(indexPath(row: 9)), indexPath(row: 5))
+
+        let testPaths3 = [indexPath(row: 5), indexPath(row: 10), indexPath(row: 14)]
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 4)), indexPath(row: 5))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 5)), indexPath(row: 5))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 6)), indexPath(row: 5))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 7)), indexPath(row: 5))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 8)), indexPath(row: 10))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 9)), indexPath(row: 10))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 10)), indexPath(row: 10))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 11)), indexPath(row: 10))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 12)), indexPath(row: 10))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 13)), indexPath(row: 14))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 14)), indexPath(row: 14))
+        XCTAssertEqual(testPaths3.closest(indexPath(row: 15)), indexPath(row: 14))
     }
 }
