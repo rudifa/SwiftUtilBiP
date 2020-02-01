@@ -1,0 +1,313 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/AppDelegate.swift",
+      "line": 14,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/AppDelegate.swift",
+      "line": 15,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/AppDelegate.swift",
+      "line": 22,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 12,
+      "symbol": "NUColor",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 13,
+      "symbol": "NUGestureRecognizer",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 14,
+      "symbol": "NUGestureRecognizerDelegate",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 15,
+      "symbol": "NUPanGestureRecognizer",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 16,
+      "symbol": "NUTapClickGestureRecognizer",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 17,
+      "symbol": "NULabel",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 18,
+      "symbol": "NUStackView",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 19,
+      "symbol": "NUView",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 20,
+      "symbol": "NUViewController",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 22,
+      "symbol": "NUView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 39,
+      "symbol": "UIGestureRecognizer.locationFromTop(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/BiPlatformExtensions.swift",
+      "line": 69,
+      "symbol": "NUImage",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/ClassUtil.swift",
+      "line": 17,
+      "symbol": "ClassNameProtocol.className",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/ClassUtil.swift",
+      "line": 18,
+      "symbol": "ClassNameProtocol.className",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/ClassUtil.swift",
+      "line": 23,
+      "symbol": "ClassNameProtocol.className",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/ClassUtil.swift",
+      "line": 27,
+      "symbol": "ClassNameProtocol.className",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/DebugUtil.swift",
+      "line": 110,
+      "symbol": "Logger.shared",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/DebugUtil.swift",
+      "line": 111,
+      "symbol": "Logger.logfile",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/DebugUtil.swift",
+      "line": 112,
+      "symbol": "Logger.logUrl",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/DictUtil.swift",
+      "line": 13,
+      "symbol": "HashablePair.p1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/DictUtil.swift",
+      "line": 14,
+      "symbol": "HashablePair.p2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/DictUtil.swift",
+      "line": 15,
+      "symbol": "HashablePair.init(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 42,
+      "symbol": "PickerView",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 43,
+      "symbol": "PickerView.pickerData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 44,
+      "symbol": "PickerView.pickerTextField",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 45,
+      "symbol": "PickerView.onSelect",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 47,
+      "symbol": "PickerView.init(pickerData:dropdownField:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 65,
+      "symbol": "PickerView.init(pickerData:dropdownField:onSelect:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 87,
+      "symbol": "PickerView.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 92,
+      "symbol": "PickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 112,
+      "symbol": "PickerView",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 114,
+      "symbol": "PickerView.pickerView(_:titleForRow:forComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/Util/PickerView.swift",
+      "line": 120,
+      "symbol": "PickerView.pickerView(_:didSelectRow:inComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/ViewController.swift",
+      "line": 25,
+      "symbol": "ViewController.label0",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/ViewController.swift",
+      "line": 36,
+      "symbol": "ViewController.label1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/ViewController.swift",
+      "line": 46,
+      "symbol": "ViewController.label2",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/ViewController.swift",
+      "line": 55,
+      "symbol": "ViewController.label3",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/ViewController.swift",
+      "line": 65,
+      "symbol": "ViewController.label4",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/ViewController.swift",
+      "line": 74,
+      "symbol": "ViewController.label5",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/ViewController.swift",
+      "line": 84,
+      "symbol": "ViewController.label6",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/rudifa/SwiftUtilBiP/Shared/ViewController.swift",
+      "line": 93,
+      "symbol": "ViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/travis/build/rudifa/SwiftUtilBiP"
+}
