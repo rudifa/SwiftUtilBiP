@@ -2,6 +2,8 @@
 
 by [rudifa](https://github.com/rudifa)
 
+### Theme: small swift utility extensions, structs and classes, compatible with one of or both **iOS** and **macOS** platforms.
+
 This project contains a set of Swift utilities for use in Xcode projects that target one of or both **iOS** and **macOS** platforms.
 
 ### How to use

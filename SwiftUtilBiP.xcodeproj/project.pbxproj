@@ -14,6 +14,7 @@
 		9D12203E2340B4EF00052F00 /* ClassUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1220392340B40C00052F00 /* ClassUtil.swift */; };
 		9D12203F2340B4F000052F00 /* ClassUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1220392340B40C00052F00 /* ClassUtil.swift */; };
 		9D1220422340B50B00052F00 /* ClassUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D12203B2340B44200052F00 /* ClassUtilTests.swift */; };
+		9D1557CD23FC1C2500AA7F28 /* DateUtilMoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1557CC23FC1C2500AA7F28 /* DateUtilMoreTests.swift */; };
 		9D3477AB22F20DCD0029BE85 /* CGUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3477AA22F20DCD0029BE85 /* CGUtil.swift */; };
 		9D3477AC22F20DF20029BE85 /* CGUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3477AA22F20DCD0029BE85 /* CGUtil.swift */; };
 		9D37783922F9639C00D040FC /* NUConstraintsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */; };
@@ -47,6 +48,12 @@
 		9D98D1EC22FB387800A4A834 /* CodableUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98D1E922FB387800A4A834 /* CodableUtilTests.swift */; };
 		9D98D1ED22FB387800A4A834 /* CodableUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98D1E922FB387800A4A834 /* CodableUtilTests.swift */; };
 		9DB8C21E22F975810077D0AB /* NUConstraintsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */; };
+		9DDD13B0241E5DB100557518 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD13AF241E5DB100557518 /* SharedDefaults.swift */; };
+		9DDD13B3241E5E2400557518 /* SharedDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD13B1241E5DE300557518 /* SharedDefaultsTests.swift */; };
+		9DDD13B4241E5E9600557518 /* SharedDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD13B1241E5DE300557518 /* SharedDefaultsTests.swift */; };
+		9DDD13B5241E5EBC00557518 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD13AF241E5DB100557518 /* SharedDefaults.swift */; };
+		9DDD13B6241E5EBD00557518 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD13AF241E5DB100557518 /* SharedDefaults.swift */; };
+		9DDD13B7241E5EBE00557518 /* SharedDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDD13AF241E5DB100557518 /* SharedDefaults.swift */; };
 		9DE027B122FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE027B022FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift */; };
 		9DE027BF22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE027BE22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift */; };
 		9DE027C722FB1E0900D8A524 /* CGUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE027C622FB1E0900D8A524 /* CGUtilTests.swift */; };
@@ -130,6 +137,7 @@
 		9984A3A322F65235AC0930C1 /* Pods-SwiftUtilBiPIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUtilBiPIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftUtilBiPIOSTests/Pods-SwiftUtilBiPIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D1220392340B40C00052F00 /* ClassUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassUtil.swift; sourceTree = "<group>"; };
 		9D12203B2340B44200052F00 /* ClassUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassUtilTests.swift; sourceTree = "<group>"; };
+		9D1557CC23FC1C2500AA7F28 /* DateUtilMoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilMoreTests.swift; sourceTree = "<group>"; };
 		9D3477AA22F20DCD0029BE85 /* CGUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGUtil.swift; sourceTree = "<group>"; };
 		9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NUConstraintsUtil.swift; sourceTree = "<group>"; };
 		9D4EFD5822FB335500631399 /* AppDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
@@ -143,6 +151,8 @@
 		9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtilTests.swift; sourceTree = "<group>"; };
 		9D98D1E422FB386100A4A834 /* CodableUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableUtil.swift; sourceTree = "<group>"; };
 		9D98D1E922FB387800A4A834 /* CodableUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableUtilTests.swift; sourceTree = "<group>"; };
+		9DDD13AF241E5DB100557518 /* SharedDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedDefaults.swift; sourceTree = "<group>"; };
+		9DDD13B1241E5DE300557518 /* SharedDefaultsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedDefaultsTests.swift; sourceTree = "<group>"; };
 		9DE027AE22FB1C4300D8A524 /* SwiftUtilBiPIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUtilBiPIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE027B022FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtilBiPIOSTests.swift; sourceTree = "<group>"; };
 		9DE027B222FB1C4300D8A524 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -254,11 +264,13 @@
 				9D98D1E922FB387800A4A834 /* CodableUtilTests.swift */,
 				9D811A5523B2A29E0014F3FB /* CollectionUtilTests.swift */,
 				9DEDA85322FB44E300DB079E /* DateUtilTests.swift */,
+				9D1557CC23FC1C2500AA7F28 /* DateUtilMoreTests.swift */,
 				9DE027CC22FB232C00D8A524 /* DebugUtilTests.swift */,
 				9DEDA81D22FB3A3F00DB079E /* DictUtilTests.swift */,
 				9DEDA81C22FB3A3F00DB079E /* HexUtilTests.swift */,
 				9DEDA83022FB3B4600DB079E /* OptionaUtilTests.swift */,
 				9DEDA83122FB3B4600DB079E /* RegexUtilTests.swift */,
+				9DDD13B1241E5DE300557518 /* SharedDefaultsTests.swift */,
 				9D69020E22FB630C00BE0FDF /* StringUtilTests.swift */,
 				9DEDA84422FB3DD900DB079E /* UIUtilTest.swift */,
 				9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */,
@@ -342,6 +354,7 @@
 				9DEDA82C22FB3B2A00DB079E /* OptionalUtil.swift */,
 				9D69FB7C23254DA2006E1C55 /* PickerView.swift */,
 				9DEDA82A22FB3B2A00DB079E /* RegexUtil.swift */,
+				9DDD13AF241E5DB100557518 /* SharedDefaults.swift */,
 				9D69020C22FB62F200BE0FDF /* StringUtil.swift */,
 				9DEDA84022FB3DAC00DB079E /* UIUtil.swift */,
 				9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */,
@@ -592,10 +605,13 @@
 				9DEDA83C22FB3CD500DB079E /* OptionaUtilTests.swift in Sources */,
 				9DEDA83E22FB3CDA00DB079E /* RegexUtilTests.swift in Sources */,
 				9DEDA82322FB3A4700DB079E /* HexUtil.swift in Sources */,
+				9D1557CD23FC1C2500AA7F28 /* DateUtilMoreTests.swift in Sources */,
+				9DDD13B3241E5E2400557518 /* SharedDefaultsTests.swift in Sources */,
 				9DE027CD22FB232C00D8A524 /* DebugUtilTests.swift in Sources */,
 				9DE027CF22FB238700D8A524 /* DebugUtil.swift in Sources */,
 				9D8FA401230A8937000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9DEDA85C22FB45B000DB079E /* DateUtil.swift in Sources */,
+				9DDD13B6241E5EBD00557518 /* SharedDefaults.swift in Sources */,
 				9D811A5723B2A5F70014F3FB /* CollectionUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,12 +640,14 @@
 				9D69021B22FB677F00BE0FDF /* StringUtil.swift in Sources */,
 				9D69021922FB675800BE0FDF /* StringUtilTests.swift in Sources */,
 				9DEDA83D22FB3CD500DB079E /* OptionaUtilTests.swift in Sources */,
+				9DDD13B7241E5EBE00557518 /* SharedDefaults.swift in Sources */,
 				9DEDA83F22FB3CDA00DB079E /* RegexUtilTests.swift in Sources */,
 				9DEDA82522FB3A4700DB079E /* HexUtil.swift in Sources */,
 				9DE027CE22FB236800D8A524 /* DebugUtil.swift in Sources */,
 				9D12203F2340B4F000052F00 /* ClassUtil.swift in Sources */,
 				9D4EFD5F22FB341A00631399 /* AppDefaults.swift in Sources */,
 				9D8FA402230A8937000CD695 /* UserDefaultsUtil.swift in Sources */,
+				9DDD13B4241E5E9600557518 /* SharedDefaultsTests.swift in Sources */,
 				9DEDA85F22FB474F00DB079E /* DateUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +662,7 @@
 				9D3477AB22F20DCD0029BE85 /* CGUtil.swift in Sources */,
 				9D69FB7D23254DA2006E1C55 /* PickerView.swift in Sources */,
 				9D811A5423B2A24E0014F3FB /* CollectionUtil.swift in Sources */,
+				9DDD13B0241E5DB100557518 /* SharedDefaults.swift in Sources */,
 				9DF5F1A322ED8EDB00A02DD4 /* AppDelegate.swift in Sources */,
 				9DEDA81A22FB3A2200DB079E /* HexUtil.swift in Sources */,
 				9DEDA81B22FB3A2200DB079E /* DictUtil.swift in Sources */,
@@ -675,6 +694,7 @@
 				9DEDA83622FB3CC900DB079E /* OptionalUtil.swift in Sources */,
 				9D98D1E622FB386100A4A834 /* CodableUtil.swift in Sources */,
 				9DF5F1D022ED962A00A02DD4 /* BiPlatformExtensions.swift in Sources */,
+				9DDD13B5241E5EBC00557518 /* SharedDefaults.swift in Sources */,
 				9DEDA85E22FB474D00DB079E /* DateUtil.swift in Sources */,
 				9D8113A822EE304000E29C0A /* ViewController.swift in Sources */,
 				9D12203D2340B4EF00052F00 /* ClassUtil.swift in Sources */,
