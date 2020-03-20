@@ -1,5 +1,5 @@
 //
-//  RegexUtil.swift  v.0.4.0
+//  RegexUtil.swift v.0.5.0
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 28.04.18.
@@ -9,13 +9,12 @@
 import Foundation
 
 /**
-Originally from
-    https://learnappmaking.com/regular-expressions-swift-string/
-    https://stackoverflow.com/questions/27880650/swift-extract-regex-matches
+ Originally from
+ https://learnappmaking.com/regular-expressions-swift-string/
+ https://stackoverflow.com/questions/27880650/swift-extract-regex-matches
  */
 extension String
 {
-
     /// Returns an array of substrings in self that matched the regex pattern
     ///
     /// - Parameter regex: pattern
@@ -23,31 +22,30 @@ extension String
     func matches(for regex: String) -> [String] {
         do {
             let regex = try NSRegularExpression(pattern: regex)
-            let results = regex.matches(in: self, range: NSRange(self.startIndex..., in: self))
+            let results = regex.matches(in: self, range: NSRange(startIndex..., in: self))
             return results.map {
                 String(self[Range($0.range, in: self)!])
             }
-        } catch let error {
+        } catch {
             print("invalid regex: \(error.localizedDescription)")
             return []
         }
     }
-    
+
     /// Check if self is blank (is empty or consists of whitespace characters only)
     ///
     /// - Returns: true if self is blank
     func isBlank() -> Bool {
-        return self.matches(for: "^\\s*$") != []
+        return matches(for: "^\\s*$") != []
     }
-    
+
     /// Returns true if self matches the regex pattern
     ///
     /// - Parameter regex: pattern
     /// - Returns: Bool
     func doesMatch(regex: String) -> Bool {
-        return self.matches(for: regex) != []
+        return matches(for: regex) != []
     }
-    
 }
 
 extension String
@@ -63,6 +61,31 @@ extension String
         }
         return ""
     }
-
 }
 
+/**
+ Originally from
+ https://www.hackingwithswift.com/articles/108/how-to-use-regular-expressions-in-swift
+ */
+
+extension NSRegularExpression {
+    convenience init(_ pattern: String) {
+        do {
+            try self.init(pattern: pattern)
+        } catch {
+            preconditionFailure("Illegal regular expression: \(pattern).")
+        }
+    }
+
+    func matches(_ string: String) -> Bool {
+        let range = NSRange(location: 0, length: string.utf16.count)
+        return firstMatch(in: string, options: [], range: range) != nil
+    }
+}
+
+
+func ~= (lhs: String, rhs: String) -> Bool {
+    guard let regex = try? NSRegularExpression(pattern: rhs) else { return false }
+    let range = NSRange(location: 0, length: lhs.utf16.count)
+    return regex.firstMatch(in: lhs, options: [], range: range) != nil
+}

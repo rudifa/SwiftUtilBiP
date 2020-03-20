@@ -1,5 +1,5 @@
 //
-//  RegexUtilTests.swift
+//  RegexUtilTests.swift v.0.5.0
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 28.04.18.
@@ -9,28 +9,21 @@
 import XCTest
 
 class RegexUtilTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
+    override func setUp() {}
+
+    override func tearDown() {}
+
     func test_string_matches() {
         var string = "🇩🇪€4.95"
         var matched = string.matches(for: "[0-9]")
-        //print(matched)
+        // print(matched)
         XCTAssertEqual(matched, ["4", "9", "5"])
         print("----", string, matched, "blank= \(string.isBlank())")
         XCTAssertFalse(string.isBlank())
 
         string = "abra cadabra"
         matched = string.matches(for: "abra")
-        //print(matched)
+        // print(matched)
         XCTAssertEqual(matched, ["abra", "abra"])
         print("---", string, matched, "blank= \(string.isBlank())")
         XCTAssertFalse(string.isBlank())
@@ -57,8 +50,7 @@ class RegexUtilTests: XCTestCase {
         XCTAssertEqual(matched, [])
         print("---", string, matched, "blank= \(string.isBlank())")
     }
-    
-    
+
     func test_string_doesMatch() {
         var string = "🇩🇪€4€9"
         XCTAssertTrue(string.doesMatch(regex: "[0-9]"))
@@ -78,5 +70,12 @@ class RegexUtilTests: XCTestCase {
         let extracted_UUID = contains_UUID.extractUUID()
         XCTAssertEqual(extracted_UUID, "08D41FB1-8B2E-4F6F-977A-BFA876AEF775")
     }
-}
 
+    func test_NSRegularExpression_extensions() {
+        let regex = NSRegularExpression("[a-z]at")
+        XCTAssertTrue(regex.matches("hat"))
+        XCTAssertTrue("hat" ~= "[a-z]at")
+
+        XCTAssertTrue("2020-03-20 10:41:43.004903" ~= #"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}$"#)
+    }
+}
