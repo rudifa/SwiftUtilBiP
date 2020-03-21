@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-#   - name: Build
-#     run: swift build -v
+    - name: Build Pods
+      run: xcodebuild clean test -project Pods/Pods.xcodeproj -scheme BiPiOS -destination "platform=iOS Simulator,name=iPhone 11 Pro"
     - name: Run tests
       run: xcodebuild clean test -project SwiftUtilBiP.xcodeproj -scheme BiPiOS -destination "platform=iOS Simulator,name=iPhone 11 Pro"
