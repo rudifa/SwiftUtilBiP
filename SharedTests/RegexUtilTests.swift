@@ -1,5 +1,5 @@
 //
-//  RegexUtilTests.swift v.0.5.0
+//  RegexUtilTests.swift v.0.5.1
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 28.04.18.
@@ -69,13 +69,5 @@ class RegexUtilTests: XCTestCase {
         let contains_UUID = "https://stick-scan/product_images%2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775.png"
         let extracted_UUID = contains_UUID.extractUUID()
         XCTAssertEqual(extracted_UUID, "08D41FB1-8B2E-4F6F-977A-BFA876AEF775")
-    }
-
-    func test_NSRegularExpression_extensions() {
-        let regex = NSRegularExpression("[a-z]at")
-        XCTAssertTrue(regex.matches("hat"))
-        XCTAssertTrue("hat" ~= "[a-z]at")
-
-        XCTAssertTrue("2020-03-20 10:41:43.004903" ~= #"^\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6}$"#)
     }
 }

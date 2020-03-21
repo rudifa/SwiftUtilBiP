@@ -1,5 +1,5 @@
 //
-//  RegexUtil.swift v.0.5.0
+//  RegexUtil.swift v.0.5.1
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 28.04.18.
@@ -13,8 +13,7 @@ import Foundation
  https://learnappmaking.com/regular-expressions-swift-string/
  https://stackoverflow.com/questions/27880650/swift-extract-regex-matches
  */
-extension String
-{
+extension String {
     /// Returns an array of substrings in self that matched the regex pattern
     ///
     /// - Parameter regex: pattern
@@ -48,8 +47,7 @@ extension String
     }
 }
 
-extension String
-{
+extension String {
     /// Returns UUID (if any) found in self
     ///
     /// - Returns: String that matched the UUID pattern or empty string
@@ -61,31 +59,4 @@ extension String
         }
         return ""
     }
-}
-
-/**
- Originally from
- https://www.hackingwithswift.com/articles/108/how-to-use-regular-expressions-in-swift
- */
-
-extension NSRegularExpression {
-    convenience init(_ pattern: String) {
-        do {
-            try self.init(pattern: pattern)
-        } catch {
-            preconditionFailure("Illegal regular expression: \(pattern).")
-        }
-    }
-
-    func matches(_ string: String) -> Bool {
-        let range = NSRange(location: 0, length: string.utf16.count)
-        return firstMatch(in: string, options: [], range: range) != nil
-    }
-}
-
-
-func ~= (lhs: String, rhs: String) -> Bool {
-    guard let regex = try? NSRegularExpression(pattern: rhs) else { return false }
-    let range = NSRange(location: 0, length: lhs.utf16.count)
-    return regex.firstMatch(in: lhs, options: [], range: range) != nil
 }
