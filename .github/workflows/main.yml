@@ -16,4 +16,4 @@ jobs:
 #   - name: Build
 #     run: swift build -v
     - name: Run tests
-      run: xcodebuild clean test -project TodoSampleApp.xcodeproj -scheme BiPiOS -destination "platform=iOS Simulator,name=iPhone 11 Pro"
+      run: xcodebuild clean test -project SwiftUtilBiP.xcworkspace -scheme BiPiOS -destination "platform=iOS Simulator,name=iPhone 11 Pro"
