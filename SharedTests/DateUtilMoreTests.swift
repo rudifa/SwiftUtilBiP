@@ -72,20 +72,6 @@ class DateUtilMoreTests: XCTestCase {
         }
     }
 
-    @Weak var weakExamples: [Example]
-
-    func xtest_WeakArray() {
-        printClassAndFunc(info: "\(weakExamples)")
-
-        weakExamples.append(Example(a: 42))
-        printClassAndFunc(info: "\(weakExamples)")
-        printClassAndFunc(info: "\(weakExamples.count)")
-
-        weakExamples = [Example(a: 84)]
-        printClassAndFunc(info: "\(weakExamples)")
-        printClassAndFunc(info: "\(weakExamples.count)")
-    }
-
     func test_UsingWrapper() {
         var using = UsingWrapper(x: 42)
         printClassAndFunc(info: "using= \(using)")
@@ -328,30 +314,3 @@ struct User {
     @Capitalized var firstName: String
     @Capitalized var lastName: String
 }
-
-// MARK: - Weak Arrays with Property Wrappers
-
-// https://medium.com/@apstygo/implementing-weak-arrays-with-property-wrappers-in-swift-680e2b3c9fca
-
-// Let’s first create an object wrapper:
-
-final class WeakObject<T: AnyObject> {
-    private(set) weak var value: T?
-    init(_ v: T) { value = v }
-}
-
-@propertyWrapper
-struct Weak<Element> where Element: AnyObject {
-    private var storage = [WeakObject<Element>]()
-
-    var wrappedValue: [Element] {
-        get {
-            storage.compactMap { $0.value }
-        }
-        set {
-            storage = newValue.map { WeakObject($0) }
-        }
-    }
-}
-
-// @Weak private var weakViews: [UIView]

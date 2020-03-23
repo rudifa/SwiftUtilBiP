@@ -9,10 +9,11 @@
 // @testable import SwiftRfUtil
 import XCTest
 
+/// Return the approximate number of seconds in a year
+let yearInSeconds = TimeInterval(365 * 24 * 60 * 60)
+
 final class SharedDefaultsTests: XCTestCase {
     func test_LocalAndSharedCodableDefaults() {
-        /// Return the approximate number of seconds in a year
-        var year: TimeInterval { return TimeInterval(365 * 24 * 60 * 60) }
 
         // A struct that an app wants to save in UserDefaults
         struct SubscriptionInfo: Codable, Equatable {
@@ -34,7 +35,7 @@ final class SharedDefaultsTests: XCTestCase {
             static var userId: String
 
             @CodableUserDefault(key: Key.subscriptionInfo,
-                                defaultValue: SubscriptionInfo(productId: "ABBA", purchaseDate: Date(timeIntervalSince1970: 2 * year)))
+                                defaultValue: SubscriptionInfo(productId: "ABBA", purchaseDate: Date(timeIntervalSince1970: 2 * yearInSeconds)))
             static var subscriptionInfo: SubscriptionInfo
         }
 
@@ -63,23 +64,23 @@ final class SharedDefaultsTests: XCTestCase {
 
         // restore to default values
         LocalCodableDefaults.userId = "UNKNOWN"
-        LocalCodableDefaults.subscriptionInfo = SubscriptionInfo(productId: "ABBA", purchaseDate: Date(timeIntervalSince1970: 2 * year))
+        LocalCodableDefaults.subscriptionInfo = SubscriptionInfo(productId: "ABBA", purchaseDate: Date(timeIntervalSince1970: 2 * yearInSeconds))
         SharedCodableDefaults.calendarTitles = []
         SharedCodableDefaults.selectedCalendarTitle = "Select a calendar..."
 
         XCTAssertEqual(LocalCodableDefaults.userId, "UNKNOWN")
-        XCTAssertEqual(LocalCodableDefaults.subscriptionInfo, SubscriptionInfo(productId: "ABBA", purchaseDate: Date(timeIntervalSince1970: 2 * year)))
+        XCTAssertEqual(LocalCodableDefaults.subscriptionInfo, SubscriptionInfo(productId: "ABBA", purchaseDate: Date(timeIntervalSince1970: 2 * yearInSeconds)))
         XCTAssertEqual(SharedCodableDefaults.calendarTitles, [])
         XCTAssertEqual(SharedCodableDefaults.selectedCalendarTitle, "Select a calendar...")
 
         // modify default values
         LocalCodableDefaults.userId = "Wendy"
-        LocalCodableDefaults.subscriptionInfo = SubscriptionInfo(productId: "DADA", purchaseDate: Date(timeIntervalSince1970: -55 * year))
+        LocalCodableDefaults.subscriptionInfo = SubscriptionInfo(productId: "DADA", purchaseDate: Date(timeIntervalSince1970: -55 * yearInSeconds))
         SharedCodableDefaults.calendarTitles = ["Code_Cal", "Home", "Work"]
         SharedCodableDefaults.selectedCalendarTitle = "Code_Cal"
 
         XCTAssertEqual(LocalCodableDefaults.userId, "Wendy")
-        XCTAssertEqual(LocalCodableDefaults.subscriptionInfo, SubscriptionInfo(productId: "DADA", purchaseDate: Date(timeIntervalSince1970: -55 * year)))
+        XCTAssertEqual(LocalCodableDefaults.subscriptionInfo, SubscriptionInfo(productId: "DADA", purchaseDate: Date(timeIntervalSince1970: -55 * yearInSeconds)))
         XCTAssertEqual(SharedCodableDefaults.calendarTitles, ["Code_Cal", "Home", "Work"])
         XCTAssertEqual(SharedCodableDefaults.selectedCalendarTitle, "Code_Cal")
     }
