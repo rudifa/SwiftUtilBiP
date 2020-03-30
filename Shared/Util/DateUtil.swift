@@ -1,5 +1,5 @@
 //
-//  DateUtil.swift v.0.3.2
+//  DateUtil.swift v.0.3.3
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 18.06.18.
@@ -90,12 +90,12 @@ extension Date {
     /// - Parameters:
     ///   - component: a Calendar.Component like .hour, .day, .month, ...
     ///   - value: number of compoents (hous, days, months, ...)
-    mutating func increment(by component: Calendar.Component, times value: Int) {
+    mutating func increment(by component: Calendar.Component, times value: Int = 1) {
         self = Calendar.current.date(byAdding: component, value: value, to: self)!
     }
 
     /// Date incremented by component and value
-    func incremented(by component: Calendar.Component, times value: Int) -> Date {
+    func incremented(by component: Calendar.Component, times value: Int = 1) -> Date {
         return Calendar.current.date(byAdding: component, value: value, to: self)!
     }
 
