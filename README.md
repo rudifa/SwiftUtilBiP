@@ -1,4 +1,4 @@
-#  Swift BiPlatform utilities  &nbsp;&nbsp; ![](https://travis-ci.org/rudifa/SwiftUtilBiP.svg?branch=master)  ![](https://github.com/rudifa/SwiftUtilBiP/workflows/XCTests/badge.svg)
+#  Swift BiPlatform utilities  &nbsp;&nbsp;  ![](https://github.com/rudifa/SwiftUtilBiP/workflows/XCTests/badge.svg)
 
 by [rudifa](https://github.com/rudifa)
 
