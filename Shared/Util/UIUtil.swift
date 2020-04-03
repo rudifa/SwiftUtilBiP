@@ -1,5 +1,5 @@
 //
-//  UIUtil.swift v.0.2.1
+//  UIUtil.swift v.0.2.3
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 04.09.18.
@@ -55,6 +55,20 @@ extension UIColor {
 
 // MARK: factory methods
 
+extension UILabel {
+    static func configuredLabel(text: String) -> UILabel {
+        let label = UILabel(frame: .zero)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textColor = .white
+        // backgroundColor = .systemBlue // uncomment for visual debugging
+        label.font = .preferredFont(forTextStyle: UIFont.TextStyle.title3)
+        label.text = text
+        label.textAlignment = .center
+        label.sizeToFit()
+        return label
+    }
+}
+
 // https://cocoacasts.com/elegant-controls-in-swift-with-closures
 /// Button with storage for an action callback
 class ButtonWithAction: UIButton {
@@ -81,8 +95,8 @@ class ButtonWithAction: UIButton {
 
 /*
  Examples of creation of buttons with actions
- private lazy var backgroundColorButton = UIButton.actionButtonPref(title: "Button0", action: backgroundColorButtonTap)
- private lazy var button1 = UIButton.actionButtonPref(title: "Button1", action: { _ in self.printClassAndFunc(info: "Button1") })
+ private lazy var backgroundColorButton = UIButton.actionButton(title: "Button0", action: backgroundColorButtonTap)
+ private lazy var button1 = UIButton.actionButton(title: "Button1", action: { _ in self.printClassAndFunc(info: "Button1") })
  Example of removing the action
  */
 extension UIButton {
@@ -94,8 +108,8 @@ extension UIButton {
         let button = ButtonWithAction(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .systemGray // uncomment for visual debugging
-        button.titleLabel?.font = .systemFont(ofSize: 16)
+        button.backgroundColor = .clear // uncomment for visual debugging
+        button.titleLabel?.font = .preferredFont(forTextStyle: UIFont.TextStyle.title3)
         button.setTitle(title, for: .normal)
         button.sizeToFit()
         button.actionCallback = action
@@ -175,3 +189,4 @@ extension UIView {
         }
     }
 }
+
