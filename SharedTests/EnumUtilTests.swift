@@ -1,5 +1,5 @@
 //
-//  EnumIteratorTests.swift v.0.2.0
+//  EnumIteratorTests.swift v.0.2.1
 //  SwiftUtilBiPIOSTests
 //
 //  Created by Rudolf Farkas on 18.03.20.
@@ -32,29 +32,65 @@ class EnumIteratorTests: XCTestCase {
         XCTAssertEqual(side, .east)
     }
 
+    func test_enum_prev() {
+        var side = Windrose.north
+        XCTAssertEqual(side, .north)
+        side = side.prev
+        XCTAssertEqual(side, .west)
+        side = side.prev
+        XCTAssertEqual(side, .south)
+        side = side.prev
+        XCTAssertEqual(side, .east)
+        side = side.prev
+        XCTAssertEqual(side, .north)
+        side = side.prev
+        XCTAssertEqual(side, .west)
+    }
+
     func test_enum_increment() {
         var side = Windrose.north
         XCTAssertEqual(side, .north)
-        side.increment()
+        side.increment(next: true)
         XCTAssertEqual(side, .east)
-        side.increment()
+        side.increment(next: true)
         XCTAssertEqual(side, .south)
-        side.increment()
+        side.increment(next: true)
         XCTAssertEqual(side, .west)
-        side.increment()
+        side.increment(next: true)
         XCTAssertEqual(side, .north)
-        side.increment()
+        side.increment(next: true)
         XCTAssertEqual(side, .east)
+
+        side.increment(next: false)
+        XCTAssertEqual(side, .north)
+        side.increment(next: false)
+        XCTAssertEqual(side, .west)
+        side.increment(next: false)
+        XCTAssertEqual(side, .south)
+        side.increment(next: false)
+        XCTAssertEqual(side, .east)
+        side.increment(next: false)
+        XCTAssertEqual(side, .north)
+        side.increment(next: false)
+        XCTAssertEqual(side, .west)
+
     }
 
     func test_enum_incremented() {
         var side = Windrose.north
         XCTAssertEqual(side, .north)
 
-        XCTAssertEqual(side.incremented(), .east)
-        XCTAssertEqual(side.incremented(), .south)
-        XCTAssertEqual(side.incremented(), .west)
-        XCTAssertEqual(side.incremented(), .north)
-        XCTAssertEqual(side.incremented(), .east)
+        XCTAssertEqual(side.incremented(next: true), .east)
+        XCTAssertEqual(side.incremented(next: true), .south)
+        XCTAssertEqual(side.incremented(next: true), .west)
+        XCTAssertEqual(side.incremented(next: true), .north)
+        XCTAssertEqual(side.incremented(next: true), .east)
+
+        XCTAssertEqual(side.incremented(next: false), .north)
+        XCTAssertEqual(side.incremented(next: false), .west)
+        XCTAssertEqual(side.incremented(next: false), .south)
+        XCTAssertEqual(side.incremented(next: false), .east)
+        XCTAssertEqual(side.incremented(next: false), .north)
     }
 }
+
