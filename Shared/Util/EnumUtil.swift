@@ -1,5 +1,5 @@
 //
-//  EnumUtil.swift v.0.2.1
+//  EnumUtil.swift v.0.2.2
 //  SwiftUtilBiPIOS
 //
 //  Created by Rudolf Farkas on 18.03.20.
@@ -24,6 +24,8 @@ extension CaseIterable where Self: Equatable {
     private var index: Int {
         return all.firstIndex(of: self)!
     }
+
+    /// Returns the count of cases
     private var count: Int {
         return Self.allCases.count
     }
@@ -37,31 +39,13 @@ extension CaseIterable where Self: Equatable {
     var prev: Self {
         return all[(index+count-1) % count]
     }
-//    /// Returns the next enumerated value (circular)
-//    var next: Self {
-//        let all = Array(Self.allCases)
-//        let idx = all.firstIndex(of: self)!
-//        let next = all.index(after: idx)
-//        return all[next == all.endIndex ? all.startIndex : next]
-//    }
 
-    /// circular increment or decrement self and return it
+    /// Perform circular increment or decrement of self
     mutating func increment(next: Bool) {
-        let all = Array(Self.allCases)
-        let idx = all.firstIndex(of: self)!
-        if next {
-            let index = all.index(after: idx)
-            self = all[index == all.endIndex ? all.startIndex : index]
-        } else {
-            if idx > all.startIndex {
-                self = all[all.index(before: idx)]
-            } else {
-                self = all[all.index(before: all.endIndex)]
-            }
-        }
+        self = next ? self.next : self.prev
     }
 
-    /// increments (circular) the enum value in-place
+    /// Perform circular increment or decrement of self and return it
     mutating func incremented(next: Bool) -> Self {
         increment(next: next)
         return self
