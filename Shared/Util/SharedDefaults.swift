@@ -1,5 +1,5 @@
 //
-//  SharedDefaults.swift v.0.2.0
+//  SharedDefaults.swift v.0.3.0
 //  SwiftRfUtil
 //
 //  Created by Rudolf Farkas on 13.03.20.
@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-// MARK: using Codable items
 
 /// Wrapper CodableUserDefault<Key, Value>
 /// enables creation of variables of any type conforming to Codable protocol
@@ -38,6 +36,33 @@ struct CodableUserDefault<Key: RawRepresentable, Value: Codable> where Key.RawVa
         set {
             let data = try? JSONEncoder().encode(newValue)
             userDefaults.set(data, forKey: key.rawValue)
+        }
+    }
+}
+
+/// Wrapper PlistUserDefault<Key, Value>
+/// enables creation of variables of any type that can be stored in a .plist
+/// (Data, String, Number, Date, Array and Dictionary)
+/// that are stored in UserDefaults that can be local to app or shared between apps.
+@propertyWrapper
+struct PlistUserDefault<Key: RawRepresentable, Value> where Key.RawValue == String {
+    let key: Key
+    let defaultValue: Value
+    var userDefaults: UserDefaults = .standard
+
+    init(key: Key, defaultValue: Value, userDefaults: UserDefaults = UserDefaults.standard) {
+        self.key = key
+        self.defaultValue = defaultValue
+        self.userDefaults = userDefaults
+    }
+
+    var wrappedValue: Value {
+        get {
+            let value = userDefaults.value(forKey: key.rawValue) as? Value
+            return value ?? defaultValue
+        }
+        set {
+            userDefaults.setValue(newValue, forKey: key.rawValue)
         }
     }
 }
