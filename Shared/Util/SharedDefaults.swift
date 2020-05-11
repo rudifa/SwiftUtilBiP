@@ -8,6 +8,18 @@
 
 import Foundation
 
+/** Usage notes: CodableUserDefault<Key, Value> vs. PlistUserDefault<Key, Value>
+
+ PlistUserDefault supports plist-compatible types: Data, String, Number, Date, Array and Dictionary.
+
+ CodableUserDefault supports any type conforming to the Codable protocol (which includes plist-compatible types,
+ but also structs and enums conforming to Codable.
+
+ Note:
+ PlistUserDefault must be used for settings declared in Settings.bundle/Root.plist (because these are
+ stored in type-specific formats, while CodableUserDefault stores/retrieves all types as Data).
+ */
+
 /// Wrapper CodableUserDefault<Key, Value>
 /// enables creation of variables of any type conforming to Codable protocol
 /// that are stored in UserDefaults that can be local to app or shared between apps.
@@ -66,3 +78,5 @@ struct PlistUserDefault<Key: RawRepresentable, Value> where Key.RawValue == Stri
         }
     }
 }
+
+
