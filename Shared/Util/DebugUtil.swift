@@ -1,5 +1,5 @@
 //
-//  DebugUtil.swift  v.0.3.1
+//  DebugUtil.swift  v.0.3.2
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 23.07.19.
@@ -128,7 +128,7 @@ class Logger: TextOutputStream {
             handle.write(string.data(using: .utf8)!)
             handle.closeFile()
         } else {
-            try? string.data(using: .utf8)?.write(to: logUrl)
+            ((try? string.data(using: .utf8)?.write(to: logUrl)) as ()??)
         }
     }
 }
