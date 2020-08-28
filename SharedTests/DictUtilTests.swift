@@ -18,6 +18,10 @@ class DictUtilTests: XCTestCase {
             case done, cancel, reset
         }
 
+        // TODO WHY Use of undeclared type 'HashablePair' when compiled in SwiftPackage
+
+        //        typealias State_Event = HashablePair<State, Event> // Use of undeclared type 'HashablePair'
+
         typealias State_Event = HashablePair<State, Event>
 
         let dictionary: Dictionary<State_Event, State> = [
@@ -30,6 +34,10 @@ class DictUtilTests: XCTestCase {
             State_Event(.blue, .cancel): .black,
             State_Event(.blue, .done): .red,
         ]
+
+        XCTAssertEqual(dictionary[State_Event(.black, .cancel)], .red)
+        XCTAssertEqual(dictionary[State_Event(.blue, .cancel)], .black)
+        XCTAssertNil(dictionary[State_Event(.blue, .reset)])
 
         for (key, _) in dictionary {
             print("hash of key=", key.hashValue)
