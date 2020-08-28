@@ -35,12 +35,6 @@
 		9D811A5423B2A24E0014F3FB /* CollectionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D811A5323B2A24E0014F3FB /* CollectionUtil.swift */; };
 		9D811A5623B2A29E0014F3FB /* CollectionUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D811A5523B2A29E0014F3FB /* CollectionUtilTests.swift */; };
 		9D811A5723B2A5F70014F3FB /* CollectionUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D811A5323B2A24E0014F3FB /* CollectionUtil.swift */; };
-		9D8FA3FD230A890C000CD695 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */; };
-		9D8FA400230A8935000CD695 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */; };
-		9D8FA401230A8937000CD695 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */; };
-		9D8FA402230A8937000CD695 /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */; };
-		9D8FA403230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */; };
-		9D8FA404230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */; };
 		9D98D1E522FB386100A4A834 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98D1E422FB386100A4A834 /* CodableUtil.swift */; };
 		9D98D1E622FB386100A4A834 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98D1E422FB386100A4A834 /* CodableUtil.swift */; };
 		9D98D1E722FB386100A4A834 /* CodableUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D98D1E422FB386100A4A834 /* CodableUtil.swift */; };
@@ -149,8 +143,6 @@
 		9D69FB7C23254DA2006E1C55 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		9D811A5323B2A24E0014F3FB /* CollectionUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUtil.swift; sourceTree = "<group>"; };
 		9D811A5523B2A29E0014F3FB /* CollectionUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionUtilTests.swift; sourceTree = "<group>"; };
-		9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
-		9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtilTests.swift; sourceTree = "<group>"; };
 		9D98D1E422FB386100A4A834 /* CodableUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableUtil.swift; sourceTree = "<group>"; };
 		9D98D1E922FB387800A4A834 /* CodableUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableUtilTests.swift; sourceTree = "<group>"; };
 		9DB63EEE2422CA57008DFCF5 /* EnumUtilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumUtilTests.swift; sourceTree = "<group>"; };
@@ -279,7 +271,6 @@
 				9DDD13B1241E5DE300557518 /* SharedDefaultsTests.swift */,
 				9D69020E22FB630C00BE0FDF /* StringUtilTests.swift */,
 				9DEDA84422FB3DD900DB079E /* UIUtilTest.swift */,
-				9D8FA3FE230A8925000CD695 /* UserDefaultsUtilTests.swift */,
 				9DCE82E22426CA33000F0331 /* XCTestUtil.swift */,
 			);
 			path = SharedTests;
@@ -365,7 +356,6 @@
 				9DDD13AF241E5DB100557518 /* SharedDefaults.swift */,
 				9D69020C22FB62F200BE0FDF /* StringUtil.swift */,
 				9DEDA84022FB3DAC00DB079E /* UIUtil.swift */,
-				9D8FA3FC230A890C000CD695 /* UserDefaultsUtil.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -591,7 +581,6 @@
 			files = (
 				9D4EFD5D22FB338D00631399 /* AppDefaults.swift in Sources */,
 				9DEDA84922FB3DED00DB079E /* UIUtilTest.swift in Sources */,
-				9D8FA403230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */,
 				9DE027B122FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift in Sources */,
 				9DCE82E42426CA6D000F0331 /* XCTestUtil.swift in Sources */,
 				9DEDA84C22FB3DF400DB079E /* UIUtil.swift in Sources */,
@@ -620,7 +609,6 @@
 				9DDD13B3241E5E2400557518 /* SharedDefaultsTests.swift in Sources */,
 				9DE027CD22FB232C00D8A524 /* DebugUtilTests.swift in Sources */,
 				9DE027CF22FB238700D8A524 /* DebugUtil.swift in Sources */,
-				9D8FA401230A8937000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9DEDA85C22FB45B000DB079E /* DateUtil.swift in Sources */,
 				9DDD13B6241E5EBD00557518 /* SharedDefaults.swift in Sources */,
 				9D811A5723B2A5F70014F3FB /* CollectionUtil.swift in Sources */,
@@ -634,7 +622,6 @@
 				9D1220422340B50B00052F00 /* ClassUtilTests.swift in Sources */,
 				9DE027BF22FB1C5C00D8A524 /* SwiftUtilBiPMacOSTests.swift in Sources */,
 				9DEDA84A22FB3DEE00DB079E /* UIUtilTest.swift in Sources */,
-				9D8FA404230A8941000CD695 /* UserDefaultsUtilTests.swift in Sources */,
 				9DE027CA22FB1E7300D8A524 /* CGUtilTests.swift in Sources */,
 				9DE027C922FB1E6B00D8A524 /* CGUtil.swift in Sources */,
 				9D98D1ED22FB387800A4A834 /* CodableUtilTests.swift in Sources */,
@@ -655,7 +642,6 @@
 				9DE027CE22FB236800D8A524 /* DebugUtil.swift in Sources */,
 				9D12203F2340B4F000052F00 /* ClassUtil.swift in Sources */,
 				9D4EFD5F22FB341A00631399 /* AppDefaults.swift in Sources */,
-				9D8FA402230A8937000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9DDD13B4241E5E9600557518 /* SharedDefaultsTests.swift in Sources */,
 				9DEDA85F22FB474F00DB079E /* DateUtil.swift in Sources */,
 			);
@@ -676,7 +662,6 @@
 				9DEDA81A22FB3A2200DB079E /* HexUtil.swift in Sources */,
 				9DEDA81B22FB3A2200DB079E /* DictUtil.swift in Sources */,
 				9DB63EF12422CC3C008DFCF5 /* EnumUtil.swift in Sources */,
-				9D8FA3FD230A890C000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9D98D1E522FB386100A4A834 /* CodableUtil.swift in Sources */,
 				9DF5F1D222EDA03D00A02DD4 /* ViewController.swift in Sources */,
 				9DF5F1CC22ED927F00A02DD4 /* BiPlatformExtensions.swift in Sources */,
@@ -699,7 +684,6 @@
 				9DEDA83922FB3CCE00DB079E /* RegexUtil.swift in Sources */,
 				9DEDA82122FB3A4600DB079E /* HexUtil.swift in Sources */,
 				9D3477AC22F20DF20029BE85 /* CGUtil.swift in Sources */,
-				9D8FA400230A8935000CD695 /* UserDefaultsUtil.swift in Sources */,
 				9DF5F1C922ED904000A02DD4 /* AppDelegate.swift in Sources */,
 				9DEDA83622FB3CC900DB079E /* OptionalUtil.swift in Sources */,
 				9D98D1E622FB386100A4A834 /* CodableUtil.swift in Sources */,
