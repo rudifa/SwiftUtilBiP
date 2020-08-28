@@ -18,12 +18,6 @@
 		9D3477AB22F20DCD0029BE85 /* CGUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3477AA22F20DCD0029BE85 /* CGUtil.swift */; };
 		9D3477AC22F20DF20029BE85 /* CGUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3477AA22F20DCD0029BE85 /* CGUtil.swift */; };
 		9D37783922F9639C00D040FC /* NUConstraintsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */; };
-		9D4EFD5922FB335500631399 /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EFD5822FB335500631399 /* AppDefaults.swift */; };
-		9D4EFD5C22FB337E00631399 /* AppDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EFD5A22FB336600631399 /* AppDefaultsTests.swift */; };
-		9D4EFD5D22FB338D00631399 /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EFD5822FB335500631399 /* AppDefaults.swift */; };
-		9D4EFD5E22FB341A00631399 /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EFD5822FB335500631399 /* AppDefaults.swift */; };
-		9D4EFD5F22FB341A00631399 /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EFD5822FB335500631399 /* AppDefaults.swift */; };
-		9D4EFD6022FB341E00631399 /* AppDefaultsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4EFD5A22FB336600631399 /* AppDefaultsTests.swift */; };
 		9D69021422FB638600BE0FDF /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69020C22FB62F200BE0FDF /* StringUtil.swift */; };
 		9D69021522FB638600BE0FDF /* StringUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69020C22FB62F200BE0FDF /* StringUtil.swift */; };
 		9D69021822FB675800BE0FDF /* StringUtilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D69020E22FB630C00BE0FDF /* StringUtilTests.swift */; };
@@ -136,8 +130,6 @@
 		9D1557CC23FC1C2500AA7F28 /* DateUtilMoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilMoreTests.swift; sourceTree = "<group>"; };
 		9D3477AA22F20DCD0029BE85 /* CGUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGUtil.swift; sourceTree = "<group>"; };
 		9D37783822F9639C00D040FC /* NUConstraintsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NUConstraintsUtil.swift; sourceTree = "<group>"; };
-		9D4EFD5822FB335500631399 /* AppDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
-		9D4EFD5A22FB336600631399 /* AppDefaultsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefaultsTests.swift; sourceTree = "<group>"; };
 		9D69020C22FB62F200BE0FDF /* StringUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtil.swift; sourceTree = "<group>"; };
 		9D69020E22FB630C00BE0FDF /* StringUtilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringUtilTests.swift; sourceTree = "<group>"; };
 		9D69FB7C23254DA2006E1C55 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
@@ -255,7 +247,6 @@
 		9DE027CB22FB1F7700D8A524 /* SharedTests */ = {
 			isa = PBXGroup;
 			children = (
-				9D4EFD5A22FB336600631399 /* AppDefaultsTests.swift */,
 				9DE027C622FB1E0900D8A524 /* CGUtilTests.swift */,
 				9D12203B2340B44200052F00 /* ClassUtilTests.swift */,
 				9D98D1E922FB387800A4A834 /* CodableUtilTests.swift */,
@@ -338,7 +329,6 @@
 		9DF5F1CA22ED924A00A02DD4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				9D4EFD5822FB335500631399 /* AppDefaults.swift */,
 				9DF5F1CB22ED927F00A02DD4 /* BiPlatformExtensions.swift */,
 				9D3477AA22F20DCD0029BE85 /* CGUtil.swift */,
 				9D1220392340B40C00052F00 /* ClassUtil.swift */,
@@ -579,7 +569,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D4EFD5D22FB338D00631399 /* AppDefaults.swift in Sources */,
 				9DEDA84922FB3DED00DB079E /* UIUtilTest.swift in Sources */,
 				9DE027B122FB1C4300D8A524 /* SwiftUtilBiPIOSTests.swift in Sources */,
 				9DCE82E42426CA6D000F0331 /* XCTestUtil.swift in Sources */,
@@ -598,7 +587,6 @@
 				9D12203E2340B4EF00052F00 /* ClassUtil.swift in Sources */,
 				9DEDA83A22FB3CCF00DB079E /* RegexUtil.swift in Sources */,
 				9DEDA83722FB3CCA00DB079E /* OptionalUtil.swift in Sources */,
-				9D4EFD5C22FB337E00631399 /* AppDefaultsTests.swift in Sources */,
 				9D69021A22FB677F00BE0FDF /* StringUtil.swift in Sources */,
 				9D69021822FB675800BE0FDF /* StringUtilTests.swift in Sources */,
 				9DEDA83C22FB3CD500DB079E /* OptionaUtilTests.swift in Sources */,
@@ -632,7 +620,6 @@
 				9DEDA82822FB3A4E00DB079E /* DictUtilTests.swift in Sources */,
 				9DEDA83B22FB3CCF00DB079E /* RegexUtil.swift in Sources */,
 				9DEDA83822FB3CCB00DB079E /* OptionalUtil.swift in Sources */,
-				9D4EFD6022FB341E00631399 /* AppDefaultsTests.swift in Sources */,
 				9D69021B22FB677F00BE0FDF /* StringUtil.swift in Sources */,
 				9D69021922FB675800BE0FDF /* StringUtilTests.swift in Sources */,
 				9DEDA83D22FB3CD500DB079E /* OptionaUtilTests.swift in Sources */,
@@ -641,7 +628,6 @@
 				9DEDA82522FB3A4700DB079E /* HexUtil.swift in Sources */,
 				9DE027CE22FB236800D8A524 /* DebugUtil.swift in Sources */,
 				9D12203F2340B4F000052F00 /* ClassUtil.swift in Sources */,
-				9D4EFD5F22FB341A00631399 /* AppDefaults.swift in Sources */,
 				9DDD13B4241E5E9600557518 /* SharedDefaultsTests.swift in Sources */,
 				9DEDA85F22FB474F00DB079E /* DateUtil.swift in Sources */,
 			);
@@ -651,7 +637,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D4EFD5922FB335500631399 /* AppDefaults.swift in Sources */,
 				9D37783922F9639C00D040FC /* NUConstraintsUtil.swift in Sources */,
 				9D69021422FB638600BE0FDF /* StringUtil.swift in Sources */,
 				9D3477AB22F20DCD0029BE85 /* CGUtil.swift in Sources */,
@@ -678,7 +663,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEDA82022FB3A4600DB079E /* DictUtil.swift in Sources */,
-				9D4EFD5E22FB341A00631399 /* AppDefaults.swift in Sources */,
 				9D69021522FB638600BE0FDF /* StringUtil.swift in Sources */,
 				9DB8C21E22F975810077D0AB /* NUConstraintsUtil.swift in Sources */,
 				9DEDA83922FB3CCE00DB079E /* RegexUtil.swift in Sources */,
