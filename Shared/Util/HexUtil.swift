@@ -1,5 +1,5 @@
 //
-//  HexUtil.swift v.0.2.0
+//  HexUtil.swift v.0.3.1
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 15.08.18.
@@ -15,6 +15,21 @@ extension String {
             String(format: "%02x", $0.value)
         }
         return arr.joined(separator: " ")
+    }
+
+    func hexDump(lineSize: Int) -> String {
+        let charArray = unicodeScalars.map {String(format: "%02x", $0.value)}
+        let chunked = charArray.chunked(into: lineSize)
+        let lines = chunked.map{$0.joined(separator: " ")}
+        return lines.joined(separator: "\n")
+    }
+}
+
+extension Array {
+    func chunked(into size: Int) -> [[Element]] {
+        return stride(from: 0, to: count, by: size).map {
+            Array(self[$0 ..< Swift.min($0 + size, count)])
+        }
     }
 }
 
