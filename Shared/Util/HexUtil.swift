@@ -1,5 +1,5 @@
 //
-//  HexUtil.swift v.0.1.0
+//  HexUtil.swift v.0.2.0
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 15.08.18.
@@ -15,5 +15,12 @@ extension String {
             String(format: "%02x", $0.value)
         }
         return arr.joined(separator: " ")
+    }
+}
+
+extension Data {
+    /// Returns the string representation of data
+    var toString: String? {
+        NSString(data: self, encoding: String.Encoding.utf8.rawValue) as String?
     }
 }

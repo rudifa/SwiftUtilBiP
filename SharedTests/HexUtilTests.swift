@@ -1,5 +1,5 @@
 //
-//  HexUtilTests.swift v.0.1.0
+//  HexUtilTests.swift v.0.2.0
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 15.08.18.
@@ -42,25 +42,16 @@ class HexUtilTests: XCTestCase {
         print("--- testHexDump2 hexDump=", string.hexDump)
         // 1f1e7 1f1f7 1f1f3 1f1ff
     }
-}
 
-// var hexDump: String {
-//    let arr = unicodeScalars.map {
-//        String(format: "%02x", $0.value)
-//    }
-//    return arr.joined(separator: " ")
-// }
-//
-// var dump: String {
-//    let arr = unicodeScalars.map {
-//        String($0.value, radix: 16, uppercase: true)
-//    }
-//    return arr.joined(separator: " ")
-// }
-//
-// func hexdump(step: Int = 10) {
-//    for i in stride(from: 0, to: count, by: step) {
-//        let sub = dropFirst(i).prefix(step) as Substring
-//        print(sub)
-//    }
-// }
+    func test_Data_toString() {
+        struct Lang: Codable {
+            var name: String
+            var version: Double
+        }
+
+        let lang = Lang(name: "Swift", version: 5.3)
+
+        let data = try! lang.encode()
+        XCTAssertEqual(data.toString!, #"{"name":"Swift","version":5.2999999999999998}"#)
+    }
+}
