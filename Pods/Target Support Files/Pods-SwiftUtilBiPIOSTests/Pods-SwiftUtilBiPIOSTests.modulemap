@@ -1,6 +1,0 @@
-framework module Pods_SwiftUtilBiPIOSTests {
-  umbrella header "Pods-SwiftUtilBiPIOSTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
