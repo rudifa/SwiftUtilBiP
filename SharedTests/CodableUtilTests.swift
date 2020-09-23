@@ -1,5 +1,5 @@
 //
-//  CodableUtilTests.swift v.0.1.2
+//  CodableUtilTests.swift v.0.2.0
 //  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 23.06.19.
@@ -18,18 +18,41 @@ class CodableUtilTests: XCTestCase {
 
     override func tearDown() {}
 
-    func testEncodableDecodable() {
+    func test_EncodableDecodable_Data() {
         let language = Language(name: "Swift", version: "5")
 
-        // encode with one line of code
-        let data = try? language.encode()
+        // encode to Data?
+        let data: Data? = language.encode()
 
-        let language2 = try? Language.decode(from: data!)
+        // decode to Self?
+        let language2 = Language.decode(from: data!)
+
+        // compare
         XCTAssertEqual(language, language2)
 
-        let language3 = try? Language.decode(from: Data())
+        // test with empty Data
+        let language3 = Language.decode(from: Data())
         XCTAssertNil(language3)
     }
+
+
+    func test_EncodableDecodable_String() {
+        let language = Language(name: "Swift", version: "5")
+
+        // encode to String?
+        let string: String? = language.encode()
+
+        // decode to Self?
+        let language2 = Language.decode(from: string!)
+
+        // compare
+        XCTAssertEqual(language, language2)
+
+        // test with empty String
+        let language3 = Language.decode(from: String())
+        XCTAssertNil(language3)
+    }
+
 }
 
 //    https://gist.github.com/eMdOS/88a465e8898a0600d0a343e14

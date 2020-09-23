@@ -48,7 +48,7 @@ class HexUtilTests: XCTestCase {
 
         let lang = Lang(name: "Swift", version: 5.3)
 
-        let data = try! lang.encode()
-        XCTAssertEqual(data.toString!, #"{"name":"Swift","version":5.2999999999999998}"#)
+        let data: Data? = lang.encode()
+        XCTAssertEqual(data!.toString!, #"{"name":"Swift","version":5.2999999999999998}"#)
     }
 }
