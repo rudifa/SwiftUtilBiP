@@ -40,10 +40,11 @@ class CodableUtilTests: XCTestCase {
         let language = Language(name: "Swift", version: "5")
 
         // encode to String?
-        let string: String? = language.encode()
+        let string: String = language.encode()!
+        XCTAssertEqual(string, #"{"name":"Swift","version":"5"}"#)
 
         // decode to Self?
-        let language2 = Language.decode(from: string!)
+        let language2 = Language.decode(from: string)
 
         // compare
         XCTAssertEqual(language, language2)
