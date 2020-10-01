@@ -56,6 +56,9 @@
 		9DEBB0882525387E0077E5B8 /* DateIntervalExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBB0872525387E0077E5B8 /* DateIntervalExt.swift */; };
 		9DEBB0912525393E0077E5B8 /* DateIntervalExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBB0872525387E0077E5B8 /* DateIntervalExt.swift */; };
 		9DEBB0A125253A0A0077E5B8 /* DateIntervalExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBB0A025253A0A0077E5B8 /* DateIntervalExtTests.swift */; };
+		9DEBB0BA2525E5860077E5B8 /* DateIntervalExtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBB0A025253A0A0077E5B8 /* DateIntervalExtTests.swift */; };
+		9DEBB0BF2525EBF60077E5B8 /* DateIntervalExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBB0872525387E0077E5B8 /* DateIntervalExt.swift */; };
+		9DEBB0C42525EBFA0077E5B8 /* DateIntervalExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEBB0872525387E0077E5B8 /* DateIntervalExt.swift */; };
 		9DEDA81A22FB3A2200DB079E /* HexUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDA81822FB3A2100DB079E /* HexUtil.swift */; };
 		9DEDA81B22FB3A2200DB079E /* DictUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDA81922FB3A2200DB079E /* DictUtil.swift */; };
 		9DEDA82022FB3A4600DB079E /* DictUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEDA81922FB3A2200DB079E /* DictUtil.swift */; };
@@ -547,10 +550,12 @@
 				9D69021B22FB677F00BE0FDF /* StringUtil.swift in Sources */,
 				9D69021922FB675800BE0FDF /* StringUtilTests.swift in Sources */,
 				9DEDA83D22FB3CD500DB079E /* OptionaUtilTests.swift in Sources */,
+				9DEBB0BF2525EBF60077E5B8 /* DateIntervalExt.swift in Sources */,
 				9DDD13B7241E5EBE00557518 /* SharedDefaults.swift in Sources */,
 				9DEDA83F22FB3CDA00DB079E /* RegexUtilTests.swift in Sources */,
 				9DEDA82522FB3A4700DB079E /* HexUtil.swift in Sources */,
 				9DE027CE22FB236800D8A524 /* DebugUtil.swift in Sources */,
+				9DEBB0BA2525E5860077E5B8 /* DateIntervalExtTests.swift in Sources */,
 				9D12203F2340B4F000052F00 /* ClassUtil.swift in Sources */,
 				9DDD13B4241E5E9600557518 /* SharedDefaultsTests.swift in Sources */,
 				9DEDA85F22FB474F00DB079E /* DateUtil.swift in Sources */,
@@ -591,6 +596,7 @@
 				9D69021522FB638600BE0FDF /* StringUtil.swift in Sources */,
 				9DB8C21E22F975810077D0AB /* NUConstraintsUtil.swift in Sources */,
 				9DEDA83922FB3CCE00DB079E /* RegexUtil.swift in Sources */,
+				9DEBB0C42525EBFA0077E5B8 /* DateIntervalExt.swift in Sources */,
 				9DEDA82122FB3A4600DB079E /* HexUtil.swift in Sources */,
 				9D3477AC22F20DF20029BE85 /* CGUtil.swift in Sources */,
 				9DF5F1C922ED904000A02DD4 /* AppDelegate.swift in Sources */,
