@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 class DateUtilTests: XCTestCase {
     func test_TimeZoneFeatures() {
         let tzCurrent = TimeZone.current
@@ -154,7 +155,7 @@ class DateUtilTests: XCTestCase {
         var dd = Date()
         XCTAssertTrue(dd.isToday)
         print("--- \(dd.ddMMyyyy) is " + (dd.isToday ? "" : "not") + "today")
-        dd.increment(by: .day, times: 1)
+        dd.increment(by: .day)
         XCTAssertFalse(dd.isToday)
         dd.increment(by: .day, times: -1)
         XCTAssertTrue(dd.isToday)
@@ -262,6 +263,16 @@ class DateUtilTests: XCTestCase {
         XCTAssertEqual(d2.EEEE_ddMMyyyy_HHmmss, "Sunday 22.09.2019 16:00:00")
 
         XCTAssertEqual(d0.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 10:20:30")
+
+        XCTAssertEqual(d0.year, 2019)
+        XCTAssertEqual(d0.month, 7)
+        XCTAssertEqual(d0.day, 26)
+        XCTAssertEqual(d0.hour, 10)
+
+        XCTAssertEqual(d0.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 10:20:30")
+        XCTAssertEqual(d0.wholeMonth!.EEEE_ddMMyyyy_HHmmss, "Monday 01.07.2019 00:00:00")
+        XCTAssertEqual(d0.wholeDay!.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 00:00:00")
+        XCTAssertEqual(d0.wholeHour!.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 10:00:00")
 
         XCTAssertEqual(d0.dateInterval(of: .year)!.start.ddMMyyyy_HHmmss, "01.01.2019 00:00:00")
         XCTAssertEqual(d0.dateInterval(of: .year)!.end.ddMMyyyy_HHmmss, "01.01.2020 00:00:00")
