@@ -263,12 +263,6 @@ class DateUtilTests: XCTestCase {
 
         XCTAssertEqual(d0.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 10:20:30")
 
-        XCTAssertEqual(d0.year, 2019)
-        XCTAssertEqual(d0.month, 7)
-        XCTAssertEqual(d0.day, 26)
-        XCTAssertEqual(d0.hour, 10)
-        XCTAssertEqual(d0.zeroingHms()!.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 00:00:00")
-
         XCTAssertEqual(d0.dateInterval(of: .year)!.start.ddMMyyyy_HHmmss, "01.01.2019 00:00:00")
         XCTAssertEqual(d0.dateInterval(of: .year)!.end.ddMMyyyy_HHmmss, "01.01.2020 00:00:00")
 
