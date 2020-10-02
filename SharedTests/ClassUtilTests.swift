@@ -1,6 +1,6 @@
 //
 //  ClassUtilTests.swift v.0.1.0
-//  SwiftUtilBiPIOSTests
+//  SwiftUtilBiPTests
 //
 //  Created by Rudolf Farkas on 29.09.19.
 //  Copyright © 2019 Rudolf Farkas. All rights reserved.

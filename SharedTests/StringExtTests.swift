@@ -1,6 +1,6 @@
 //
-//  StringUtilTests.swift v.0.2.1
-//  SwiftUtilBiPTests
+//  StringExtTests.swift v.0.3.0
+//  RudifaUtilPkg
 //
 //  Created by Rudolf Farkas on 22.07.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.
@@ -8,7 +8,22 @@
 
 import XCTest
 
-class StringUtilTests: XCTestCase {
+class StringExtTests: XCTestCase {
+    func test_capitalizingFirstLetter() {
+        XCTAssertEqual("abc".capitalizingFirstLetter(), "Abc")
+        XCTAssertEqual("".capitalizingFirstLetter(), "")
+    }
+
+    func test_capitalizeFirstLetter() {
+        var str = "def"
+        str.capitalizeFirstLetter()
+        XCTAssertEqual(str, "Def")
+
+        str = ""
+        str.capitalizeFirstLetter()
+        XCTAssertEqual(str, "")
+    }
+
     func test_camelCaseSplit() {
         XCTAssertEqual("HelloThere".camelCaseSplit, "Hello There")
         XCTAssertEqual("".camelCaseSplit, "")

@@ -1,5 +1,5 @@
 //
-//  DebugUtil.swift  v.0.3.2
+//  DebugUtil.swift v.0.3.2
 //  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 23.07.19.
@@ -58,7 +58,7 @@ extension NSObject {
     /// - Parameters:
     ///  - info: information string; a leading "@" will be replaced by the call date
     ///  - fnc: current function (default value is the caller)
-    func printClassAndFunc(info inf_: String = "", fnc fnc_: String = #function) {
+    public func printClassAndFunc(info inf_: String = "", fnc fnc_: String = #function) {
         #if DEBUG
             print(formatClassAndFunc(info: inf_, fnc: fnc_))
         #endif
@@ -71,7 +71,7 @@ extension NSObject {
     /// - Parameters:
     ///  - info: information string; a leading "@" will be replaced by the call date
     ///  - fnc: current function (default value is the caller)
-    func logClassAndFunc(info inf_: String = "", fnc fnc_: String = #function) {
+    public func logClassAndFunc(info inf_: String = "", fnc fnc_: String = #function) {
         Logger.shared.print(formatClassAndFunc(info: inf_, fnc: fnc_))
     }
 
@@ -80,7 +80,7 @@ extension NSObject {
     /// - Parameters:
     ///  - info: information string; a leading "@" will be replaced by the call date
     ///  - fnc: current function (default value is the caller)
-    func formatClassAndFunc(info inf_: String = "", fnc fnc_: String = #function) -> String {
+    public func formatClassAndFunc(info inf_: String = "", fnc fnc_: String = #function) -> String {
         var dateTime = ""
         var info = inf_
         if inf_.first == "@" {

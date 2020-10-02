@@ -8,14 +8,10 @@
 
 import XCTest
 
-class CGUtilTests: XCTestCase {
-    override func setUp() {
-        super.setUp()
-    }
+class CGExtTests: XCTestCase {
+    override func setUp() {}
 
-    override func tearDown() {
-        super.tearDown()
-    }
+    override func tearDown() {}
 
     func testCGFmt() {
         XCTAssertEqual(CGFloat(1.23456789).fmt, "1.23")

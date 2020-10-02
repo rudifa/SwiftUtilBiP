@@ -1,6 +1,6 @@
 //
-//  RegexUtilTests.swift v.0.5.1
-//  SwiftUtilBiPTests
+//  StringRegexExtTests.swift v.0.6.0
+//  RudifaUtilPkgTests
 //
 //  Created by Rudolf Farkas on 28.04.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class RegexUtilTests: XCTestCase {
+class StringRegexExtTests: XCTestCase {
     override func setUp() {}
 
     override func tearDown() {}
@@ -66,8 +66,17 @@ class RegexUtilTests: XCTestCase {
     }
 
     func test_string_extractUUID() {
-        let contains_UUID = "https://stick-scan/product_images%2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775.png"
-        let extracted_UUID = contains_UUID.extractUUID()
-        XCTAssertEqual(extracted_UUID, "08D41FB1-8B2E-4F6F-977A-BFA876AEF775")
+        do {
+            let contains_UUID = "https://stick-scan/product_images%2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775.png"
+            let extracted_UUID = contains_UUID.extractUUID()
+            XCTAssertEqual(extracted_UUID, "08D41FB1-8B2E-4F6F-977A-BFA876AEF775")
+            XCTAssertEqual("".extractUUID(), "")
+        }
+        do {
+            let contains_UUID = "https://stick-scan/product_images%2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775.png"
+            let extracted = contains_UUID.extractedUUID
+            XCTAssertEqual(extracted, "08D41FB1-8B2E-4F6F-977A-BFA876AEF775")
+            XCTAssertNil("".extractedUUID)
+        }
     }
 }

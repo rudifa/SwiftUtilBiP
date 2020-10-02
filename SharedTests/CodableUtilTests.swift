@@ -19,13 +19,19 @@ class CodableUtilTests: XCTestCase {
     override func tearDown() {}
 
     func test_EncodableDecodable_Data() {
-        let language = Language(name: "Swift", version: "5")
+        let language = Language(name: "Swift", version: "5.3")
 
         // encode to Data?
-        let data: Data? = language.encode()
+        guard let data: Data = language.encode() else {
+            XCTFail("language.encode()")
+            return
+        }
 
         // decode to Self?
-        let language2 = Language.decode(from: data!)
+        guard let language2 = Language.decode(from: data) else {
+            XCTFail("Language.decode()")
+            return
+        }
 
         // compare
         XCTAssertEqual(language, language2)
@@ -35,16 +41,21 @@ class CodableUtilTests: XCTestCase {
         XCTAssertNil(language3)
     }
 
-
     func test_EncodableDecodable_String() {
-        let language = Language(name: "Swift", version: "5")
+        let language = Language(name: "Swift", version: "5.3")
 
         // encode to String?
-        let string: String = language.encode()!
-        XCTAssertEqual(string, #"{"name":"Swift","version":"5"}"#)
+        guard let string: String = language.encode() else {
+            XCTFail("language.encode()")
+            return
+        }
+        XCTAssertEqual(string, #"{"name":"Swift","version":"5.3"}"#)
 
         // decode to Self?
-        let language2 = Language.decode(from: string)
+        guard let language2 = Language.decode(from: string) else {
+            XCTFail("Language.decode()")
+            return
+        }
 
         // compare
         XCTAssertEqual(language, language2)
@@ -54,33 +65,44 @@ class CodableUtilTests: XCTestCase {
         XCTAssertNil(language3)
     }
 
+    func test_Both() {
+        // create an instance
+        let language = Language(name: "Swift", version: "5.3")
+
+        // encode to Data?
+        if let data: Data = language.encode() {
+            // use data here
+
+            // decode from Data
+            if let lang = Language.decode(from: data) {
+                // use lang here
+                XCTAssertEqual(lang, language)
+            } else {
+                // handle decode error
+                XCTFail("let lang = Language.decode(from: data)")
+            }
+        } else {
+            // handle encode error
+            XCTFail("let data: Data = language.encode()")
+        }
+
+        // encode to String?
+        if let string: String = language.encode() {
+            // use string here
+            XCTAssertEqual(string, #"{"name":"Swift","version":"5.3"}"#)
+
+            // decode from String
+            if let lang = Language.decode(from: string) {
+                // use lang here
+                XCTAssertEqual(lang, language)
+            } else {
+                // handle decode error
+                XCTFail("let lang = Language.decode(from: string)")
+           }
+        } else {
+            // handle encode error
+            XCTFail("let string: String = language.encode()")
+        }
+    }
 }
 
-//    https://gist.github.com/eMdOS/88a465e8898a0600d0a343e14
-//
-//    extension Encodable {
-//        func encode(with encoder: JSONEncoder = JSONEncoder()) throws -> Data {
-//            return try encoder.encode(self)
-//        }
-//    }
-//
-//    extension Decodable {
-//        static func decode(with decoder: JSONDecoder = JSONDecoder(), from data: Data) throws -> Self {
-//            return try decoder.decode(Self.self, from: data)
-//        }
-//    }
-//
-//    sample code:
-//
-//    struct Language: Codable {
-//        var name: String
-//        var version: String
-//    }
-//
-//    // create a new language
-//    let language = Language(name: "Swift", version: "4")
-//
-//    // encode with one line of code
-//    let data = try? language.encode()
-//
-//    let lang: Language? = try? Language.decode(from: data!)

@@ -1,5 +1,5 @@
 //
-//  EnumIteratorTests.swift v.0.2.1
+//  EnumIteratorTests.swift v.0.3.0
 //  SwiftUtilBiPIOSTests
 //
 //  Created by Rudolf Farkas on 18.03.20.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class EnumIteratorTests: XCTestCase {
+class EnumExtTests: XCTestCase {
     override func setUp() {}
 
     override func tearDown() {}

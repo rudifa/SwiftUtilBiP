@@ -1,18 +1,18 @@
 //
-//  SharedDefaultsTests.swift v.0.3.0
-//  SwiftRfUtil
+//  UserDefaultsExtTests.swift v.0.3.0
+//  RudifaUtilPkgTests
 //
 //  Created by Rudolf Farkas on 13.03.20.
 //  Copyright © 2020 Rudolf Farkas. All rights reserved.
 //
 
-// @testable import SwiftRfUtil
+//@testable import RudifaUtilPkg
 import XCTest
 
 /// Return the approximate number of seconds in a year
 let yearInSeconds = TimeInterval(365 * 24 * 60 * 60)
 
-final class SharedDefaultsTests: XCTestCase {
+final class UserDefaultsExtTests: XCTestCase {
     func test_CodableUserDefault() {
         // A struct that an app wants to save in UserDefaults
         struct SubscriptionInfo: Codable, Equatable {
@@ -34,7 +34,8 @@ final class SharedDefaultsTests: XCTestCase {
             static var userId: String
 
             @CodableUserDefault(key: Key.subscriptionInfo,
-                                defaultValue: SubscriptionInfo(productId: "ABBA", purchaseDate: Date(timeIntervalSince1970: 2 * yearInSeconds)))
+                                defaultValue: SubscriptionInfo(productId: "ABBA",
+                                                               purchaseDate: Date(timeIntervalSince1970: 2 * yearInSeconds)))
             static var subscriptionInfo: SubscriptionInfo
         }
 
@@ -99,23 +100,22 @@ final class SharedDefaultsTests: XCTestCase {
             // define keys to defaults
             enum Key: String {
                 case userId2
-                case subscriptionInfo2
                 case selectedCalendarTitle
                 case calendarTitles
             }
 
             @PlistUserDefault(key: Key.userId2,
-                                defaultValue: "UNKNOWN")
+                              defaultValue: "UNKNOWN")
             static var userId: String
 
             @PlistUserDefault(key: Key.calendarTitles,
-                                defaultValue: [],
-                                userDefaults: sharedDefaults)
+                              defaultValue: [],
+                              userDefaults: sharedDefaults)
             static var calendarTitles: [String]
 
             @PlistUserDefault(key: Key.selectedCalendarTitle,
-                                defaultValue: "Select a calendar...",
-                                userDefaults: sharedDefaults)
+                              defaultValue: "Select a calendar...",
+                              userDefaults: sharedDefaults)
             static var selectedCalendarTitle: String
         }
 

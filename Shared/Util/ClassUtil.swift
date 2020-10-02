@@ -1,6 +1,6 @@
 //
 //  ClassUtil.swift v.0.1.0
-//  SwiftUtilBiPIOS
+//  SwiftUtilBiP
 //
 //  Created by Rudolf Farkas on 29.09.19.
 //  Copyright © 2019 Rudolf Farkas. All rights reserved.

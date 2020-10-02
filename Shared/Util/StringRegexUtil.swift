@@ -53,10 +53,18 @@ extension String {
     /// - Returns: String that matched the UUID pattern or empty string
     /// - Example: "https://my-app/product_images%2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775.png" -> "08D41FB1-8B2E-4F6F-977A-BFA876AEF775"
     func extractUUID() -> String {
+        return extractedUUID ?? ""
+    }
+
+    /// Returns UUID (if any) found in self
+    ///
+    /// - Returns: String that matched the UUID pattern or empty nil
+    /// - Example: "https://my-app/product_images%2F08D41FB1-8B2E-4F6F-977A-BFA876AEF775.png" -> "08D41FB1-8B2E-4F6F-977A-BFA876AEF775"
+    var extractedUUID: String? {
         let matches = self.matches(for: "[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}")
         if matches.count > 0 {
             return matches[0]
         }
-        return ""
+        return nil
     }
 }
