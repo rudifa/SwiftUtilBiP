@@ -1,6 +1,6 @@
 //
-//  OptionaUtilTests.swift
-//  SwiftUtilBiPTests
+//  OptionalExtTests.swift
+//  RudifaUtilPkgTests
 //
 //  Created by Rudolf Farkas on 15.10.18.
 //  Copyright © 2018 Rudolf Farkas. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class OptionaUtilTests: XCTestCase {
+class OptionalExtTests: XCTestCase {
     func testOptionalIntIncrement() {
         var ival: Int?
         ival.increment()

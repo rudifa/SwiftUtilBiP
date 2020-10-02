@@ -7,6 +7,7 @@
 //
 
 import XCTest
+
 class DateUtilTests: XCTestCase {
     func test_TimeZoneFeatures() {
         let tzCurrent = TimeZone.current
@@ -154,7 +155,7 @@ class DateUtilTests: XCTestCase {
         var dd = Date()
         XCTAssertTrue(dd.isToday)
         print("--- \(dd.ddMMyyyy) is " + (dd.isToday ? "" : "not") + "today")
-        dd.increment(by: .day, times: 1)
+        dd.increment(by: .day)
         XCTAssertFalse(dd.isToday)
         dd.increment(by: .day, times: -1)
         XCTAssertTrue(dd.isToday)
@@ -267,7 +268,11 @@ class DateUtilTests: XCTestCase {
         XCTAssertEqual(d0.month, 7)
         XCTAssertEqual(d0.day, 26)
         XCTAssertEqual(d0.hour, 10)
-        XCTAssertEqual(d0.zeroingHms()!.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 00:00:00")
+
+        XCTAssertEqual(d0.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 10:20:30")
+        XCTAssertEqual(d0.wholeMonth!.EEEE_ddMMyyyy_HHmmss, "Monday 01.07.2019 00:00:00")
+        XCTAssertEqual(d0.wholeDay!.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 00:00:00")
+        XCTAssertEqual(d0.wholeHour!.EEEE_ddMMyyyy_HHmmss, "Friday 26.07.2019 10:00:00")
 
         XCTAssertEqual(d0.dateInterval(of: .year)!.start.ddMMyyyy_HHmmss, "01.01.2019 00:00:00")
         XCTAssertEqual(d0.dateInterval(of: .year)!.end.ddMMyyyy_HHmmss, "01.01.2020 00:00:00")
@@ -282,27 +287,52 @@ class DateUtilTests: XCTestCase {
         XCTAssertEqual(d0.dateInterval(of: .hour)!.end.ddMMyyyy_HHmmss, "26.07.2019 11:00:00")
     }
 
-    func test_DateIntervalExtensions() {
-        let calendar = Calendar.current
-        let refDate = calendar.date(from: DateComponents(calendar: calendar, year: 2020, month: 1, day: 28, hour: 14))!
+    func test_UsingPropertyWrappers() {
+        struct UsingPropertyWrappers {
+            @WholeMonth var yMonth: Date
+            @WholeDay var ymDay: Date
+            @WholeHour var ymdHour: Date
+            @WholeHours var ymdHours: [Date]
 
-        let firstHour = Calendar.current.dateInterval(of: .hour, for: refDate)!
-        let oneHour = firstHour.duration
-        let firstThreeHours = DateInterval(start: refDate, duration: 3.0 * oneHour)
+            init(date: Date) {
+                yMonth = date
+                ymdHour = date
+                ymDay = date
+                ymdHours = []
+            }
+        }
 
-        let zeroHour = DateInterval(start: refDate - oneHour * 1.0, duration: oneHour)
-        let halfHour = DateInterval(start: refDate - oneHour * 0.5, duration: oneHour)
-        let secondHour = DateInterval(start: refDate + oneHour, duration: oneHour)
-        let fourthHour = DateInterval(start: refDate + oneHour * 4.0, duration: oneHour)
+        // create date1 from components, decompose and compare
+        let date1Comp = DateComponents(timeZone: TimeZone.current, year: 2019, month: 7, day: 26, hour: 10, minute: 15, second: 20)
+        let date1 = Calendar.current.date(from: date1Comp)!
 
-        XCTAssertTrue(firstHour.fullyOverlaps(with: firstThreeHours))
-        XCTAssertFalse(firstHour.fullyOverlaps(with: halfHour))
+        var iuTest = UsingPropertyWrappers(date: date1)
 
-        XCTAssertTrue(firstThreeHours.fullyOverlaps(with: firstHour))
-        XCTAssertTrue(firstThreeHours.fullyOverlaps(with: secondHour))
+        XCTAssertEqual(iuTest.ymdHour.ddMMyyyy_HHmmss, "26.07.2019 10:00:00")
+        XCTAssertEqual(iuTest.ymDay.ddMMyyyy_HHmmss, "26.07.2019 00:00:00")
+        XCTAssertEqual(iuTest.yMonth.ddMMyyyy_HHmmss, "01.07.2019 00:00:00")
+        XCTAssertEqual(iuTest.ymdHours, [])
+        XCTAssertEqual(iuTest.ymdHours.map({ $0.ddMMyyyy_HHmmss }).joined(separator: " "), "")
 
-        XCTAssertFalse(firstThreeHours.fullyOverlaps(with: halfHour))
-        XCTAssertFalse(firstThreeHours.fullyOverlaps(with: fourthHour))
-        XCTAssertFalse(firstThreeHours.fullyOverlaps(with: zeroHour))
+        iuTest.ymdHour.increment(by: .hour, times: 37)
+        iuTest.ymDay.increment(by: .day, times: 35)
+        iuTest.yMonth.increment(by: .month, times: 33)
+
+        XCTAssertEqual(iuTest.ymdHour.ddMMyyyy_HHmmss, "27.07.2019 23:00:00")
+        XCTAssertEqual(iuTest.ymDay.ddMMyyyy_HHmmss, "30.08.2019 00:00:00")
+        XCTAssertEqual(iuTest.yMonth.ddMMyyyy_HHmmss, "01.04.2022 00:00:00")
+
+        // test ymdHours array operations
+
+        iuTest.ymdHours.append(date1)
+        XCTAssertEqual(iuTest.ymdHours, [date1.wholeHour])
+        XCTAssertEqual(iuTest.ymdHours.map({ $0.ddMMyyyy_HHmmss }).joined(separator: ", "), "26.07.2019 10:00:00")
+
+        iuTest.ymdHours.append(date1.incremented(by: .hour))
+        iuTest.ymdHours.append(date1.incremented(by: .hour, times: -3))
+        XCTAssertEqual(iuTest.ymdHours.map({ $0.ddMMyyyy_HHmmss }).joined(separator: ", "), "26.07.2019 10:00:00, 26.07.2019 11:00:00, 26.07.2019 07:00:00")
+
+        iuTest.ymdHours.removeAll()
+        XCTAssertEqual(iuTest.ymdHours, [])
     }
 }

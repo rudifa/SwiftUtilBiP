@@ -17,16 +17,10 @@ class DebugUtilTests: XCTestCase {
         XCTAssertEqual(formatClassAndFunc(info: "more info"),
                        "---- DebugUtilTests.test_printClassAndFunc() more info")
 
-//        XCTAssertTrue(formatClassAndFunc(info: "@ even more info at this time") ~=
-//            #"^---- \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6} DebugUtilTests.test_printClassAndFunc\(\)  even more info at this time$"#)
+        XCTAssertMatchesRegex(formatClassAndFunc(info: "@"),
+                              #"^---- \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6} DebugUtilTests.test_printClassAndFunc\(\) $"#)
 
-        xctAssertMatches(formatClassAndFunc(info: "@ even more info at this time"),
-                         #"^---- \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6} DebugUtilTests.test_printClassAndFunc\(\)  even more info at this time$"#)
-
-//        XCTAssertTrue(formatClassAndFunc(info: "@ even more info a tad later") ~=
-//            #"^---- \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6} DebugUtilTests.test_printClassAndFunc\(\)  even more info a tad later$"#)
-
-        xctAssertMatches(formatClassAndFunc(info: "@ even more info a tad later"),
-            #"^---- \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6} DebugUtilTests.test_printClassAndFunc\(\)  even more info a tad later$"#)
+        XCTAssertMatchesRegex(formatClassAndFunc(info: "@ even more info at this time"),
+                              #"^---- \d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}\.\d{6} DebugUtilTests.test_printClassAndFunc\(\)  even more info at this time$"#)
     }
 }
